@@ -1,0 +1,63 @@
+@use "../common/variables" as *;
+
+.advantages {
+  background: linear-gradient(119deg, #222222 0%, #333333 100%);
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+
+  @media (min-width: $d-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 90px;
+    row-gap: 50px;
+  }
+
+  @media (min-width: $f-width) {
+    row-gap: 60px;
+    column-gap: 74px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  @media (min-width: $d-width) {
+    column-gap: 35px;
+    width: calc((100% / 2) - 45px);
+  }
+
+  @media (min-width: $f-width) {
+    column-gap: 30px;
+    width: calc((100% - 2 * 74px) / 3);
+  }
+}
+
+.advantages__item svg {
+  flex-shrink: 0;
+  flex-basis: 60px;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $d-width) {
+    width: 100px;
+    height: 100px;
+    flex-basis: 100px;
+  }
+}
+
+.advantages__item span {
+  color: $colorWhite;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: $d-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

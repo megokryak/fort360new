@@ -1,0 +1,121 @@
+@use "../common/variables" as *;
+
+.contacts {
+  display: flex;
+  column-gap: 30px;
+  background-color: $colorHeaderBackGround;
+
+  @media (min-width: $d-width) {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  @media (min-width: $f-width) {
+    width: auto;
+  }
+}
+
+.contacts__information {
+  padding-left: 20px;
+
+  @media (min-width: $d-width) {
+    display: flex;
+    align-items: center;
+    order: 2;
+    padding-left: 0;
+    flex-grow: 1;
+  }
+}
+
+.contacts__tel {
+  color: $colorWhite;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+
+  @media (min-width: $d-width) {
+    order: 2;
+    margin-left: 40px;
+  }
+}
+
+.contacts__work-day,
+.contacts__text-info {
+  font-size: 13px;
+  line-height: 13px;
+  margin-top: 4px;
+
+  @media (min-width: $d-width) {
+    margin-top: 0;
+  }
+}
+
+.contacts__work-day {
+  @media (min-width: $d-width) {
+    order: 3;
+    margin-left: 6px;
+  }
+}
+
+.contacts__callback {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $colorOrange;
+  margin-top: 16px;
+
+  @media (min-width: $d-width) {
+    display: flex;
+    align-items: center;
+    color: $colorWhite;
+    margin-top: 0;
+    order: 4;
+    margin-left: auto;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $colorOrange;
+      margin-right: 6px;
+    }
+  }
+}
+
+.contacts__mail {
+  color: $colorWhite;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+  margin-top: 16px;
+
+  @media (min-width: $d-width) {
+    margin-top: 0;
+    order: 1;
+  }
+}
+
+.contacts__social {
+  margin-right: 20px;
+
+  @media (min-width: $d-width) {
+    order: 1;
+    margin-right: 0;
+  }
+}
+
+.contacts__mail--info {
+  @media (min-width: $d-width) {
+    display: none;
+  }
+}
+
+.contacts__mail + span {
+  @media (min-width: $d-width) {
+    display: none;
+  }
+}

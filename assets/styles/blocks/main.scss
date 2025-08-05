@@ -1,0 +1,15 @@
+@use "../common/variables" as *;
+
+.main__usp {
+  padding-top: var(--sectionPT);
+  padding-bottom: var(--sectionPB);
+}
+
+.main__advantages,
+.main__about,
+.main__possibilities,
+.main__functional,
+.main__safety {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}

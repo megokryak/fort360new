@@ -1,0 +1,136 @@
+@use "../common/variables" as *;
+
+.safety {
+  background: $colorGrayLight;
+}
+
+.safety__container {
+  @media (min-width: $d-width) {
+    display: grid;
+    grid-template-columns: 67% 33%;
+  }
+
+  @media (min-width: $f-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+  }
+}
+
+.safety__title {
+  font-size: 42px;
+  line-height: 50px;
+
+  @media (min-width: $d-width) {
+    font-size: 56px;
+    line-height: 67px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+.safety__text {
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 30px;
+
+  @media (min-width: $d-width) {
+    font-size: 18px;
+    line-height: 27px;
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.safety__img {
+  margin-top: 40px;
+  border-radius: 50%;
+
+  @media (min-width: $d-width) {
+    width: 310px;
+    height: 310px;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    margin-top: 0;
+  }
+
+  @media (min-width: $f-width) {
+    justify-self: center;
+  }
+}
+
+.safety__list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  @media (min-width: $d-width) {
+    flex-direction: row;
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+
+  @media (min-width: $f-width) {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    flex-direction: column;
+    row-gap: 35px;
+    margin-top: 0;
+  }
+}
+
+.safety__item {
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    background-color: $colorBlack;
+    border-radius: 50%;
+  }
+
+  @media (min-width: $d-width) {
+    border-right: 1px solid $colorGray;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 33%;
+
+    &::before {
+      left: 10px;
+    }
+  }
+
+  @media (min-width: $f-width) {
+    border-right: none;
+    width: 100%;
+  }
+}
+
+.safety__item:not(:last-child) {
+  padding-bottom: 24px;
+  border-bottom: 2px solid $colorGrayDark;
+
+  @media (min-width: $d-width) {
+    border-bottom: none;
+  }
+
+  @media (min-width: $f-width) {
+    border-bottom: 2px solid $colorGrayDark;
+  }
+}
+
+.safety__item:last-child {
+  @media (min-width: $d-width) {
+    border-right: none;
+  }
+}

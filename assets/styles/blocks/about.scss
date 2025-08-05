@@ -1,0 +1,223 @@
+@use "../common/variables" as *;
+
+.about__container {
+  @media (min-width: $d-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 29px;
+    row-gap: 40px;
+  }
+}
+
+.about__title {
+  font-size: 42px;
+  line-height: 50px;
+  color: $colorBlack;
+  text-transform: uppercase;
+
+  @media (min-width: $d-width) {
+    font-size: 56px;
+    line-height: 67px;
+    width: 100%;
+  }
+}
+
+.about__link-video {
+  margin-top: 30px;
+  position: relative;
+
+  @media (min-width: $d-width) {
+    width: calc(549 / 960 * 100%);
+    margin-top: 0;
+  }
+
+  @media (min-width: $f-width) {
+    width: calc(883 / 1340 * 100%);
+  }
+}
+
+.about__play-icon {
+  position: absolute;
+  top: calc(50% - 75px / 2);
+  left: calc(50% - 75px / 2);
+  width: 75px;
+  height: 75px;
+  background: transparent url("../../images/svg/video_icon_rutube.svg")
+    no-repeat center / cover;
+}
+
+.about__img-rutube {
+  border-radius: 8px;
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-top: 30px;
+
+  @media (min-width: $d-width) {
+    width: calc(382 / 960 * 100%);
+    margin-top: 0;
+  }
+
+  @media (min-width: $f-width) {
+    width: calc(427 / 1340 * 100%);
+    align-self: center;
+  }
+}
+
+.about__item {
+  padding-left: 36px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: $colorGray;
+    border-radius: 3px;
+  }
+}
+
+.about__together-wrapper {
+  margin-top: 30px;
+
+  @media (min-width: $d-width) {
+    width: calc(549 / 960 * 100%);
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $f-width) {
+    width: calc(883 / 1340 * 100%);
+  }
+}
+
+.about__together-title {
+  font-size: 20px;
+  line-height: 24px;
+  color: $colorBlack;
+  text-transform: uppercase;
+
+  @media (min-width: $d-width) {
+    margin-top: 38px;
+  }
+}
+
+.about__together-slider {
+  overflow: hidden;
+  margin-top: 12px;
+
+  @media (min-width: $d-width) {
+    margin-top: 14px;
+  }
+}
+
+.about__together-list {
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+
+  @media (min-width: $d-width) {
+    justify-content: space-between;
+  }
+}
+
+.about__img {
+  width: 59px;
+  height: 59px;
+
+  @media (min-width: $d-width) {
+    width: 79px;
+    height: 79px;
+  }
+}
+
+.about__rewiew {
+  font-size: 16px;
+  line-height: 19px;
+  padding: 18px 15px;
+  display: flex;
+  justify-content: center;
+  column-gap: 16px;
+  border: 1px solid $colorGray;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 30px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: transparent url("../../images/svg/arrow_small_icon_black.svg")
+      no-repeat center / cover;
+  }
+
+  @media (min-width: $d-width) {
+    margin-top: auto;
+    width: 383px;
+  }
+
+  @media (min-width: $f-width) {
+    width: 396px;
+  }
+}
+
+.about__request-wrapper {
+  margin-top: 30px;
+  background: $colorOrangeOnWhite;
+  padding: 35px;
+  border-radius: 6px;
+  box-sizing: border-box;
+
+  @media (min-width: $d-width) {
+    width: calc(382 / 960 * 100%);
+    margin-top: 0;
+  }
+
+  @media (min-width: $f-width) {
+    width: calc(427 / 1340 * 100%);
+    padding: 45px 60px;
+  }
+}
+
+.about__request-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: $colorWhite;
+  text-transform: uppercase;
+}
+
+.about__btn {
+  margin-top: 12px;
+  font-size: 16px;
+  color: $colorWhite;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  column-gap: 15px;
+  justify-content: center;
+  padding: 18px;
+  border: 1px solid $colorWhite;
+  border-radius: 6px;
+  width: 100%;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: transparent url("../../images/svg/arrow_small_icon.svg")
+      no-repeat center / cover;
+  }
+
+  @media (min-width: $f-width) {
+    margin-top: 32px;
+  }
+}

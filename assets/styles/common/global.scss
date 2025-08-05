@@ -1,0 +1,104 @@
+@use "./variables" as *;
+
+@font-face {
+  font-family: "PFDinTextPro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/PF\ DinText\ Pro\ Regular.woff2") format("woff2"),
+    url("../../fonts/PF\ DinText\ Pro\ Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PFDinTextPro";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts/PFDinTextPro-Medium.woff2") format("woff2"),
+    url("../../fonts/PFDinTextPro-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PFDinTextPro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/PF\ DinText\ Pro\ Bold.woff2") format("woff2"),
+    url("../../fonts/PF\ DinText\ Pro\ Bold.woff") format("woff");
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "PFDinTextPro", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: $colorMainText;
+  background-color: $colorMainBackGround;
+  margin: 0;
+
+  @media (min-width: $t-width) {
+    font-size: 16px;
+    line-height: 27px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (min-width: $t-width) {
+    padding: 0 120px;
+  }
+
+  @media (min-width: $f-width) {
+    padding: 0 290px;
+    max-width: 1920px;
+  }
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 700;
+  color: $colorTitle1;
+  letter-spacing: 0.1px;
+
+  @media (min-width: $d-width) {
+    font-size: 60px;
+    line-height: 66px;
+  }
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: 500;
+  color: $colorTitle2;
+
+  @media (min-width: $t-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}

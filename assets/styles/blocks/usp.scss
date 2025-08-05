@@ -1,0 +1,84 @@
+@use "../common/variables" as *;
+
+.usp {
+  background: $colorBlack url("../../images/1screen.jpg") no-repeat center /
+    cover;
+  color: $colorWhite;
+  position: relative;
+}
+
+.usp__title {
+  font-size: 26px;
+  text-transform: uppercase;
+  line-height: 36px;
+  color: $colorWhite;
+  z-index: 2;
+  position: relative;
+
+  @media (min-width: $d-width) {
+    font-size: 46px;
+    line-height: 65px;
+    width: 771px;
+  }
+}
+
+.usp__description {
+  font-size: 16px;
+  line-height: 24px;
+  color: $colorGray;
+  z-index: 2;
+  position: relative;
+  margin-top: 10px;
+
+  @media (min-width: $d-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
+    width: 655px;
+  }
+}
+
+.usp__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 360px;
+
+  @media (min-width: $d-width) {
+    width: 893px;
+  }
+
+  @media (min-width: $f-width) {
+    width: 1127px;
+    bottom: -185px;
+  }
+}
+
+.usp__wrapper-btn-demo {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  row-gap: 10px;
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+
+  @media (min-width: $d-width) {
+    width: 480px;
+    flex-direction: row;
+    column-gap: 25px;
+    margin-top: 90px;
+  }
+}
+
+.ups__wrapper-btn-video {
+  margin-top: 114px;
+  display: flex;
+  width: 100%;
+
+  @media (min-width: $d-width) {
+    width: 480px;
+    margin-top: 100px;
+  }
+}

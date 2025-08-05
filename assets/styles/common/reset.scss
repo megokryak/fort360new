@@ -1,0 +1,44 @@
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+ul,
+ol,
+li,
+button {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  text-transform: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+}

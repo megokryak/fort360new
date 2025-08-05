@@ -1,0 +1,41 @@
+$m-width: 360px;
+$x-width: 600px;
+$t-width: 900px;
+$d-width: 1200px;
+$f-width: 1920px;
+
+$colorMainBackGround: #ffffff;
+$colorHeaderBackGround: #202020;
+$colorHeaderGrayText: #b6b6b6;
+$colorNavText: #ffffff;
+$colorWhite: #ffffff;
+$colorBlack: #202020;
+$colorGray: #b6b6b6;
+$colorGrayDark: #6f6f6f;
+$colorGrayLight: #f4f4f4;
+$colorOrange: #ff9029;
+$colorOrangeOnWhite: #f1790a;
+$colorMainText: #202020;
+$colorTitle1: #ffffff;
+$colorTitle2: #000000;
+
+:root {
+  --sectionPT: 30px;
+  --sectionPB: 20px;
+  --container: 15px;
+  --paddingTop: 40px;
+  --paddingBot: 40px;
+  --paddingLeft: 15px;
+  --paddingRight: 15px;
+
+  @media (min-width: $d-width) {
+    --sectionPT: 100px;
+    --sectionPB: 50px;
+    --container: 120px;
+  }
+
+  @media (min-width: $f-width) {
+    --sectionPT: 150px;
+    --container: 290px;
+  }
+}

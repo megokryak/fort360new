@@ -1,0 +1,121 @@
+@use "../common/variables" as *;
+
+.btn {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  display: block;
+  color: $colorBlack;
+  background-color: $colorOrange;
+  padding: 16px 18px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 100%;
+  text-transform: uppercase;
+
+  @media (min-width: $d-width) {
+    padding: 12px 22px;
+    color: $colorWhite;
+    background-color: transparent;
+    border: 1px solid $colorWhite;
+  }
+}
+
+.btn--demo {
+  background-color: transparent;
+  border: 1px solid $colorOrange;
+  color: $colorOrange;
+
+  @media (min-width: $d-width) {
+    background-color: $colorOrange;
+    color: $colorBlack;
+  }
+}
+
+.btn--padding {
+  @media (min-width: $d-width) {
+    padding: 25px 40px;
+  }
+}
+
+.btn--demo-1screen {
+  @media (min-width: $d-width) {
+    background-color: transparent;
+    color: $colorOrange;
+    border: 1px solid $colorOrange;
+  }
+}
+
+.btn--connect {
+  @media (min-width: $d-width) {
+    background-color: $colorOrange;
+    color: $colorBlack;
+    border: 1px solid $colorOrange;
+  }
+}
+
+.btn__video {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  color: $colorWhite;
+  padding: 10px 22px;
+  border: 1px solid $colorGrayDark;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    display: block;
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+    background: transparent url("../../images/svg/arrow_small_icon.svg")
+      no-repeat center / cover;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 13px;
+    width: 40px;
+    height: 40px;
+    background: transparent url("../../images/svg/video_icon.svg") no-repeat
+      center / cover;
+  }
+
+  @media (min-width: $d-width) {
+    padding: 16px 37px;
+
+    &::after {
+      content: "";
+      display: block;
+      margin-left: 16px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      margin-right: 13px;
+      width: 68px;
+      height: 68px;
+    }
+  }
+}
+
+.btn__presentasion {
+  &::before {
+    display: none;
+  }
+}
+
+.btn__video--border-left {
+  border-radius: 8px 0 0 8px;
+}
+
+.btn__video--border-right {
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+}
