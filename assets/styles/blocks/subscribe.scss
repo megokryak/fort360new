@@ -1,0 +1,190 @@
+@use "../common/variables" as *;
+
+.subscribe {
+  background: linear-gradient(119deg, #222222 0%, #333333 100%);
+  border-radius: 6px;
+
+  @media (min-width: $d-width) {
+    display: flex;
+  }
+}
+
+.subscribe__wrapper {
+  padding: 35px;
+  box-sizing: border-box;
+
+  @media (min-width: $d-width) {
+    padding: 35px 40px;
+  }
+}
+
+.subscribe__title {
+  font-size: 24px;
+  line-height: 28px;
+  color: $colorWhite;
+  text-transform: uppercase;
+
+  @media (min-width: $d-width) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.subscribe__wrapper-input {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @media (min-width: $d-width) {
+    flex-direction: row;
+    column-gap: 30px;
+    row-gap: 56px;
+    flex-wrap: wrap;
+  }
+}
+
+.subscribe__input {
+  font-size: 14px;
+  line-height: 22px;
+  color: $colorGrayLight;
+  background: transparent;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $colorGrayDark;
+  padding: 0 0 16px 0;
+
+  &::placeholder {
+    color: $colorGray;
+  }
+}
+
+.subscribe__wrapper-bottom {
+  display: flex;
+  flex-direction: column;
+  background: $colorOrange;
+  border-radius: 6px;
+  margin-top: -6px;
+  padding: 35px;
+  box-sizing: border-box;
+
+  @media (min-width: $d-width) {
+    margin-top: 0;
+    width: calc(382 / 960 * 100%);
+    flex-basis: calc(382 / 960 * 100%);
+    flex-shrink: 0;
+    padding: 35px 40px;
+  }
+
+  @media (min-width: $f-width) {
+    width: calc(427 / 1340 * 100%);
+  }
+}
+
+.subscribe__text {
+  font-size: 16px;
+  line-height: 22px;
+  color: $colorWhite;
+  text-transform: uppercase;
+
+  @media (min-width: $d-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.subscribe__label {
+  @media (min-width: $d-width) {
+    width: calc(50% - 15px);
+  }
+}
+
+.subscribe__label--textarea {
+  @media (min-width: $d-width) {
+    width: 100%;
+  }
+}
+
+.subscribe__label--personal {
+  margin-top: 30px;
+  width: 100%;
+
+  @media (min-width: $d-width) {
+    margin-top: 62px;
+  }
+}
+
+.subscribe__label--personal span {
+  display: block;
+  font-size: 15px;
+  line-height: 22px;
+  color: $colorWhite;
+
+  position: relative;
+  padding-left: 28px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border: 1px solid $colorWhite;
+    border-radius: 5px;
+  }
+
+  @media (min-width: $d-width) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.subscribe__input--checkbox {
+  width: auto;
+}
+
+.subscribe__input--checkbox:checked ~ span {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: $colorWhite;
+    border-radius: 1px;
+    left: 4px;
+    top: 7px;
+  }
+}
+
+.subscribe__button {
+  font-size: 16px;
+  line-height: 16px;
+  color: $colorWhite;
+  text-transform: uppercase;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+  width: 100%;
+  border: 1px solid $colorWhite;
+  border-radius: 6px;
+  margin-top: 12px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: transparent url("../../images/svg/arrow_small_icon.svg")
+      no-repeat center / cover;
+  }
+
+  @media (min-width: $d-width) {
+    margin-top: 20px;
+    padding: 26px 38px;
+  }
+}

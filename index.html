@@ -2359,67 +2359,88 @@
       </section>
       <section class="main__feedback feedback">
         <div class="feedback__container container">
-          <h2 class="feedback__title">
-            Заполните форму для получения консультации
-          </h2>
           <form action="#" class="feedback___form subscribe" method="post">
-            <label for="name" class="subscribe__label">
-              <span>Ваше имя</span>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="subscribe__input"
-                required
-              />
-            </label>
-            <label for="organization" class="subscribe__label"
-              ><span>Организация</span>
-              <input
-                type="text"
-                id="organization"
-                name="organization"
-                class="subscribe__input"
-                required
-              />
-            </label>
-            <label for="phone" class="subscribe__label"
-              ><span>Ваш телефон</span>
-              <input
-                type="text"
-                id="phone"
-                name="phone"
-                class="subscribe__input"
-                required
-              />
-            </label>
-            <label for="email" class="subscribe__label"
-              ><span>E-mail</span>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="subscribe__input"
-                required
-              />
-            </label>
-            <label for="message" class="subscribe__label"
-              ><span>Ваше сообщение</span>
-              <textarea
-                id="message"
-                name="message"
-                class="subscribe__input"
-                required
+            <div class="subscribe__wrapper">
+              <h2 class="subscribe__title">
+                Заполните форму для получения консультации
+              </h2>
+              <div class="subscribe__wrapper-input">
+                <label for="name" class="subscribe__label">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="subscribe__input"
+                    placeholder="Ваше имя"
+                    required
+                  />
+                </label>
+                <label for="organization" class="subscribe__label">
+                  <input
+                    type="text"
+                    id="organization"
+                    name="organization"
+                    class="subscribe__input"
+                    placeholder="Организация"
+                    required
+                  />
+                </label>
+                <label for="phone" class="subscribe__label">
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    class="subscribe__input"
+                    placeholder="Телефон"
+                    required
+                  />
+                </label>
+                <label for="email" class="subscribe__label">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="subscribe__input"
+                    placeholder="E-mail"
+                    required
+                  />
+                </label>
+                <label
+                  for="message"
+                  class="subscribe__label subscribe__label--textarea"
+                >
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="subscribe__input"
+                    placeholder="Ваш запрос"
+                    required
+                  ></textarea>
+                </label>
+              </div>
+            </div>
+            <div class="subscribe__wrapper-bottom">
+              <span class="subscribe__text"
+                >Мы готовы провести презентацию ФОРТ360, обсудить Вашу задачу и
+                приступить к реализации</span
               >
-              </textarea>
-            </label>
-            <span class="subscribe__text"
-              >Мы готовы провести презентацию ФОРТ360, обсудить Вашу задачу и
-              приступить к реализации</span
-            >
-            <button type="submit" class="subscribe__button">
-              Отправить запрос
-            </button>
+              <label
+                for="personal_data"
+                class="subscribe__label subscribe__label--personal"
+              >
+                <input
+                  type="checkbox"
+                  id="personal_data"
+                  name="personal_data"
+                  class="visually-hidden subscribe__input subscribe__input--checkbox"
+                  required
+                />
+                <span>Согласие на обработку персональных данных</span>
+              </label>
+              <button type="submit" class="subscribe__button">
+                Отправить запрос
+              </button>
+            </div>
           </form>
         </div>
       </section>
