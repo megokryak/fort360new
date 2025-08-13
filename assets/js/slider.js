@@ -94,4 +94,26 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  const swiperCases = new Swiper(".cases__swiper", {
+    // Основные параметры
+    loop: false,
+    centeredSlides: false,
+    slidesPerView: "auto",
+
+    navigation: {
+      nextEl: ".cases__pagination-btn--next",
+      prevEl: ".cases__pagination-btn--prev",
+    },
+    pagination: {
+      el: ".cases__pagination-list",
+      clickable: true,
+      bulletClass: "cases__pagination-item", // класс элемента-ли
+      bulletActiveClass: "cases__pagination-item--active", // добавь в CSS
+      renderBullet: (index, className) => {
+        // Можно просто вернуть пустой span, т.к. у тебя уже есть своя разметка
+        return `<li class="${className}"><span class="cases__mark"></span></li>`;
+      },
+    },
+  });
 });

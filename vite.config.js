@@ -4,6 +4,7 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import createSvgSpritePlugin from "vite-plugin-svg-spriter";
 export default defineConfig({
   build: {
+    outDir: "docs",
     rollupOptions: {
       input: {
         index: resolve("index.html"),
