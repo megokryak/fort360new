@@ -1,0 +1,62 @@
+@use "../common/variables" as *;
+
+.certificates {
+  background: $colorGrayLight;
+}
+
+.certificates__contacts.contacts {
+  flex-wrap: wrap;
+  padding: 35px;
+  row-gap: 35px;
+  border-radius: 8px;
+}
+
+.contacts__title {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $colorWhite;
+  width: 100%;
+}
+
+.certificates__contacts .contacts__information {
+  padding-left: 0;
+  margin-left: auto;
+}
+
+.certificates__contacts .contacts__social {
+  margin-right: 0;
+}
+
+.certificates__wrapper-btn-modal {
+  background: $colorOrange;
+  padding: 35px;
+  margin-top: 15px;
+  border-radius: 6px;
+}
+
+.certificates__btn-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+  box-sizing: border-box;
+  color: $colorWhite;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 1px solid $colorWhite;
+  border-radius: 6px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: url("../../images/svg/arrow_big_icon_white.svg") no-repeat
+      center;
+  }
+}
