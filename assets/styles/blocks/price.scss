@@ -66,6 +66,10 @@
 
 .price__info-list {
   margin-top: 30px;
+
+  @media (min-width: $d-width) {
+    display: flex;
+  }
 }
 
 .price__info-item {
@@ -75,8 +79,26 @@
   padding-bottom: 12px;
   padding-top: 12px;
   border-bottom: 2px solid $colorGray;
+  box-sizing: border-box;
 
   &:first-child {
     border-top: 2px solid $colorGray;
+  }
+
+  @media (min-width: $d-width) {
+    border-right: 2px solid $colorGray;
+    border-bottom: 2px solid $colorGray;
+    border-top: 2px solid $colorGray;
+    width: calc(100% / 4);
+    padding: 22px 32px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
   }
 }

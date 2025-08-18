@@ -1,0 +1,79 @@
+@use "../common/variables" as *;
+
+.footer {
+  background: $colorWhite;
+}
+
+.footer__wrapper-logo {
+  margin-top: 35px;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+  border-bottom: 1px solid $colorGray;
+}
+
+.footer__copy-rigth-text {
+  font-size: 13px;
+  line-height: 18px;
+  color: $colorGrayDark;
+  margin-top: 30px;
+}
+
+.footer__link-lic {
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 18px;
+  color: $colorOrange;
+}
+
+.footer__menu-list {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+  border-bottom: 1px solid $colorGray;
+}
+
+.footer__menu-item {
+  width: 50%;
+}
+
+.footer__menu-link {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  color: $colorBlack;
+}
+
+.footer__contacts {
+  padding-top: 24px;
+  padding-bottom: 35px;
+  column-gap: 0;
+  justify-content: space-between;
+}
+
+.footer__contacts.contacts {
+  background: transparent;
+}
+
+.footer__contacts .contacts__information {
+  padding-left: 0;
+}
+
+.footer__contacts .contacts__tel,
+.footer__contacts .contacts__mail {
+  color: $colorBlack;
+}
+
+.footer__contacts .contacts__text-info {
+  color: $colorGrayDark;
+}
+
+.footer__contacts .social__link svg path {
+  stroke: $colorBlack;
+}
+
+.footer__contacts .contacts__social {
+  margin-right: 0;
+}

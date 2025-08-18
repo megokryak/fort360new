@@ -4,11 +4,24 @@
   background: $colorGrayLight;
 }
 
+.certificates__container {
+  @media (min-width: $d-width) {
+    display: flex;
+    column-gap: 30px;
+  }
+}
+
 .certificates__contacts.contacts {
   flex-wrap: wrap;
   padding: 35px;
   row-gap: 35px;
   border-radius: 8px;
+
+  @media (min-width: $d-width) {
+    flex-direction: column;
+    width: auto;
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .contacts__title {
@@ -18,15 +31,76 @@
   font-weight: 700;
   color: $colorWhite;
   width: 100%;
+
+  @media (min-width: $d-width) {
+    order: 1;
+  }
 }
 
 .certificates__contacts .contacts__information {
   padding-left: 0;
-  margin-left: auto;
+  margin-left: 0;
+
+  @media (min-width: $d-width) {
+    display: block;
+  }
+}
+
+.certificates__contacts .contacts__tel {
+  @media (min-width: $d-width) {
+    margin-left: 0;
+  }
+}
+
+.certificates__contacts .contacts__work-day,
+.certificates__contacts .contacts__text-info {
+  color: $colorGray;
+
+  @media (min-width: $d-width) {
+    margin-left: 0;
+    display: block;
+  }
+}
+
+.certificates__contacts .contacts__mail {
+  @media (min-width: $d-width) {
+    display: block;
+  }
+}
+
+.certificates__contacts .contacts__callback {
+  @media (min-width: $d-width) {
+    color: $colorOrange;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .certificates__contacts .contacts__social {
   margin-right: 0;
+  margin-left: auto;
+
+  @media (min-width: $d-width) {
+    order: 3;
+    border: 1px solid $colorGray;
+    border-radius: 6px;
+    margin-left: 0;
+    box-sizing: border-box;
+    padding: 16px 20px;
+  }
+}
+
+.certificates__contacts .social__link {
+  line-height: 16px;
+}
+
+.certificates__contacts .social__link svg {
+  @media (min-width: $d-width) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .certificates__wrapper-btn-modal {
@@ -34,6 +108,10 @@
   padding: 35px;
   margin-top: 15px;
   border-radius: 6px;
+
+  @media (min-width: $d-width) {
+    display: none;
+  }
 }
 
 .certificates__btn-modal {
@@ -59,4 +137,22 @@
     background: url("../../images/svg/arrow_big_icon_white.svg") no-repeat
       center;
   }
+}
+
+.certificates__wrapper-img {
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid $colorGray;
+  border-radius: 10px;
+  margin-top: 30px;
+
+  @media (min-width: $d-width) {
+    width: calc((100% - 60px) / 3);
+    margin-top: 0;
+  }
+}
+
+.certificate__img {
+  display: block;
+  border-radius: 6px;
 }

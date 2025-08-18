@@ -2,6 +2,7 @@
 
 .contacts {
   display: flex;
+  box-sizing: border-box;
   column-gap: 30px;
   background-color: $colorHeaderBackGround;
 

@@ -108,4 +108,10 @@
     display: block;
     background: url("../../images/svg/arrow_big_icon.svg") no-repeat center;
   }
+
+  @media (min-width: $d-width) {
+    &::after {
+      display: none;
+    }
+  }
 }
