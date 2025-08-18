@@ -4,11 +4,23 @@
   background: $colorWhite;
 }
 
+.footer__container {
+  @media (min-width: $d-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .footer__wrapper-logo {
   margin-top: 35px;
   padding-bottom: 24px;
   box-sizing: border-box;
   border-bottom: 1px solid $colorGray;
+
+  @media (min-width: $d-width) {
+    margin-top: 45px;
+    width: 300px;
+  }
 }
 
 .footer__copy-rigth-text {
@@ -16,6 +28,10 @@
   line-height: 18px;
   color: $colorGrayDark;
   margin-top: 30px;
+
+  @media (min-width: $d-width) {
+    margin-top: 50px;
+  }
 }
 
 .footer__link-lic {
@@ -23,6 +39,10 @@
   font-size: 13px;
   line-height: 18px;
   color: $colorOrange;
+
+  @media (min-width: $d-width) {
+    margin-top: 20px;
+  }
 }
 
 .footer__menu-list {
@@ -33,6 +53,10 @@
   padding-bottom: 24px;
   box-sizing: border-box;
   border-bottom: 1px solid $colorGray;
+
+  @media (min-width: $d-width) {
+    width: 290px;
+  }
 }
 
 .footer__menu-item {
@@ -55,10 +79,21 @@
 
 .footer__contacts.contacts {
   background: transparent;
+
+  @media (min-width: $d-width) {
+    width: auto;
+    column-gap: 30px;
+  }
 }
 
 .footer__contacts .contacts__information {
   padding-left: 0;
+
+  @media (min-width: $d-width) {
+    order: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .footer__contacts .contacts__tel,
@@ -66,8 +101,56 @@
   color: $colorBlack;
 }
 
+.footer__contacts .contacts__tel {
+  @media (min-width: $d-width) {
+    margin-left: 0;
+    order: 1;
+  }
+}
+
+.footer__contacts .contacts__work-day {
+  @media (min-width: $d-width) {
+    order: 2;
+  }
+}
+
+.footer__contacts .contacts__callback {
+  @media (min-width: $d-width) {
+    order: 3;
+    color: $colorOrange;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.footer__contacts .contacts__mail {
+  @media (min-width: $d-width) {
+    order: 4;
+  }
+}
+
 .footer__contacts .contacts__text-info {
   color: $colorGrayDark;
+
+  @media (min-width: $d-width) {
+    display: block;
+    order: 5;
+  }
+}
+
+.footer__contacts .contacts__mail--info {
+  @media (min-width: $d-width) {
+    order: 6;
+    display: block;
+  }
+}
+
+.footer__contacts .contacts__mail--info ~ span.contacts__text-info {
+  @media (min-width: $d-width) {
+    order: 7;
+  }
 }
 
 .footer__contacts .social__link svg path {
@@ -76,4 +159,19 @@
 
 .footer__contacts .contacts__social {
   margin-right: 0;
+
+  @media (min-width: $d-width) {
+    order: 2;
+    flex-direction: column;
+    padding: 11px;
+    border: 1px solid $colorGray;
+    border-radius: 6px;
+  }
+}
+
+.footer__contacts .social__link svg {
+  @media (min-width: $d-width) {
+    width: 30px;
+    height: 30px;
+  }
 }

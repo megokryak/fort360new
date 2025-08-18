@@ -21,6 +21,8 @@
     flex-direction: column;
     width: auto;
     width: calc((100% - 60px) / 3);
+    padding: 35px 40px;
+    row-gap: 0;
   }
 }
 
@@ -43,6 +45,8 @@
 
   @media (min-width: $d-width) {
     display: block;
+    margin-top: 16px;
+    flex-grow: 0;
   }
 }
 
@@ -65,12 +69,14 @@
 .certificates__contacts .contacts__mail {
   @media (min-width: $d-width) {
     display: block;
+    margin-top: 12px;
   }
 }
 
 .certificates__contacts .contacts__callback {
   @media (min-width: $d-width) {
     color: $colorOrange;
+    margin-top: 12px;
 
     &::before {
       display: none;
@@ -89,6 +95,7 @@
     margin-left: 0;
     box-sizing: border-box;
     padding: 16px 20px;
+    margin-top: 25px;
   }
 }
 
