@@ -50,8 +50,9 @@
 
 .header__logo-text {
   font-size: 12px;
-  line-height: 16px;
+  line-height: 15px;
   margin-left: 22px;
+  letter-spacing: -0.6px;
 
   @media (min-width: $d-width) {
     order: 4;

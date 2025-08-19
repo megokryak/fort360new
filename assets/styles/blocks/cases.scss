@@ -37,9 +37,10 @@
 
 .cases__description {
   font-size: 15px;
-  line-height: 22px;
+  line-height: 23px;
   color: $colorBlack;
-  margin-top: 30px;
+  margin-top: 33px;
+  letter-spacing: -0.6px;
 
   @media (min-width: $d-width) {
     font-size: 18px;
@@ -70,11 +71,11 @@
 .cases__wrapper-text-upper {
   background: linear-gradient(119deg, #222222 0%, #333333 100%);
   border-radius: 6px;
-  padding: 35px;
+  padding: 35px 20px 35px 35px;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
-  height: 604px;
+  height: 566px;
 
   @media (min-width: $d-width) {
     width: calc(50% + 6px);
@@ -115,13 +116,14 @@
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 24px;
 }
 
 .cases__item-text {
   font-size: 15px;
-  line-height: 22px;
+  line-height: 23px;
   color: $colorWhite;
+  letter-spacing: -0.6px;
 }
 
 .cases__wrapper-text {

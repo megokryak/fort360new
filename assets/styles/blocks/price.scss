@@ -7,6 +7,11 @@
   font-size: 42px;
   line-height: 50px;
   color: $colorBlack;
+  text-transform: uppercase;
+}
+
+.price__wrapper {
+  position: relative;
 }
 
 .price__tabs {
@@ -18,16 +23,32 @@
   width: 50%;
   font-size: 15px;
   line-height: 22px;
+  text-transform: uppercase;
   color: $colorGrayDark;
   box-sizing: border-box;
-  border-bottom: 1px solid $colorGray;
-  padding-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: $colorGray;
+    margin-top: 13px;
+  }
 }
 
 .price__tab--is-active {
   color: $colorBlack;
-  border-bottom: 2px solid $colorOrange;
-  padding-bottom: 7px;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: $colorOrange;
+    margin-top: 11px;
+  }
 }
 
 .price__header {
@@ -45,19 +66,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.price__plan-name {
-  font-size: 20px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: $colorBlack;
-  width: 150px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid $colorGray;
-  align-self: flex-start;
-  text-align: center;
-  font-weight: 700;
 }
 
 .price__nav-btn--next svg {

@@ -18,7 +18,7 @@
 }
 
 .possibilities__img {
-  margin-top: -135px;
+  margin-top: -127px;
   width: calc(100% + 30px);
   margin-left: -15px;
 
@@ -52,7 +52,7 @@
   font-size: 42px;
   line-height: 50px;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-top: 7px;
 
   @media (min-width: $d-width) {
     font-size: 56px;
@@ -68,7 +68,8 @@
 
 .possibilities__wrapper-description {
   font-size: 15px;
-  line-height: 22px;
+  line-height: 23px;
+  letter-spacing: -0.3px;
   margin-top: 30px;
   display: flex;
   flex-direction: column;
@@ -86,7 +87,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  margin-top: 40px;
+  margin-top: 42px;
 
   @media (min-width: $d-width) {
     display: grid;
@@ -104,7 +105,7 @@
 .possibilities__item {
   display: flex;
   column-gap: 20px;
-  padding: 24px 35px;
+  padding: 23px 35px;
   border: 1px solid $colorGray;
   border-radius: 6px;
   box-sizing: border-box;
@@ -119,7 +120,8 @@
 .possibilities__item-text {
   flex-grow: 1;
   font-size: 15px;
-  line-height: 22px;
+  line-height: 23px;
+  letter-spacing: -0.3px;
 }
 
 .possibilities__item--main {
@@ -172,7 +174,7 @@
   box-sizing: border-box;
   border: 1px solid $colorGray;
   border-radius: 6px;
-  margin-top: 40px;
+  margin-top: 35px;
 
   &::after {
     content: "";

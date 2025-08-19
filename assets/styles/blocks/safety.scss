@@ -19,6 +19,7 @@
 .safety__title {
   font-size: 42px;
   line-height: 50px;
+  text-transform: uppercase;
 
   @media (min-width: $d-width) {
     font-size: 56px;
@@ -32,6 +33,7 @@
   font-size: 15px;
   line-height: 22px;
   margin-top: 30px;
+  letter-spacing: -0.6px;
 
   @media (min-width: $d-width) {
     font-size: 18px;
@@ -59,7 +61,7 @@
 }
 
 .safety__list {
-  margin-top: 40px;
+  margin-top: 42px;
   display: flex;
   flex-direction: column;
   row-gap: 24px;
@@ -82,7 +84,8 @@
 .safety__item {
   font-size: 16px;
   line-height: 24px;
-  padding-left: 15px;
+  padding-left: 24px;
+  padding-right: 29px;
   font-weight: 500;
   text-transform: uppercase;
   position: relative;
@@ -92,7 +95,7 @@
     display: block;
     position: absolute;
     top: 11px;
-    left: 0;
+    left: 10px;
     width: 4px;
     height: 4px;
     background-color: $colorBlack;

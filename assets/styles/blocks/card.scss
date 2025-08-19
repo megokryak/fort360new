@@ -1,5 +1,26 @@
 @use "../common/variables" as *;
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__plan-name {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $colorBlack;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  padding-bottom: 6px;
+  border-bottom: 2px solid $colorGray;
+  align-self: flex-start;
+  text-align: center;
+  font-weight: 700;
+}
+
 .card__features {
   display: flex;
   flex-direction: column;

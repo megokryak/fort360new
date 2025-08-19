@@ -14,6 +14,7 @@
   color: $colorWhite;
   z-index: 2;
   position: relative;
+  letter-spacing: 1px;
 
   @media (min-width: $d-width) {
     font-size: 46px;
@@ -28,7 +29,8 @@
   color: $colorGray;
   z-index: 2;
   position: relative;
-  margin-top: 10px;
+  margin-top: 12px;
+  letter-spacing: -0.6px;
 
   @media (min-width: $d-width) {
     font-size: 20px;
@@ -41,7 +43,7 @@
 .usp__img {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 10px;
   z-index: 1;
   width: 360px;
 
@@ -59,10 +61,10 @@
   display: flex;
   flex-direction: column;
   width: 160px;
-  row-gap: 10px;
+  row-gap: 14px;
   position: relative;
   z-index: 2;
-  margin-top: 40px;
+  margin-top: 42px;
 
   @media (min-width: $d-width) {
     width: 480px;

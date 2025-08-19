@@ -9,6 +9,12 @@
     display: flex;
     column-gap: 30px;
   }
+
+  @media (min-width: $f-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+  }
 }
 
 .certificates__contacts.contacts {
@@ -23,6 +29,12 @@
     width: calc((100% - 60px) / 3);
     padding: 35px 40px;
     row-gap: 0;
+  }
+
+  @media (min-width: $f-width) {
+    grid-row: 1;
+    width: auto;
+    flex-direction: row;
   }
 }
 
@@ -97,6 +109,10 @@
     padding: 16px 20px;
     margin-top: 25px;
   }
+
+  @media (min-width: $f-width) {
+    flex-direction: column;
+  }
 }
 
 .certificates__contacts .social__link {
@@ -118,6 +134,12 @@
 
   @media (min-width: $d-width) {
     display: none;
+  }
+
+  @media (min-width: $f-width) {
+    display: block;
+    grid-row: 2;
+    margin-top: 0;
   }
 }
 
@@ -156,6 +178,11 @@
   @media (min-width: $d-width) {
     width: calc((100% - 60px) / 3);
     margin-top: 0;
+  }
+
+  @media (min-width: $f-width) {
+    grid-row: 1 / span 2;
+    width: auto;
   }
 }
 
