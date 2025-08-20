@@ -2815,198 +2815,390 @@
             </div>
 
             <!-- Контент тарифа -->
-            <ul class="price__list">
-              <li class="price__card card" aria-live="polite">
-                <h3 class="card__plan-name" id="plan-name">Компания</h3>
-                <dl class="card__features">
-                  <div class="card__feature">
-                    <dt>Количество пользователей</dt>
-                    <dd>20 пользователей</dd>
-                  </div>
-                  <div class="card__feature">
-                    <dt>Количество организаций в аккаунте</dt>
-                    <dd>5 организации</dd>
-                  </div>
-
-                  <!-- раскрывающиеся пункты -->
-                  <details class="card__feature card__feature--details">
-                    <summary class="card__summary">
-                      <span>Модуль «Совместная работа»</span>
-                      <span class="card__badge"></span>
-                      <div class="card__wrapper-status">
-                        <svg
-                          class="card__status"
-                          width="29"
-                          height="28"
-                          viewBox="0 0 29 28"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="14.5"
-                            cy="14"
-                            r="13"
-                            stroke="#169432"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
-                            stroke="#169432"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                    </summary>
-                    <div class="card__feature-body" id="f-collab-body">
-                      Описание модуля…
+            <div class="swiper price__wrapper-list">
+              <ul class="swiper-wrapper price__list">
+                <li class="swiper-slide price__card card" aria-live="polite">
+                  <h3 class="card__plan-name" id="plan-name">Компания</h3>
+                  <dl class="card__features">
+                    <div class="card__feature">
+                      <dt>Количество пользователей</dt>
+                      <dd>20 пользователей</dd>
                     </div>
-                  </details>
-
-                  <details class="card__feature card__feature--details">
-                    <summary class="card__summary">
-                      <span>Модуль «Делопроизводство»</span>
-                      <span class="card__badge"></span>
-                      <div class="card__wrapper-status">
-                        <svg
-                          class="card__status"
-                          width="29"
-                          height="28"
-                          viewBox="0 0 29 28"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="14.5"
-                            cy="14"
-                            r="13"
-                            stroke="#169432"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
-                            stroke="#169432"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                    </summary>
-                    <div class="card__feature-body" id="f-collab-body">
-                      Описание модуля…
+                    <div class="card__feature">
+                      <dt>Количество организаций в аккаунте</dt>
+                      <dd>5 организации</dd>
                     </div>
-                  </details>
 
-                  <details class="card__feature card__feature--details">
-                    <summary class="card__summary">
-                      <span>Модуль «Мобильный доклад»</span>
-                      <span class="card__badge"></span>
-                      <div class="card__wrapper-status">
-                        <svg
-                          width="29"
-                          height="28"
-                          viewBox="0 0 29 28"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="14.5"
-                            cy="14"
-                            r="13.1"
-                            stroke="#F1790A"
-                            stroke-width="1.8"
-                          />
-                          <path
-                            d="M15.0003 21.8235L15.0003 6.17644M22.8238 14L7.17676 14"
-                            stroke="#F1790A"
-                            stroke-width="1.8"
-                          />
-                        </svg>
+                    <!-- раскрывающиеся пункты -->
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span>Модуль «Совместная работа»</span>
+                        <span class="card__badge"></span>
+                        <div class="card__wrapper-status">
+                          <svg
+                            class="card__status"
+                            width="29"
+                            height="28"
+                            viewBox="0 0 29 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="14.5"
+                              cy="14"
+                              r="13"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        Описание модуля…
                       </div>
-                    </summary>
-                    <div class="card__feature-body" id="f-collab-body">
-                      Описание модуля…
-                    </div>
-                  </details>
+                    </details>
 
-                  <details class="card__feature card__feature--details">
-                    <summary class="card__summary">
-                      <span>Модуль «Администратор»</span>
-                      <span class="card__badge"></span>
-                      <div class="card__wrapper-status">
-                        <svg
-                          class="card__status"
-                          width="29"
-                          height="28"
-                          viewBox="0 0 29 28"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="14.5"
-                            cy="14"
-                            r="13"
-                            stroke="#169432"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
-                            stroke="#169432"
-                            stroke-width="2"
-                          />
-                        </svg>
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span>Модуль «Делопроизводство»</span>
+                        <span class="card__badge"></span>
+                        <div class="card__wrapper-status">
+                          <svg
+                            class="card__status"
+                            width="29"
+                            height="28"
+                            viewBox="0 0 29 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="14.5"
+                              cy="14"
+                              r="13"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        Описание модуля…
                       </div>
-                    </summary>
-                    <div class="card__feature-body" id="f-collab-body">
-                      Описание модуля…
-                    </div>
-                  </details>
+                    </details>
 
-                  <details class="card__feature card__feature--details">
-                    <summary class="card__summary">
-                      <span>Дополнительные опции</span>
-                      <span class="card__badge"></span>
-                      <div class="card__wrapper-status">
-                        <svg
-                          width="29"
-                          height="28"
-                          viewBox="0 0 29 28"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="14.5"
-                            cy="14"
-                            r="13.1"
-                            stroke="#F1790A"
-                            stroke-width="1.8"
-                          />
-                          <path
-                            d="M15.0003 21.8235L15.0003 6.17644M22.8238 14L7.17676 14"
-                            stroke="#F1790A"
-                            stroke-width="1.8"
-                          />
-                        </svg>
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span>Модуль «Мобильный доклад»</span>
+                        <span class="card__badge"></span>
+                        <div class="card__wrapper-status">
+                          <svg
+                            width="29"
+                            height="28"
+                            viewBox="0 0 29 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="14.5"
+                              cy="14"
+                              r="13.1"
+                              stroke="#F1790A"
+                              stroke-width="1.8"
+                            />
+                            <path
+                              d="M15.0003 21.8235L15.0003 6.17644M22.8238 14L7.17676 14"
+                              stroke="#F1790A"
+                              stroke-width="1.8"
+                            />
+                          </svg>
+                        </div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        Описание модуля…
                       </div>
-                    </summary>
-                    <div class="card__feature-body" id="f-collab-body">
-                      Описание модуля…
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span>Модуль «Администратор»</span>
+                        <span class="card__badge"></span>
+                        <div class="card__wrapper-status">
+                          <svg
+                            class="card__status"
+                            width="29"
+                            height="28"
+                            viewBox="0 0 29 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="14.5"
+                              cy="14"
+                              r="13"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        Описание модуля…
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span>Дополнительные опции</span>
+                        <span class="card__badge"></span>
+                        <div class="card__wrapper-status">
+                          <svg
+                            width="29"
+                            height="28"
+                            viewBox="0 0 29 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="14.5"
+                              cy="14"
+                              r="13.1"
+                              stroke="#F1790A"
+                              stroke-width="1.8"
+                            />
+                            <path
+                              d="M15.0003 21.8235L15.0003 6.17644M22.8238 14L7.17676 14"
+                              stroke="#F1790A"
+                              stroke-width="1.8"
+                            />
+                          </svg>
+                        </div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        Описание модуля…
+                      </div>
+                    </details>
+
+                    <div class="card__feature">
+                      <dt>База данных</dt>
+                      <dd>до 20Гб</dd>
                     </div>
-                  </details>
 
-                  <div class="card__feature">
-                    <dt>База данных</dt>
-                    <dd>до 20Гб</dd>
-                  </div>
+                    <div class="card__feature card__feature--price">
+                      <dt>
+                        Стоимость пользования комплексом, начальная комплектация
+                      </dt>
+                      <dd id="card__price">20 000 ₽</dd>
+                    </div>
+                    <button class="card__btn-primary">Подключиться</button>
+                  </dl>
+                </li>
+                <li class="swiper-slide price__card card" aria-live="polite">
+                  <h3 class="card__plan-name" id="plan-name">Старт</h3>
+                  <dl class="card__features">
+                    <div class="card__feature">
+                      <dt>Количество пользователей</dt>
+                      <dd>20 пользователей</dd>
+                    </div>
+                    <div class="card__feature">
+                      <dt>Количество организаций в аккаунте</dt>
+                      <dd>5 организации</dd>
+                    </div>
 
-                  <div class="card__feature card__feature--price">
-                    <dt>
-                      Стоимость пользования комплексом, начальная комплектация
-                    </dt>
-                    <dd id="card__price">20 000 ₽</dd>
-                  </div>
-                  <button class="card__btn-primary">Подключиться</button>
-                </dl>
-              </li>
-            </ul>
+                    <!-- раскрывающиеся пункты -->
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span>Модуль «Совместная работа»</span>
+                        <span class="card__badge"></span>
+                        <div class="card__wrapper-status">
+                          <svg
+                            class="card__status"
+                            width="29"
+                            height="28"
+                            viewBox="0 0 29 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="14.5"
+                              cy="14"
+                              r="13"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        Описание модуля…
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span>Модуль «Делопроизводство»</span>
+                        <span class="card__badge"></span>
+                        <div class="card__wrapper-status">
+                          <svg
+                            class="card__status"
+                            width="29"
+                            height="28"
+                            viewBox="0 0 29 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="14.5"
+                              cy="14"
+                              r="13"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        Описание модуля…
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span>Модуль «Мобильный доклад»</span>
+                        <span class="card__badge"></span>
+                        <div class="card__wrapper-status">
+                          <svg
+                            width="29"
+                            height="28"
+                            viewBox="0 0 29 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="14.5"
+                              cy="14"
+                              r="13.1"
+                              stroke="#F1790A"
+                              stroke-width="1.8"
+                            />
+                            <path
+                              d="M15.0003 21.8235L15.0003 6.17644M22.8238 14L7.17676 14"
+                              stroke="#F1790A"
+                              stroke-width="1.8"
+                            />
+                          </svg>
+                        </div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        Описание модуля…
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span>Модуль «Администратор»</span>
+                        <span class="card__badge"></span>
+                        <div class="card__wrapper-status">
+                          <svg
+                            class="card__status"
+                            width="29"
+                            height="28"
+                            viewBox="0 0 29 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="14.5"
+                              cy="14"
+                              r="13"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
+                              stroke="#169432"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        Описание модуля…
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span>Дополнительные опции</span>
+                        <span class="card__badge"></span>
+                        <div class="card__wrapper-status">
+                          <svg
+                            width="29"
+                            height="28"
+                            viewBox="0 0 29 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="14.5"
+                              cy="14"
+                              r="13.1"
+                              stroke="#F1790A"
+                              stroke-width="1.8"
+                            />
+                            <path
+                              d="M15.0003 21.8235L15.0003 6.17644M22.8238 14L7.17676 14"
+                              stroke="#F1790A"
+                              stroke-width="1.8"
+                            />
+                          </svg>
+                        </div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        Описание модуля…
+                      </div>
+                    </details>
+
+                    <div class="card__feature">
+                      <dt>База данных</dt>
+                      <dd>до 20Гб</dd>
+                    </div>
+
+                    <div class="card__feature card__feature--price">
+                      <dt>
+                        Стоимость пользования комплексом, начальная комплектация
+                      </dt>
+                      <dd id="card__price">20 000 ₽</dd>
+                    </div>
+                    <button class="card__btn-primary">Подключиться</button>
+                  </dl>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <!-- Доп информация -->

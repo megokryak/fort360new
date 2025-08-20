@@ -53,9 +53,12 @@
 
 .price__header {
   display: flex;
-  margin-top: 30px;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .price__nav-btn {
@@ -70,6 +73,21 @@
 
 .price__nav-btn--next svg {
   transform: rotate(180deg);
+}
+
+.price__wrapper-list {
+  overflow: hidden;
+  margin-top: 30px;
+  padding-top: 10px;
+}
+
+.price__list {
+  display: flex;
+}
+
+.price__card {
+  width: 100%;
+  flex: 0 0 100%;
 }
 
 .price__info-list {

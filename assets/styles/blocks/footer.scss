@@ -27,7 +27,7 @@
   font-size: 13px;
   line-height: 18px;
   color: $colorGrayDark;
-  margin-top: 30px;
+  margin-top: 35px;
 
   @media (min-width: $d-width) {
     margin-top: 50px;
@@ -39,6 +39,7 @@
   font-size: 13px;
   line-height: 18px;
   color: $colorOrange;
+  margin-top: 7px;
 
   @media (min-width: $d-width) {
     margin-top: 20px;
@@ -49,6 +50,7 @@
   padding-top: 24px;
   padding-bottom: 24px;
   display: flex;
+  row-gap: 16px;
   flex-wrap: wrap;
   padding-bottom: 24px;
   box-sizing: border-box;

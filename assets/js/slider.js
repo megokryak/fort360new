@@ -116,4 +116,16 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  const swiperPrice = new Swiper(".price__wrapper-list", {
+    // Основные параметры
+    loop: false,
+    centeredSlides: false,
+    slidesPerView: 1,
+
+    navigation: {
+      nextEl: ".price__nav-btn--next",
+      prevEl: ".price__nav-btn--prev",
+    },
+  });
 });

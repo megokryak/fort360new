@@ -1,0 +1,30 @@
+@use "../common/variables" as *;
+
+.params {
+  width: 50%;
+}
+
+.params__item {
+  padding-right: 35px;
+  box-sizing: border-box;
+}
+.params__item--list {
+  position: relative;
+  &::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    background: url("../../images/svg/arrow_down.svg") no-repeat center;
+    border: 1px solid $colorGray;
+    border-radius: 50%;
+  }
+}
+
+.params__sublist {
+  display: none;
+}

@@ -16,7 +16,7 @@
   box-sizing: border-box;
   padding-bottom: 6px;
   border-bottom: 2px solid $colorGray;
-  align-self: flex-start;
+  align-self: center;
   text-align: center;
   font-weight: 700;
 }
@@ -27,13 +27,13 @@
   row-gap: 12px;
   margin-block-start: 0;
   margin-block-end: 0;
-  margin-top: 30px;
+  margin-top: 45px;
 }
 
 .card__feature {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 12px;
+  padding-bottom: 7spx;
   border-bottom: 1px solid $colorGray;
 }
 
