@@ -46,6 +46,7 @@
     font-size: 18px;
     line-height: 27px;
     order: 2;
+    margin-top: 27px;
   }
 
   @media (min-width: $f-width) {
@@ -104,12 +105,22 @@
   font-weight: 700;
   color: $colorWhite;
   text-transform: uppercase;
+
+  @media (min-width: $d-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .cases__item-description {
   font-size: 16px;
   line-height: 24px;
   color: $colorWhite;
+
+  @media (min-width: $d-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .cases__wrapper-item-text {

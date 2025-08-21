@@ -16,12 +16,24 @@
 .main__certificates {
   padding-top: 50px;
   padding-bottom: 50px;
+
+  @media (min-width: $d-width) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $f-width) {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
 }
 
 .main__feedback {
   padding-top: 0;
 }
-
-.main__cases {
-  padding-top: 45px;
+.main__advantages {
+  @media (min-width: $f-width) {
+    padding-top: 93px;
+    padding-bottom: 100px;
+  }
 }

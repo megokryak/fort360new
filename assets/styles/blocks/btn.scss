@@ -19,6 +19,10 @@
     background-color: transparent;
     border: 1px solid $colorWhite;
   }
+
+  @media (min-width: $f-width) {
+    padding: 14px 22px;
+  }
 }
 
 .btn--demo {
@@ -35,6 +39,10 @@
 .btn--padding {
   @media (min-width: $d-width) {
     padding: 25px 40px;
+  }
+
+  @media (min-width: $f-width) {
+    padding: 27px 40px;
   }
 }
 

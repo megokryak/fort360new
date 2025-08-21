@@ -31,6 +31,8 @@
 
   @media (min-width: $d-width) {
     margin-top: 50px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -43,6 +45,8 @@
 
   @media (min-width: $d-width) {
     margin-top: 20px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -70,6 +74,11 @@
   font-size: 16px;
   line-height: 24px;
   color: $colorBlack;
+
+  @media (min-width: $d-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .footer__contacts {
@@ -120,6 +129,7 @@
   @media (min-width: $d-width) {
     order: 3;
     color: $colorOrange;
+    margin-top: 17px;
 
     &::before {
       display: none;
@@ -130,6 +140,7 @@
 .footer__contacts .contacts__mail {
   @media (min-width: $d-width) {
     order: 4;
+    margin-top: 17px;
   }
 }
 
@@ -168,6 +179,7 @@
     padding: 11px;
     border: 1px solid $colorGray;
     border-radius: 6px;
+    row-gap: 5px;
   }
 }
 

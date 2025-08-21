@@ -18,7 +18,8 @@
   @media (min-width: $d-width) {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 16px;
+    padding-bottom: 9px;
+    padding-top: 0;
     align-items: flex-start;
 
     &::after {
@@ -56,7 +57,8 @@
 
   @media (min-width: $d-width) {
     order: 4;
-    margin-top: 16px;
+    margin-top: 14px;
+    margin-left: 29px;
     font-size: 16px;
     line-height: 20px;
   }
@@ -65,7 +67,7 @@
     order: 1;
     margin: 0;
     border-bottom: 2px solid $colorGrayDark;
-    padding-bottom: 15px;
+    padding-bottom: 14px;
     padding-top: 14px;
   }
 }
@@ -111,6 +113,8 @@
     order: 6;
     margin-top: 22px;
     margin-left: 0;
+    width: 25px;
+    height: 25px;
   }
 
   @media (min-width: $f-width) {
@@ -201,7 +205,7 @@ nav.header__main-nav {
   @media (min-width: $f-width) {
     display: flex;
     order: 4;
-    padding: 28px 0 24px 95px;
+    padding: 28px 0 17px 95px;
     max-width: calc(100% - 224px - 95px - 301px);
   }
 }
@@ -211,8 +215,8 @@ div.header__contacts {
     display: flex;
     flex-grow: 1;
     order: 1;
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 7px;
+    padding-bottom: 3px;
     padding-left: 0;
     padding-right: 0;
     column-gap: 40px;
@@ -221,6 +225,8 @@ div.header__contacts {
   @media (min-width: $f-width) {
     order: 2;
     padding-left: 148px;
+    padding-top: 13px;
+    padding-bottom: 8px;
   }
 }
 
@@ -264,5 +270,6 @@ div.header__callback {
 
   @media (min-width: $d-width) {
     display: block;
+    letter-spacing: -0.6px;
   }
 }

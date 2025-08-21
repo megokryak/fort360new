@@ -103,6 +103,8 @@
   }
 
   @media (min-width: $d-width) {
+    font-size: 20px;
+    line-height: 30px;
     border-right: 1px solid $colorGray;
     padding-left: 30px;
     padding-right: 30px;

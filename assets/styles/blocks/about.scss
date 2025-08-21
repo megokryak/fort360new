@@ -3,6 +3,7 @@
 .about__container {
   @media (min-width: $d-width) {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     column-gap: 29px;
     row-gap: 40px;
@@ -44,6 +45,13 @@
   height: 75px;
   background: transparent url("../../images/svg/video_icon_rutube.svg")
     no-repeat center / cover;
+
+  @media (min-width: $d-width) {
+    width: 150px;
+    height: 150px;
+    top: calc(50% - 150px / 2);
+    left: calc(50% - 150px / 2);
+  }
 }
 
 .about__img-rutube {
@@ -59,6 +67,7 @@
   @media (min-width: $d-width) {
     width: calc(382 / 960 * 100%);
     margin-top: 0;
+    row-gap: 24px;
   }
 
   @media (min-width: $f-width) {
@@ -84,6 +93,13 @@
     background: $colorGray;
     border-radius: 3px;
   }
+
+  @media (min-width: $d-width) {
+    padding-left: 48px;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0;
+  }
 }
 
 .about__together-wrapper {
@@ -91,9 +107,10 @@
 
   @media (min-width: $d-width) {
     width: calc(549 / 960 * 100%);
-    margin-top: 0;
+    margin-top: 26px;
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
   }
 
   @media (min-width: $f-width) {
@@ -109,7 +126,10 @@
   text-transform: uppercase;
 
   @media (min-width: $d-width) {
-    margin-top: 38px;
+    margin-top: 11px;
+    font-size: 26px;
+    line-height: 40px;
+    letter-spacing: 0;
   }
 }
 
@@ -118,7 +138,7 @@
   margin-top: 12px;
 
   @media (min-width: $d-width) {
-    margin-top: 14px;
+    margin-top: 19px;
   }
 }
 
@@ -164,8 +184,11 @@
   }
 
   @media (min-width: $d-width) {
-    margin-top: auto;
+    margin-top: 68px;
     width: 383px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 26px 30px 26px 30px;
   }
 
   @media (min-width: $f-width) {
@@ -183,6 +206,9 @@
   @media (min-width: $d-width) {
     width: calc(382 / 960 * 100%);
     margin-top: 0;
+    border-radius: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media (min-width: $f-width) {
@@ -197,6 +223,11 @@
   letter-spacing: -0.6px;
   color: $colorWhite;
   text-transform: uppercase;
+
+  @media (min-width: $d-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .about__btn {
@@ -220,6 +251,13 @@
     height: 16px;
     background: transparent url("../../images/svg/arrow_small_icon.svg")
       no-repeat center / cover;
+  }
+
+  @media (min-width: $d-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 55px;
+    padding: 26px 30px 24px 30px;
   }
 
   @media (min-width: $f-width) {

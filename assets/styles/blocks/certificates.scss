@@ -48,6 +48,7 @@
 
   @media (min-width: $d-width) {
     order: 1;
+    font-size: 26px;
   }
 }
 
@@ -65,6 +66,8 @@
 .certificates__contacts .contacts__tel {
   @media (min-width: $d-width) {
     margin-left: 0;
+    font-size: 20px;
+    line-height: 28px;
   }
 }
 
@@ -75,6 +78,8 @@
   @media (min-width: $d-width) {
     margin-left: 0;
     display: block;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 

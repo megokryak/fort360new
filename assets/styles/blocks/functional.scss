@@ -20,6 +20,7 @@ div.functional__container {
   @media (min-width: $d-width) {
     font-size: 56px;
     line-height: 66px;
+    letter-spacing: 2px;
   }
 }
 
@@ -49,7 +50,7 @@ div.functional__container {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    padding-top: 50px;
+    padding-top: 43px;
   }
 }
 
@@ -78,7 +79,7 @@ div.functional__container {
   @media (min-width: $d-width) {
     flex-direction: column;
     width: 100%;
-    row-gap: 34px;
+    row-gap: 24px;
   }
 }
 
@@ -140,7 +141,7 @@ div.functional__container {
 
   @media (min-width: $d-width) {
     order: 3;
-    margin-top: 50px;
+    margin-top: 10px;
     width: 100%;
   }
 
@@ -175,7 +176,7 @@ div.functional__container {
   @media (min-width: $d-width) {
     font-size: 18px;
     line-height: 28px;
-    row-gap: 30px;
+    row-gap: 25px;
   }
 }
 
