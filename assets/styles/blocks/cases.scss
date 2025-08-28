@@ -52,6 +52,7 @@
   @media (min-width: $f-width) {
     grid-column: 1;
     grid-row: 2;
+    margin-top: 0;
   }
 }
 
@@ -66,6 +67,7 @@
   @media (min-width: $f-width) {
     grid-column: 2;
     grid-row: 1 / span 3;
+    margin-top: 0;
   }
 }
 
@@ -83,6 +85,14 @@
     flex: 0 0 calc(50% + 6px);
     border-radius: 6px;
     overflow: hidden;
+  }
+
+  @media (min-width: $f-width) {
+    width: calc(50% + 12px);
+    flex: 0 0 calc(50% + 12px);
+    border-radius: 12px;
+    padding: 43px 20px 20px 42px;
+    height: 580px;
   }
 }
 
@@ -128,6 +138,11 @@
   display: flex;
   flex-direction: column;
   row-gap: 24px;
+
+  @media (min-width: $f-width) {
+    margin-top: 35px;
+    row-gap: 50px;
+  }
 }
 
 .cases__item-text {
@@ -135,6 +150,11 @@
   line-height: 23px;
   color: $colorWhite;
   letter-spacing: -0.6px;
+
+  @media (min-width: $f-width) {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
 
 .cases__wrapper-text {
@@ -237,6 +257,8 @@
   @media (min-width: $f-width) {
     grid-column: 1;
     grid-row: 3;
+    justify-content: start;
+    align-self: flex-end;
   }
 }
 

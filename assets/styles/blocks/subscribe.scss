@@ -16,6 +16,10 @@
   @media (min-width: $d-width) {
     padding: 35px 40px;
   }
+
+  @media (min-width: $f-width) {
+    padding: 80px;
+  }
 }
 
 .subscribe__title {
@@ -27,6 +31,10 @@
   @media (min-width: $d-width) {
     font-size: 32px;
     line-height: 38px;
+  }
+
+  @media (min-width: $f-width) {
+    padding-right: 100px;
   }
 }
 
@@ -41,6 +49,11 @@
     column-gap: 30px;
     row-gap: 56px;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: $f-width) {
+    margin-top: 45px;
+    row-gap: 40px;
   }
 }
 
@@ -57,6 +70,12 @@
 
   &::placeholder {
     color: $colorGray;
+  }
+
+  @media (min-width: $f-width) {
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 14px;
   }
 }
 
@@ -84,6 +103,8 @@ textarea.subscribe__input {
 
   @media (min-width: $f-width) {
     width: calc(427 / 1340 * 100%);
+    flex-basis: calc(427 / 1340 * 100%);
+    padding: 80px 60px;
   }
 }
 
@@ -102,6 +123,10 @@ textarea.subscribe__input {
 .subscribe__label {
   @media (min-width: $d-width) {
     width: calc(50% - 15px);
+  }
+
+  @media (min-width: $f-width) {
+    font-size: 18px;
   }
 }
 
@@ -192,4 +217,49 @@ textarea.subscribe__input {
     margin-top: 20px;
     padding: 26px 38px;
   }
+}
+
+.subscribe__label-text {
+  color: $colorWhite;
+}
+
+.subscribe__label--select {
+  font-size: 14px;
+  line-height: 22px;
+  color: $colorGrayLight;
+  background: transparent;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $colorGrayDark;
+  padding: 0 0 16px 0;
+
+  &::placeholder {
+    color: $colorGray;
+  }
+
+  @media (min-width: $f-width) {
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 14px;
+  }
+}
+
+.subscribe__select {
+  font-size: 14px;
+  line-height: 22px;
+  color: $colorGray;
+  background: transparent;
+  display: block;
+  width: 100%;
+  border: none;
+
+  @media (min-width: $f-width) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.subscribe__select option {
+  background: transparent;
 }

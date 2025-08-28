@@ -27,7 +27,7 @@
     position: absolute;
     right: 0;
     bottom: -25px;
-    height: 1644px;
+    height: 110%;
     width: auto;
   }
 }
@@ -35,13 +35,16 @@
 .possibilities__container {
   @media (min-width: $d-width) {
     display: flex;
-    overflow: hidden;
   }
 }
 
 div.possibilities__container {
   @media (min-width: $d-width) {
     padding: 0 0 0 120px;
+  }
+
+  @media (min-width: $f-width) {
+    padding: 0 0 0 290px;
   }
 }
 
@@ -51,6 +54,11 @@ div.possibilities__container {
     display: grid;
     grid-template-columns: 58% auto; /* 2 колонки */
     gap: 25px 20px; /* 30px между колонками, 20px между строками */
+  }
+
+  @media (min-width: $f-width) {
+    grid-template-columns: 54% auto; /* 2 колонки */
+    gap: 45px 65px; /* 30px между колонками, 20px между строками */
   }
 }
 
@@ -116,6 +124,7 @@ div.possibilities__container {
 
   @media (min-width: $f-width) {
     margin-top: 0;
+    gap: 30px 30px;
   }
 }
 
@@ -131,6 +140,11 @@ div.possibilities__container {
     column-gap: 20px;
     padding: 23px 10px 23px 23px;
   }
+
+  @media (min-width: $f-width) {
+    padding: 23px 10px 23px 29px;
+    column-gap: 25px;
+  }
 }
 
 .possibilities__item svg {
@@ -141,6 +155,11 @@ div.possibilities__container {
   @media (min-width: $d-width) {
     width: 40px;
     height: 40px;
+  }
+
+  @media (min-width: $f-width) {
+    width: 52px;
+    height: 52px;
   }
 }
 

@@ -39,6 +39,7 @@ body {
   color: $colorMainText;
   background-color: $colorMainBackGround;
   margin: 0;
+  position: relative;
 
   @media (min-width: $t-width) {
     font-size: 16px;

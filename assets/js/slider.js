@@ -34,41 +34,30 @@ document.addEventListener("DOMContentLoaded", function () {
     // },
   });
 
-  const swiperFunctional = new Swiper(".functional__slider", {
-    // Основные параметры
-    loop: false,
-    slidesPerView: "auto",
-    centeredSlides: false,
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
+  let swiperFunctional = null;
 
-    // // Автопрокрутка
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+  function initFunctionalSwiper() {
+    if (window.innerWidth < 1200 && !swiperFunctional) {
+      // Инициализируем Swiper для функциональных блоков
+      swiperFunctional = new Swiper(".functional__slider", {
+        loop: false,
+        slidesPerView: "auto",
+        centeredSlides: false,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+      });
+    } else if (window.innerWidth >= 1200 && swiperFunctional) {
+      swiperFunctional.destroy(true, true);
+      swiperFunctional = null;
+    }
+  }
 
-    // Пагинация
-    // pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable: true,
-    // },
+  // Запускаем при загрузке
+  initFunctionalSwiper();
 
-    // Навигация
-    // navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    // },
-
-    // Адаптивность
-    // breakpoints: {
-    //   640: {
-    //     spaceBetween: 40,
-    //   },
-    //   1024: {
-    //     spaceBetween: 50,
-    //   },
-    // },
+  // И при изменении размера окна
+  window.addEventListener("resize", () => {
+    initFunctionalSwiper();
   });
 
   const swiperImg = new Swiper(".functional__img-slider", {
@@ -117,15 +106,33 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  const swiperPrice = new Swiper(".price__wrapper-list", {
-    // Основные параметры
-    loop: false,
-    centeredSlides: false,
-    slidesPerView: 1,
+  let swiperPrice = null;
 
-    navigation: {
-      nextEl: ".price__nav-btn--next",
-      prevEl: ".price__nav-btn--prev",
-    },
+  function initPriceSwiper() {
+    if (window.innerWidth < 1200 && !swiperPrice) {
+      // Инициализируем Swiper для функциональных блоков
+      swiperPrice = new Swiper(".price__wrapper-list", {
+        // Основные параметры
+        loop: false,
+        centeredSlides: false,
+        slidesPerView: 1,
+
+        navigation: {
+          nextEl: ".price__nav-btn--next",
+          prevEl: ".price__nav-btn--prev",
+        },
+      });
+    } else if (window.innerWidth >= 1200 && swiperPrice) {
+      swiperPrice.destroy(true, true);
+      swiperPrice = null;
+    }
+  }
+
+  // Запускаем при загрузке
+  initPriceSwiper();
+
+  // И при изменении размера окна
+  window.addEventListener("resize", () => {
+    initPriceSwiper();
   });
 });

@@ -13,7 +13,7 @@
   @media (min-width: $f-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 30px;
+    row-gap: 40px;
   }
 }
 
@@ -35,6 +35,9 @@
     grid-row: 1;
     width: auto;
     flex-direction: row;
+    padding: 45px 60px 20px 60px;
+    align-content: start;
+    justify-content: space-between;
   }
 }
 
@@ -60,6 +63,10 @@
     display: block;
     margin-top: 16px;
     flex-grow: 0;
+  }
+
+  @media (min-width: $f-width) {
+    margin-top: 33px;
   }
 }
 
@@ -88,6 +95,10 @@
     display: block;
     margin-top: 12px;
   }
+
+  @media (min-width: $f-width) {
+    margin-top: 25px;
+  }
 }
 
 .certificates__contacts .contacts__callback {
@@ -98,6 +109,10 @@
     &::before {
       display: none;
     }
+  }
+
+  @media (min-width: $f-width) {
+    margin-top: 25px;
   }
 }
 
@@ -117,6 +132,8 @@
 
   @media (min-width: $f-width) {
     flex-direction: column;
+    margin-top: 30px;
+    row-gap: 25px;
   }
 }
 
@@ -142,7 +159,9 @@
   }
 
   @media (min-width: $f-width) {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-row: 2;
     margin-top: 0;
   }
@@ -170,6 +189,12 @@
     height: 19px;
     background: url("../../images/svg/arrow_big_icon_white.svg") no-repeat
       center;
+  }
+
+  @media (min-width: $f-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 25px 33px;
   }
 }
 

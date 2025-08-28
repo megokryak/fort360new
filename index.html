@@ -183,7 +183,7 @@
           <div class="contacts__information">
             <a href="tel:+79262051919" class="contacts__tel">+7 926 205 1919</a>
             <span class="contacts__work-day"> (пн-пт 10:00 - 18:00) </span>
-            <a href="#" class="contacts__callback">Заказать звонок</a>
+            <a href="#" class="contacts__callback callback">Заказать звонок</a>
             <a href="mailto:manager@fort360.ru" class="contacts__mail"
               >manager@fort360.ru</a
             >
@@ -1356,6 +1356,13 @@
             <div class="possibilities__wrapper-img">
               <picture>
                 <source
+                  media="(min-width: 1920px)"
+                  srcset="
+                    assets/images/Мокап_2_1920.png    1x,
+                    assets/images/Мокап_2@2x_1920.png 2x
+                  "
+                />
+                <source
                   media="(min-width: 1200px)"
                   srcset="
                     assets/images/Мокап_2.png    1x,
@@ -2261,27 +2268,76 @@
               </ul>
             </div>
             <!-- Слайдер изображений -->
-            <div class="swiper functional__img-slider">
-              <ul class="swiper-wrapper functional__img-list" data-tab="1">
-                <li class="swiper-slide functional__img-item">
-                  <img
-                    src="./assets/images/img01-slider-item.png"
-                    alt="1 img slider"
-                    class="functional__img"
-                    width="310"
-                    height="207"
-                  />
-                </li>
-                <li class="swiper-slide functional__img-item">
-                  <img
-                    src="./assets/images/img02-slider-item.png"
-                    alt="2 img slider"
-                    class="functional__img"
-                    width="310"
-                    height="207"
-                  />
-                </li>
-              </ul>
+            <div class="functional__wrapper-main-img">
+              <div class="swiper functional__img-slider" data-tab="1">
+                <ul class="swiper-wrapper functional__img-list">
+                  <li class="swiper-slide functional__img-item">
+                    <img
+                      src="./assets/images/img01-slider-item.png"
+                      alt="1 img slider"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </li>
+                  <li class="swiper-slide functional__img-item">
+                    <img
+                      src="./assets/images/img02-slider-item.png"
+                      alt="2 img slider"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="swiper functional__img-slider" data-tab="2">
+                <ul class="swiper-wrapper functional__img-list">
+                  <li class="swiper-slide functional__img-item">
+                    <img
+                      src="./assets/images/img01-slider-item.png"
+                      alt="1 img slider"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </li>
+                  <li class="swiper-slide functional__img-item">
+                    <img
+                      src="./assets/images/img02-slider-item.png"
+                      alt="2 img slider"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="swiper functional__img-slider functional__img-slider--hidden"
+                data-tab="2"
+              >
+                <ul class="swiper-wrapper functional__img-list">
+                  <li class="swiper-slide functional__img-item">
+                    <img
+                      src="./assets/images/img01-slider-item.png"
+                      alt="1 img slider"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </li>
+                  <li class="swiper-slide functional__img-item">
+                    <img
+                      src="./assets/images/img02-slider-item.png"
+                      alt="2 img slider"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </li>
+                </ul>
+              </div>
             </div>
             <!-- Текст для каждого раздела -->
             <div class="functional__wrapper-text">
@@ -2328,6 +2384,21 @@
                   </li>
                 </ul>
               </div>
+              <div
+                class="functional__text functional__text--hidden"
+                data-tab="2"
+              >
+                <ul class="functional__text-list">
+                  <li>ТЕСТОВЫ ТЕКСТ 2</li>
+                  <li>ТЕСТОВЫ ТЕКСТ 2</li>
+                  <li>ТЕСТОВЫ ТЕКСТ 2</li>
+                  <li>ТЕСТОВЫ ТЕКСТ 2</li>
+                  <li>ТЕСТОВЫ ТЕКСТ 2</li>
+                  <li>ТЕСТОВЫ ТЕКСТ 2</li>
+                  <li>ТЕСТОВЫ ТЕКСТ 2</li>
+                  <li>ТЕСТОВЫ ТЕКСТ 2</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -2361,7 +2432,7 @@
       <!-- Форма -->
       <section class="main__feedback feedback">
         <div class="feedback__container container">
-          <form action="#" class="feedback___form subscribe" method="post">
+          <form action="#" class="feedback___subscribe subscribe" method="post">
             <div class="subscribe__wrapper">
               <h2 class="subscribe__title">
                 Заполните форму для получения консультации
@@ -2763,7 +2834,11 @@
           <h2 class="price__title">Выберите тарифный план</h2>
 
           <!-- Табы Месяц/Год -->
-          <div class="price__tabs" role="tablist" aria-label="Период оплаты">
+          <div
+            class="price__tabs price__tabs--mobile"
+            role="tablist"
+            aria-label="Период оплаты"
+          >
             <button
               class="price__tab price__tab--is-active"
               role="tab"
@@ -2782,7 +2857,7 @@
             </button>
           </div>
           <div class="price__wrapper">
-            <!-- Хедер с названием и стрелками -->
+            <!-- Хедер со стрелками -->
             <div class="price__header">
               <button
                 class="price__nav-btn price__nav-btn--prev"
@@ -2817,201 +2892,766 @@
             <!-- Контент тарифа -->
             <div class="swiper price__wrapper-list">
               <ul class="swiper-wrapper price__list">
-                <li class="swiper-slide price__card card" aria-live="polite">
-                  <h3 class="card__plan-name" id="plan-name">Компания</h3>
-                  <dl class="card__features">
-                    <div class="card__feature">
-                      <dt>Количество пользователей</dt>
-                      <dd>20 пользователей</dd>
+                <li class="price__specs">
+                  <div class="price__specs-cell price__specs-cell--head">
+                    <div
+                      class="price__tabs price__tabs--desktop"
+                      role="tablist"
+                      aria-label="Период оплаты"
+                    >
+                      <button
+                        class="price__tab price__tab--is-active"
+                        role="tab"
+                        aria-selected="true"
+                        data-period="monthly"
+                      >
+                        Месяц
+                      </button>
+                      <button
+                        class="price__tab"
+                        role="tab"
+                        aria-selected="false"
+                        data-period="yearly"
+                      >
+                        Год
+                      </button>
                     </div>
-                    <div class="card__feature">
-                      <dt>Количество организаций в аккаунте</dt>
-                      <dd>5 организации</dd>
-                    </div>
+                  </div>
+                  <!-- пустая ячейка под заголовок колонок -->
+                  <div class="price__specs-cell">Количество пользователей</div>
+                  <div class="price__specs-cell">
+                    Количество организаций в аккаунте
+                  </div>
 
-                    <!-- раскрывающиеся пункты -->
-                    <details class="card__feature card__feature--details">
-                      <summary class="card__summary">
-                        <span>Модуль «Совместная работа»</span>
-                        <span class="card__badge"></span>
-                        <div class="card__wrapper-status">
-                          <svg
-                            class="card__status"
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="14.5"
-                              cy="14"
-                              r="13"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                            <path
-                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </summary>
-                      <div class="card__feature-body" id="f-collab-body">
-                        Описание модуля…
-                      </div>
-                    </details>
+                  <div class="price__specs-cell price__specs-cell--details">
+                    Модуль «Совместная работа»
+                    <ul class="card__list">
+                      <li class="card__item">Адресная книга</li>
+                      <li class="card__item">Оповещения</li>
+                      <li class="card__item">Задачи</li>
+                      <li class="card__item">Фин. сопровождение</li>
+                      <li class="card__item">Тех. обслуживание</li>
+                      <li class="card__item">Правовой центр</li>
+                      <li class="card__item">Мат. обеспечение</li>
+                      <li class="card__item">Реестр табелей</li>
+                      <li class="card__item">CRM</li>
+                      <li class="card__item">Тендерный центр</li>
+                    </ul>
+                  </div>
+                  <div class="price__specs-cell price__specs-cell--details">
+                    Модуль «Делопроизводство»
+                    <ul class="card__list">
+                      <li class="card__item">Организации (ЧОП)</li>
+                      <li class="card__item">Учет персонала</li>
+                      <li class="card__item">Контрагенты</li>
+                      <li class="card__item">Договоры</li>
+                      <li class="card__item">Объекты</li>
+                      <li class="card__item">Посты</li>
+                      <li class="card__item">
+                        Центр оперативного реагирования
+                      </li>
+                      <li class="card__item">Учёт рабочего времени</li>
+                      <li class="card__item">Расчёт оплаты персоналу</li>
+                      <li class="card__item">Складской учёт</li>
+                    </ul>
+                  </div>
+                  <div class="price__specs-cell price__specs-cell--details">
+                    Модуль «Мобильный доклад»
 
-                    <details class="card__feature card__feature--details">
-                      <summary class="card__summary">
-                        <span>Модуль «Делопроизводство»</span>
-                        <span class="card__badge"></span>
-                        <div class="card__wrapper-status">
-                          <svg
-                            class="card__status"
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="14.5"
-                              cy="14"
-                              r="13"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                            <path
-                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </summary>
-                      <div class="card__feature-body" id="f-collab-body">
-                        Описание модуля…
-                      </div>
-                    </details>
+                    <ul class="card__list">
+                      <li class="card__item">до 10 сотрудников</li>
+                      <li class="card__item">до 50 сотрудников</li>
+                      <li class="card__item">до 100 сотрудников</li>
+                      <li class="card__item">до 200 сотрудников</li>
+                      <li class="card__item">до 300 сотрудников</li>
+                      <li class="card__item">более 100 сотрудников</li>
+                    </ul>
+                  </div>
+                  <div class="price__specs-cell price__specs-cell--details">
+                    Модуль «Администратор»
 
-                    <details class="card__feature card__feature--details">
-                      <summary class="card__summary">
-                        <span>Модуль «Мобильный доклад»</span>
-                        <span class="card__badge"></span>
-                        <div class="card__wrapper-status">
-                          <svg
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="14.5"
-                              cy="14"
-                              r="13.1"
-                              stroke="#F1790A"
-                              stroke-width="1.8"
-                            />
-                            <path
-                              d="M15.0003 21.8235L15.0003 6.17644M22.8238 14L7.17676 14"
-                              stroke="#F1790A"
-                              stroke-width="1.8"
-                            />
-                          </svg>
-                        </div>
-                      </summary>
-                      <div class="card__feature-body" id="f-collab-body">
-                        Описание модуля…
-                      </div>
-                    </details>
+                    <ul class="card__list">
+                      <li class="card__item">Встроенные отчёты</li>
+                      <li class="card__item">Пользовательские отчёты</li>
+                      <li class="card__item">Сервис «Контроль сроков»</li>
+                    </ul>
+                  </div>
+                  <div class="price__specs-cell price__specs-cell--details">
+                    Дополнительные опции
 
-                    <details class="card__feature card__feature--details">
-                      <summary class="card__summary">
-                        <span>Модуль «Администратор»</span>
-                        <span class="card__badge"></span>
-                        <div class="card__wrapper-status">
-                          <svg
-                            class="card__status"
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="14.5"
-                              cy="14"
-                              r="13"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                            <path
-                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </summary>
-                      <div class="card__feature-body" id="f-collab-body">
-                        Описание модуля…
-                      </div>
-                    </details>
+                    <ul class="card__list">
+                      <li class="card__item">Дополнительно 5 пользователей</li>
+                      <li class="card__item">
+                        Дополнительная охранная организация
+                      </li>
+                      <li class="card__item">
+                        Техническое сопровождение внедрения
+                      </li>
+                    </ul>
+                  </div>
 
-                    <details class="card__feature card__feature--details">
-                      <summary class="card__summary">
-                        <span>Дополнительные опции</span>
-                        <span class="card__badge"></span>
-                        <div class="card__wrapper-status">
-                          <svg
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="14.5"
-                              cy="14"
-                              r="13.1"
-                              stroke="#F1790A"
-                              stroke-width="1.8"
-                            />
-                            <path
-                              d="M15.0003 21.8235L15.0003 6.17644M22.8238 14L7.17676 14"
-                              stroke="#F1790A"
-                              stroke-width="1.8"
-                            />
-                          </svg>
-                        </div>
-                      </summary>
-                      <div class="card__feature-body" id="f-collab-body">
-                        Описание модуля…
-                      </div>
-                    </details>
-
-                    <div class="card__feature">
-                      <dt>База данных</dt>
-                      <dd>до 20Гб</dd>
-                    </div>
-
-                    <div class="card__feature card__feature--price">
-                      <dt>
-                        Стоимость пользования комплексом, начальная комплектация
-                      </dt>
-                      <dd id="card__price">20 000 ₽</dd>
-                    </div>
-                    <button class="card__btn-primary">Подключиться</button>
-                  </dl>
+                  <div class="price__specs-cell">База данных</div>
+                  <div class="price__specs-cell">Стоимость пользования</div>
+                  <div class="price__specs-cell price__specs-cell--cta"></div>
+                  <!-- под кнопки -->
                 </li>
                 <li class="swiper-slide price__card card" aria-live="polite">
                   <h3 class="card__plan-name" id="plan-name">Старт</h3>
                   <dl class="card__features">
                     <div class="card__feature">
                       <dt>Количество пользователей</dt>
+                      <dd>5 пользователей</dd>
+                    </div>
+                    <div class="card__feature">
+                      <dt>Количество организаций в аккаунте</dt>
+                      <dd>2 организации</dd>
+                    </div>
+
+                    <!-- раскрывающиеся пункты -->
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Совместная работа»</span
+                        >
+                        <span class="card__badge"></span>
+
+                        <div class="card__status card__status--no-option"></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Адресная книга</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Оповещения</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Задачи</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Фин. сопровождение</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Тех. обслуживание</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Правовой центр</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Мат. обеспечение</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Реестр табелей</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">CRM</span>
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Тендерный центр</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Делопроизводство»</span
+                        >
+                        <span class="card__badge"></span>
+                        <div class="card__status card__status--no-option"></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Организации (ЧОП)</span
+                            >
+                            2 организации
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Учет персонала</span
+                            >
+                            50 сотрудников
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Контрагенты</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Договоры</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Объекты</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Посты</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Центр оперативного реагирования</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Учёт рабочего времени</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Расчёт оплаты персоналу</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Складской учёт</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Мобильный доклад»</span
+                        >
+                        <span class="card__badge"></span>
+                        <div
+                          class="card__status card__status--no-include"
+                        ></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 10 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 50 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 100 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 200 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 300 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >более 300 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Администратор»</span
+                        >
+                        <span class="card__badge"></span>
+                        <div
+                          class="card__status card__status--no-include"
+                        ></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Встроенные отчёты</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Пользовательские отчёты</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Сервис «Периодические отчёты»</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Сервис «Контроль сроков»</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Дополнительные опции</span
+                        >
+                        <span class="card__badge"></span>
+                        <div
+                          class="card__status card__status--no-include"
+                        ></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Дополнительно 5 пользователей</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Дополнительная охранная организация</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Техническое сопровождение внедрения</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <div class="card__feature">
+                      <dt>База данных</dt>
+                      <dd>до 1Гб</dd>
+                    </div>
+
+                    <div class="card__feature card__feature--price">
+                      <dt>
+                        Стоимость пользования комплексом, начальная комплектация
+                      </dt>
+                      <dd id="card__price">Бесплатно</dd>
+                    </div>
+                    <button class="card__btn-primary">Подключиться</button>
+                  </dl>
+                </li>
+                <li class="swiper-slide price__card card" aria-live="polite">
+                  <h3 class="card__plan-name" id="plan-name">КОМАНДА</h3>
+                  <dl class="card__features">
+                    <div class="card__feature">
+                      <dt>Количество пользователей</dt>
+                      <dd>10 пользователей</dd>
+                    </div>
+                    <div class="card__feature">
+                      <dt>Количество организаций в аккаунте</dt>
+                      <dd>3 организации</dd>
+                    </div>
+
+                    <!-- раскрывающиеся пункты -->
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Совместная работа»</span
+                        >
+                        <span class="card__badge"></span>
+                        <div class="card__status card__status--no-option"></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Адресная книга</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Оповещения</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Задачи</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Фин. сопровождение</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Тех. обслуживание</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Правовой центр</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Мат. обеспечение</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Реестр табелей</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">CRM</span>
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Тендерный центр</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Делопроизводство»</span
+                        >
+                        <span class="card__badge"></span>
+                        <div class="card__status card__status--no-option"></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Организации (ЧОП)</span
+                            >
+                            3 организации
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Учет персонала</span
+                            >
+                            300 сотрудников
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Контрагенты</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Договоры</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Объекты</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Посты</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Центр оперативного реагирования</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Учёт рабочего времени</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Расчёт оплаты персоналу</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Складской учёт</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Мобильный доклад»</span
+                        >
+                        <span class="card__badge"></span>
+                        <div class="card__status card__status--no-option"></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 10 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 50 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 100 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 200 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 300 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >более 300 сотрудников</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Администратор»</span
+                        >
+                        <span class="card__badge"></span>
+                        <div
+                          class="card__status card__status--no-include"
+                        ></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Встроенные отчёты</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Пользовательские отчёты</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Сервис «Периодические отчёты»</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Сервис «Контроль сроков»</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Дополнительные опции</span
+                        >
+                        <span class="card__badge"></span>
+                        <div
+                          class="card__status card__status--no-include"
+                        ></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Дополнительно 5 пользователей</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Дополнительная охранная организация</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Техническое сопровождение внедрения</span
+                            >
+                            <div
+                              class="card__status card__status--no-include"
+                            ></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <div class="card__feature">
+                      <dt>База данных</dt>
+                      <dd>до 5 Гб</dd>
+                    </div>
+
+                    <div class="card__feature card__feature--price">
+                      <dt>
+                        Стоимость пользования комплексом, начальная комплектация
+                      </dt>
+                      <dd id="card__price">10 000 ₽</dd>
+                    </div>
+
+                    <button class="card__btn-primary">Подключиться</button>
+                  </dl>
+                </li>
+                <li class="swiper-slide price__card card" aria-live="polite">
+                  <h3 class="card__plan-name" id="plan-name">КОМПАНИЯ</h3>
+                  <dl class="card__features">
+                    <div class="card__feature">
+                      <dt>Количество пользователей</dt>
                       <dd>20 пользователей</dd>
                     </div>
                     <div class="card__feature">
@@ -3022,170 +3662,269 @@
                     <!-- раскрывающиеся пункты -->
                     <details class="card__feature card__feature--details">
                       <summary class="card__summary">
-                        <span>Модуль «Совместная работа»</span>
+                        <span class="card__summary-text"
+                          >Модуль «Совместная работа»</span
+                        >
                         <span class="card__badge"></span>
-                        <div class="card__wrapper-status">
-                          <svg
-                            class="card__status"
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="14.5"
-                              cy="14"
-                              r="13"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                            <path
-                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
+                        <div class="card__status card__status--no-option"></div>
                       </summary>
                       <div class="card__feature-body" id="f-collab-body">
-                        Описание модуля…
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Адресная книга</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Оповещения</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Задачи</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Фин. сопровождение</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Тех. обслуживание</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Правовой центр</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Мат. обеспечение</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Реестр табелей</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">CRM</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Тендерный центр</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                        </ul>
                       </div>
                     </details>
 
                     <details class="card__feature card__feature--details">
                       <summary class="card__summary">
-                        <span>Модуль «Делопроизводство»</span>
+                        <span class="card__summary-text"
+                          >Модуль «Делопроизводство»</span
+                        >
                         <span class="card__badge"></span>
-                        <div class="card__wrapper-status">
-                          <svg
-                            class="card__status"
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="14.5"
-                              cy="14"
-                              r="13"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                            <path
-                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
+                        <div class="card__status card__status--no-option"></div>
                       </summary>
                       <div class="card__feature-body" id="f-collab-body">
-                        Описание модуля…
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Организации (ЧОП)</span
+                            >
+                            5 организации
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Учет персонала</span
+                            >
+                            600 сотрудников
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Контрагенты</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Договоры</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Объекты</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Посты</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Центр оперативного реагирования</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Учёт рабочего времени</span
+                            >
+                            10 000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Расчёт оплаты персоналу</span
+                            >
+                            10 000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Складской учёт</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                        </ul>
                       </div>
                     </details>
 
                     <details class="card__feature card__feature--details">
                       <summary class="card__summary">
-                        <span>Модуль «Мобильный доклад»</span>
+                        <span class="card__summary-text"
+                          >Модуль «Мобильный доклад»</span
+                        >
                         <span class="card__badge"></span>
-                        <div class="card__wrapper-status">
-                          <svg
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="14.5"
-                              cy="14"
-                              r="13.1"
-                              stroke="#F1790A"
-                              stroke-width="1.8"
-                            />
-                            <path
-                              d="M15.0003 21.8235L15.0003 6.17644M22.8238 14L7.17676 14"
-                              stroke="#F1790A"
-                              stroke-width="1.8"
-                            />
-                          </svg>
-                        </div>
+                        <div class="card__status card__status--no-option"></div>
                       </summary>
                       <div class="card__feature-body" id="f-collab-body">
-                        Описание модуля…
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 10 сотрудников</span
+                            >
+                            3000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 50 сотрудников</span
+                            >
+                            14 000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 100 сотрудников</span
+                            >
+                            25 000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 200 сотрудников</span
+                            >
+                            40 000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 300 сотрудников</span
+                            >
+                            54 000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >более 300 сотрудников</span
+                            >
+                            индивидуально
+                          </li>
+                        </ul>
                       </div>
                     </details>
 
                     <details class="card__feature card__feature--details">
                       <summary class="card__summary">
-                        <span>Модуль «Администратор»</span>
+                        <span class="card__summary-text"
+                          >Модуль «Администратор»</span
+                        >
                         <span class="card__badge"></span>
-                        <div class="card__wrapper-status">
-                          <svg
-                            class="card__status"
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="14.5"
-                              cy="14"
-                              r="13"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                            <path
-                              d="M8.37695 11.6172L14.5003 17.7405L24.9974 7.24348"
-                              stroke="#169432"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
+                        <div
+                          class="card__status card__status--no-include"
+                        ></div>
                       </summary>
                       <div class="card__feature-body" id="f-collab-body">
-                        Описание модуля…
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Встроенные отчёты</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Пользовательские отчёты</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Сервис «Периодические отчёты»</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Сервис «Контроль сроков»</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                        </ul>
                       </div>
                     </details>
 
                     <details class="card__feature card__feature--details">
                       <summary class="card__summary">
-                        <span>Дополнительные опции</span>
+                        <span class="card__summary-text"
+                          >Дополнительные опции</span
+                        >
                         <span class="card__badge"></span>
-                        <div class="card__wrapper-status">
-                          <svg
-                            width="29"
-                            height="28"
-                            viewBox="0 0 29 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="14.5"
-                              cy="14"
-                              r="13.1"
-                              stroke="#F1790A"
-                              stroke-width="1.8"
-                            />
-                            <path
-                              d="M15.0003 21.8235L15.0003 6.17644M22.8238 14L7.17676 14"
-                              stroke="#F1790A"
-                              stroke-width="1.8"
-                            />
-                          </svg>
-                        </div>
+                        <div
+                          class="card__status card__status--no-include"
+                        ></div>
                       </summary>
                       <div class="card__feature-body" id="f-collab-body">
-                        Описание модуля…
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Дополнительно 5 пользователей</span
+                            >
+                            2000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Дополнительная охранная организация</span
+                            >
+                            2000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Техническое сопровождение внедрения</span
+                            >
+                            от 60 000 ₽
+                          </li>
+                        </ul>
                       </div>
                     </details>
 
                     <div class="card__feature">
                       <dt>База данных</dt>
-                      <dd>до 20Гб</dd>
+                      <dd>до 20 Гб</dd>
                     </div>
 
                     <div class="card__feature card__feature--price">
@@ -3194,6 +3933,297 @@
                       </dt>
                       <dd id="card__price">20 000 ₽</dd>
                     </div>
+
+                    <button class="card__btn-primary">Подключиться</button>
+                  </dl>
+                </li>
+                <li class="swiper-slide price__card card" aria-live="polite">
+                  <h3 class="card__plan-name" id="plan-name">КОРПОРАЦИЯ</h3>
+                  <dl class="card__features">
+                    <div class="card__feature">
+                      <dt>Количество пользователей</dt>
+                      <dd>40 пользователей</dd>
+                    </div>
+                    <div class="card__feature">
+                      <dt>Количество организаций в аккаунте</dt>
+                      <dd>15 организации</dd>
+                    </div>
+
+                    <!-- раскрывающиеся пункты -->
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Совместная работа»</span
+                        >
+                        <span class="card__badge"></span>
+                        <div class="card__status card__status--no-option"></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Адресная книга</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Оповещения</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Задачи</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Фин. сопровождение</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Тех. обслуживание</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Правовой центр</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Мат. обеспечение</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Реестр табелей</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">CRM</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Тендерный центр</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Делопроизводство»</span
+                        >
+                        <span class="card__badge"></span>
+                        <div class="card__status card__status--no-option"></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Организации (ЧОП)</span
+                            >
+                            15 организации
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Учет персонала</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Контрагенты</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Договоры</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Объекты</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description">Посты</span>
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Центр оперативного реагирования</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Учёт рабочего времени</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Расчёт оплаты персоналу</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Складской учёт</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Мобильный доклад»</span
+                        >
+                        <span class="card__badge"></span>
+                        <div class="card__status card__status--no-option"></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 10 сотрудников</span
+                            >
+                            3000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 50 сотрудников</span
+                            >
+                            14 000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 100 сотрудников</span
+                            >
+                            25 000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 200 сотрудников</span
+                            >
+                            40 000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >до 300 сотрудников</span
+                            >
+                            54 000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >более 300 сотрудников</span
+                            >
+                            индивидуально
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Модуль «Администратор»</span
+                        >
+                        <span class="card__badge"></span>
+                        <div
+                          class="card__status card__status--no-include"
+                        ></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Встроенные отчёты</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Пользовательские отчёты</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Сервис «Периодические отчёты»</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Сервис «Контроль сроков»</span
+                            >
+                            <div class="card__status card__status--ok"></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <details class="card__feature card__feature--details">
+                      <summary class="card__summary">
+                        <span class="card__summary-text"
+                          >Дополнительные опции</span
+                        >
+                        <span class="card__badge"></span>
+                        <div
+                          class="card__status card__status--no-include"
+                        ></div>
+                      </summary>
+                      <div class="card__feature-body" id="f-collab-body">
+                        <ul class="card__list-status">
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Дополнительно 5 пользователей</span
+                            >
+                            1500 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Дополнительная охранная организация</span
+                            >
+                            1000 ₽
+                          </li>
+                          <li class="card__item-status">
+                            <span class="card__item-description"
+                              >Техническое сопровождение внедрения</span
+                            >
+                            от 100 000 ₽
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                    <div class="card__feature">
+                      <dt>База данных</dt>
+                      <dd>до 40 Гб</dd>
+                    </div>
+
+                    <div class="card__feature card__feature--price">
+                      <dt>
+                        Стоимость пользования комплексом, начальная комплектация
+                      </dt>
+                      <dd id="card__price">40 000 ₽</dd>
+                    </div>
+
                     <button class="card__btn-primary">Подключиться</button>
                   </dl>
                 </li>
@@ -3222,6 +4252,7 @@
           </ul>
         </div>
       </section>
+
       <!-- Контакты -->
       <section class="main__certificates certificates">
         <div class="certificates__container container">
@@ -3232,7 +4263,9 @@
                 >+7 926 205 1919</a
               >
               <span class="contacts__work-day"> (пн-пт 10:00 - 18:00) </span>
-              <a href="#" class="contacts__callback">Заказать звонок</a>
+              <a href="#" class="contacts__callback callback"
+                >Заказать звонок</a
+              >
               <a href="mailto:manager@fort360.ru" class="contacts__mail"
                 >manager@fort360.ru</a
               >
@@ -3485,7 +4518,7 @@
           <div class="contacts__information">
             <a href="tel:+79262051919" class="contacts__tel">+7 926 205 1919</a>
             <span class="contacts__work-day"> (пн-пт 10:00 - 18:00) </span>
-            <a href="#" class="contacts__callback">Заказать звонок</a>
+            <a href="#" class="contacts__callback callback">Заказать звонок</a>
             <a href="mailto:manager@fort360.ru" class="contacts__mail"
               >manager@fort360.ru</a
             >
@@ -3583,6 +4616,278 @@
         </div>
       </div>
     </footer>
+    <div class="modal modal--demo modal--close">
+      <div class="modal__container">
+        <form action="#" class="modal___subscribe subscribe" method="post">
+          <div class="subscribe__wrapper">
+            <h2 class="subscribe__title">
+              Заполните форму для получения демо-доступа
+            </h2>
+            <div class="subscribe__wrapper-input">
+              <label for="name" class="subscribe__label">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="subscribe__input"
+                  placeholder="Ваше имя"
+                  required
+                />
+              </label>
+              <label for="organization" class="subscribe__label">
+                <input
+                  type="text"
+                  id="organization"
+                  name="organization"
+                  class="subscribe__input"
+                  placeholder="Организация"
+                  required
+                />
+              </label>
+              <label for="phone" class="subscribe__label">
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  class="subscribe__input"
+                  placeholder="Телефон"
+                  required
+                />
+              </label>
+              <label for="email" class="subscribe__label">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="subscribe__input"
+                  placeholder="E-mail"
+                  required
+                />
+              </label>
+              <label
+                for="personal_data"
+                class="subscribe__label subscribe__label--personal"
+              >
+                <input
+                  type="checkbox"
+                  id="personal_data"
+                  name="personal_data"
+                  class="visually-hidden subscribe__input subscribe__input--checkbox"
+                  required
+                />
+                <span class="subscribe__label-text"
+                  >Я согласен на обработку персональных данных</span
+                >
+              </label>
+              <button type="submit" class="subscribe__button">
+                Отправить запрос
+              </button>
+            </div>
+          </div>
+        </form>
+        <button class="modal__close-btn" type="button">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+        </button>
+      </div>
+    </div>
+    <div class="modal modal--consultation modal--close">
+      <div class="modal__container">
+        <form action="#" class="modal___subscribe subscribe" method="post">
+          <div class="subscribe__wrapper">
+            <h2 class="subscribe__title">
+              Заполните форму для получения консультации
+            </h2>
+            <div class="subscribe__wrapper-input">
+              <label for="name" class="subscribe__label">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="subscribe__input"
+                  placeholder="Ваше имя"
+                  required
+                />
+              </label>
+              <label for="organization" class="subscribe__label">
+                <input
+                  type="text"
+                  id="organization"
+                  name="organization"
+                  class="subscribe__input"
+                  placeholder="Организация"
+                  required
+                />
+              </label>
+              <label for="phone" class="subscribe__label">
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  class="subscribe__input"
+                  placeholder="Телефон"
+                  required
+                />
+              </label>
+              <label for="email" class="subscribe__label">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="subscribe__input"
+                  placeholder="E-mail"
+                  required
+                />
+              </label>
+              <label
+                for="message"
+                class="subscribe__label subscribe__label--textarea"
+              >
+                <textarea
+                  id="message"
+                  name="message"
+                  class="subscribe__input"
+                  placeholder="Ваш запрос"
+                  required
+                ></textarea>
+              </label>
+              <label
+                for="personal_data"
+                class="subscribe__label subscribe__label--personal"
+              >
+                <input
+                  type="checkbox"
+                  id="personal_data"
+                  name="personal_data"
+                  class="visually-hidden subscribe__input subscribe__input--checkbox"
+                  required
+                />
+                <span class="subscribe__label-text"
+                  >Я согласен на обработку персональных данных</span
+                >
+              </label>
+              <button type="submit" class="subscribe__button">
+                Отправить запрос
+              </button>
+            </div>
+          </div>
+        </form>
+        <button class="modal__close-btn" type="button">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+        </button>
+      </div>
+    </div>
+    <div class="modal modal--connect modal--close">
+      <div class="modal__container">
+        <form action="#" class="modal___subscribe subscribe" method="post">
+          <div class="subscribe__wrapper">
+            <h2 class="subscribe__title">
+              Заполните форму для оформления заявки на подключение
+            </h2>
+            <div class="subscribe__wrapper-input">
+              <label for="name" class="subscribe__label">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="subscribe__input"
+                  placeholder="Ваше имя"
+                  required
+                />
+              </label>
+              <label for="organization" class="subscribe__label">
+                <input
+                  type="text"
+                  id="organization"
+                  name="organization"
+                  class="subscribe__input"
+                  placeholder="Организация"
+                  required
+                />
+              </label>
+              <label for="phone" class="subscribe__label">
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  class="subscribe__input"
+                  placeholder="Телефон"
+                  required
+                />
+              </label>
+              <label for="email" class="subscribe__label">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="subscribe__input"
+                  placeholder="E-mail"
+                  required
+                />
+              </label>
+              <label
+                for="message"
+                class="subscribe__label subscribe__label--select"
+              >
+                <select name="subscribe-selected" class="subscribe__select">
+                  <option value="start">Старт</option>
+                  <option value="command">Команда</option>
+                  <option value="company">Компания</option>
+                  <option value="corporation">Корпорация</option>
+                </select>
+              </label>
+              <label
+                for="personal_data"
+                class="subscribe__label subscribe__label--personal"
+              >
+                <input
+                  type="checkbox"
+                  id="personal_data"
+                  name="personal_data"
+                  class="visually-hidden subscribe__input subscribe__input--checkbox"
+                  required
+                />
+                <span class="subscribe__label-text"
+                  >Я согласен на обработку персональных данных</span
+                >
+              </label>
+              <button type="submit" class="subscribe__button">
+                Отправить запрос
+              </button>
+            </div>
+          </div>
+        </form>
+        <button class="modal__close-btn" type="button">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+        </button>
+      </div>
+    </div>
+    <div class="modal modal--call-me modal--close">
+      <div class="modal__container">
+        <form action="#" class="modal___subscribe subscribe" method="post">
+          <div class="subscribe__wrapper">
+            <h2 class="subscribe__title">Заказать звонок</h2>
+            <div class="subscribe__wrapper-input">
+              <label for="phone" class="subscribe__label">
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  class="subscribe__input"
+                  placeholder="Телефон"
+                  required
+                />
+              </label>
+              <button type="submit" class="subscribe__button">
+                Отправить запрос
+              </button>
+            </div>
+          </div>
+        </form>
+        <button class="modal__close-btn" type="button">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+        </button>
+      </div>
+    </div>
     <script type="module" src="/index.js"></script>
   </body>
 </html>

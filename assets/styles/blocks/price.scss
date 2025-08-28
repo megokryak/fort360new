@@ -23,6 +23,24 @@
 .price__tabs {
   display: flex;
   margin-top: 30px;
+
+  @media (min-width: $d-width) {
+    width: 135px;
+    margin-top: 0;
+  }
+}
+
+.price__tabs--mobile {
+  @media (min-width: $d-width) {
+    display: none;
+  }
+}
+
+.price__tabs--desktop {
+  display: none;
+  @media (min-width: $d-width) {
+    display: flex;
+  }
 }
 
 .price__tab {
@@ -41,6 +59,11 @@
     height: 1px;
     background: $colorGray;
     margin-top: 13px;
+  }
+
+  @media (min-width: $d-width) {
+    font-size: 18px;
+    line-height: 27px;
   }
 }
 
@@ -65,6 +88,11 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
+
+  @media (min-width: $d-width) {
+    display: none;
+  }
 }
 
 .price__nav-btn {
@@ -85,15 +113,185 @@
   overflow: hidden;
   margin-top: 30px;
   padding-top: 10px;
+
+  @media (min-width: $d-width) {
+    display: grid;
+    grid-template-columns: 248px repeat(4, 1fr);
+    grid-template-rows:
+      auto /* заголовок */
+      auto /* пользователи */
+      auto /* организации */
+      auto /* совместная работа */
+      auto /* делопроизводство */
+      auto /* мобильный доклад */
+      auto /* администратор */
+      auto /* доп. опции */
+      auto /* база данных */
+      auto /* цена */
+      auto; /* кнопка */
+  }
+
+  @media (min-width: $f-width) {
+    margin-top: 37px;
+    padding-top: 0;
+    grid-template-columns: 313px repeat(4, 1fr);
+    grid-template-rows:
+      min-content /* заголовок */
+      min-content /* пользователи */
+      min-content /* организации */
+      min-content /* совместная работа */
+      min-content /* делопроизводство */
+      min-content /* мобильный доклад */
+      min-content /* администратор */
+      min-content /* доп. опции */
+      min-content /* база данных */
+      min-content /* цена */
+      min-content; /* кнопка */
+  }
 }
 
 .price__list {
   display: flex;
+  @media (min-width: $d-width) {
+    align-items: flex-start;
+    display: contents;
+  }
+}
+
+.price__specs {
+  display: none;
+
+  @media (min-width: $d-width) {
+    display: grid;
+    grid-template-rows: subgrid; /* наследуем ряды */
+    grid-row: 1 / -1; /* охватываем все строки родителя */
+  }
+}
+
+.price__specs-cell {
+  @media (min-width: $d-width) {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid $colorGray;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $f-width) {
+    font-size: 18px;
+    line-height: 30px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+.price__specs-cell .card__list {
+  @media (min-width: $d-width) {
+    width: 100%;
+  }
+}
+
+.price__specs-cell:last-child,
+.price__specs-cell:nth-child(10) {
+  @media (min-width: $d-width) {
+    border-bottom: none;
+  }
+}
+
+.price__specs-cell:nth-child(10) {
+  @media (min-width: $d-width) {
+    padding-top: 44px;
+    padding-bottom: 22px;
+  }
+}
+
+.price__specs-cell--head {
+  @media (min-width: $d-width) {
+    border-bottom: none;
+  }
+
+  @media (min-width: $f-width) {
+    padding-bottom: 0;
+    padding-top: 0;
+    align-self: flex-end;
+  }
+}
+
+.price__specs-cell--details {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 28px;
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $colorGray;
+    border-radius: 50%;
+    background: url("../../images/svg/arrow_down.svg") no-repeat center;
+  }
+}
+
+/* Скрытые списки по умолчанию */
+.price__specs-cell--details .card__list {
+  display: none;
+}
+
+/* Когда строка раскрыта */
+.price__specs-cell--details.is-open .card__list {
+  display: block;
+}
+
+/* Скрытые списки по умолчанию */
+.card__feature--details .card__list {
+  display: none;
+}
+
+/* Когда строка раскрыта */
+.card__feature--details.is-open .card__list {
+  display: block;
 }
 
 .price__card {
   width: 100%;
   flex: 0 0 100%;
+
+  @media (min-width: $d-width) {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 1 / -1;
+  }
+}
+
+li.price__card {
+  @media (min-width: $d-width) {
+    display: grid;
+    grid-template-rows: subgrid;
+    justify-content: stretch;
+  }
+}
+
+.price__card:not(:first-child) div.card__feature dd {
+  @media (min-width: $d-width) {
+    width: 100%;
+  }
+}
+
+.price__card:not(:first-child) dt,
+.price__card:not(:first-child) .card__summary-text,
+.price__card:not(:first-child) .card__badge {
+  @media (min-width: $d-width) {
+    display: none;
+  }
 }
 
 .price__info-list {
@@ -101,6 +299,10 @@
 
   @media (min-width: $d-width) {
     display: flex;
+  }
+
+  @media (min-width: $f-width) {
+    margin-top: 45px;
   }
 }
 
@@ -132,5 +334,10 @@
       border-right: none;
       padding-right: 0;
     }
+  }
+
+  @media (min-width: $f-width) {
+    font-size: 18px;
+    line-height: 27px;
   }
 }

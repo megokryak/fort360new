@@ -37,3 +37,21 @@
     padding-bottom: 100px;
   }
 }
+
+.main__possibilities {
+  @media (min-width: $f-width) {
+    padding-bottom: 37px;
+  }
+}
+
+.main__price {
+  @media (min-width: $f-width) {
+    padding-bottom: 20px;
+  }
+}
+
+.main__certificates {
+  @media (min-width: $f-width) {
+    padding-top: 60px;
+  }
+}

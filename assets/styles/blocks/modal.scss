@@ -1,0 +1,82 @@
+@use "../common/variables" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 13, 0.8);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__container {
+  position: relative;
+  @media (min-width: $d-width) {
+    width: 80%;
+  }
+
+  @media (min-width: $f-width) {
+    width: 60%;
+  }
+}
+
+.modal--close {
+  display: none;
+}
+
+.modal .subscribe__button {
+  width: auto;
+  border: 1px solid $colorOrange;
+  color: $colorOrange;
+
+  &::after {
+    background: url("../../images/svg/arrow_big_icon_orange.svg") no-repeat
+      center;
+  }
+}
+
+.modal .subscribe__label--personal {
+  @media (min-width: $d-width) {
+    width: 50%;
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 0;
+  right: -88px;
+  display: block;
+  width: 68px;
+  height: 68px;
+  box-sizing: border-box;
+  border: 1px solid $colorGray;
+  border-radius: 50%;
+
+  &::after,
+  &::before {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: $colorGray;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.modal--call-me .modal__container {
+  width: auto;
+}
+
+.modal--call-me .subscribe__label {
+  width: 100%;
+}
