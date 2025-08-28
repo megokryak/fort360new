@@ -8,13 +8,26 @@ export default defineConfig({
   base: "./",
   build: {
     outDir: "docs",
-    assetsDir: "assets",
     emptyOutDir: true,
     rollupOptions: {
       input: {
         index: resolve(__dirname, "index.html"),
         about: resolve(__dirname, "pages/about/index.html"),
         contacts: resolve(__dirname, "pages/contacts/index.html"),
+      },
+      output: {
+        // сохраняем структуру ассетов
+        assetFileNames: (assetInfo) => {
+          const ext = assetInfo.name.split(".").pop();
+          if (/css/i.test(ext)) return "assets/css/[name]-[hash][extname]";
+          if (/woff2?|ttf|otf/i.test(ext))
+            return "assets/fonts/[name]-[hash][extname]";
+          if (/png|jpe?g|gif|svg|webp/i.test(ext))
+            return "assets/images/[name]-[hash][extname]";
+          return "assets/[name]-[hash][extname]";
+        },
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
   },
@@ -24,11 +37,8 @@ export default defineConfig({
       png: { quality: 75 },
     }),
     createSvgSpritePlugin({
-      // исходники иконок для спрайта
       svgFolder: "./assets/images/svg",
-      // при необходимости можно задать имя/путь спрайта опциями плагина
     }),
-    // Копируем статические ассеты как есть в docs/, чтобы они точно попали в билд
     viteStaticCopy({
       targets: [
         { src: "assets/images/**/*", dest: "assets/images" },
