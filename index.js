@@ -5,3 +5,4 @@ import "./assets/js/flip.js";
 import "./assets/js/tabs.js";
 import "./assets/js/price.js";
 import "./assets/js/modal-demo.js";
+import "./assets/js/changePrice.js";
