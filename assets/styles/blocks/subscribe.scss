@@ -72,6 +72,10 @@
     color: $colorGray;
   }
 
+  &:focus-visible {
+    outline: none;
+  }
+
   @media (min-width: $f-width) {
     font-size: 18px;
     line-height: 28px;
@@ -184,8 +188,8 @@ textarea.subscribe__input {
     height: 12px;
     background: $colorWhite;
     border-radius: 1px;
-    left: 4px;
-    top: 7px;
+    left: 3.5px;
+    top: 6.5px;
   }
 }
 

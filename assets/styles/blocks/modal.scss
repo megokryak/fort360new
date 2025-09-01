@@ -46,11 +46,11 @@
 
 .modal__close-btn {
   position: absolute;
-  top: 0;
-  right: -88px;
+  top: 10px;
+  right: 10px;
   display: block;
-  width: 68px;
-  height: 68px;
+  width: 34px;
+  height: 34px;
   box-sizing: border-box;
   border: 1px solid $colorGray;
   border-radius: 50%;
@@ -70,6 +70,12 @@
 
   &::before {
     transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  @media (min-width: $d-width) {
+    right: -88px;
+    width: 68px;
+    height: 68px;
   }
 }
 
