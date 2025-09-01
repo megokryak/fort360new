@@ -120,4 +120,89 @@ document.addEventListener("DOMContentLoaded", () => {
       closeModal(modalCallMe);
     }
   });
+
+  // Функция для валидации email
+  function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+  }
+
+  // Функция для отображения уведомлений
+  function notify(title, text, type) {
+      const notification = document.createElement('div');
+      notification.className = `notification notification--${type}`;
+      notification.innerHTML = `<strong>${title}</strong>: ${text}`;
+      document.body.appendChild(notification);
+
+      setTimeout(() => {
+          notification.remove();
+      }, 3000);
+  }
+
+  // Получение элементов формы
+  const form = document.querySelector('.demo-form');
+  const nameInput = document.getElementById('name');
+  const organizationInput = document.getElementById('organization');
+  const phoneInput = document.getElementById('phone');
+  const emailInput = document.getElementById('email');
+  const personalDataCheckbox = document.getElementById('personal_data');
+  const submitButton = document.querySelector('.demo-submit');
+
+  // Функция для сброса формы
+  function resetForm() {
+      form.reset();
+      personalDataCheckbox.checked = false;
+  }
+
+  // Обработчик отправки формы
+  form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const formValues = {
+          name: formData.get('name'),
+          organization: formData.get('organization'),
+          phone: formData.get('phone'),
+          email: formData.get('email'),
+          personal_data: formData.get('personal_data') ? true : false,
+      };
+
+      if (!validateEmail(formValues.email)) {
+          notify("Ошибка!", `Почта указана некорректно: ${formValues.email}`, 'error');
+          return;
+      }
+
+      submitButton.disabled = true;
+
+      try {
+          const response = await fetch('/portal/demo/', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formValues),
+          });
+
+          if (!response.ok) {
+              throw new Error('Ошибка сервера');
+          }
+
+          const data = await response.json();
+
+          if (data.username) {
+              notify("Ошибка!", data.username[0], 'error');
+          } else {
+              notify("Успех!", "Заявка на демо-доступ отправлена", 'success');
+              resetForm();
+          }
+      } catch (error) {
+          if (error.response && error.response.data && error.response.data.username) {
+              notify("Ошибка!", error.response.data.username[0], 'error');
+          } else {
+              notify("Ошибка!", error.message, 'error');
+          }
+      } finally {
+          submitButton.disabled = false;
+      }
+  });
 });
