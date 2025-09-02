@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const swiperImg = new Swiper(".functional__img-slider", {
     // Основные параметры
-    loop: true,
+    loop: false,
     centeredSlides: false,
     slidesPerView: "auto",
     spaceBetween: 20,

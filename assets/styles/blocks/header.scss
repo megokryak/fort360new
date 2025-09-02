@@ -115,6 +115,10 @@
     margin-left: 0;
     width: 25px;
     height: 25px;
+
+    &::before {
+      box-shadow: 0 11px 0 #ffffff;
+    }
   }
 
   @media (min-width: $f-width) {
@@ -134,6 +138,16 @@
     bottom: 9px;
     transform: rotate(-45deg);
     transition: bottom 0.3s, transform 0.3s 0.15s;
+  }
+
+  @media (min-width: $d-width) {
+    &::before {
+      top: 11px;
+    }
+
+    &::after {
+      bottom: 12px;
+    }
   }
 }
 
