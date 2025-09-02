@@ -148,6 +148,7 @@ div.functional__container {
   @media (min-width: $f-width) {
     width: 600px;
     margin-top: 0;
+    overflow: hidden;
     margin-left: auto;
   }
 }
@@ -156,10 +157,10 @@ div.functional__container {
   overflow: hidden;
 
   @media (min-width: $f-width) {
-    width: 600px;
-    margin-top: 0;
-    margin-left: auto;
-    height: 100%;
+    width: 1630px;
+    // margin-top: 0;
+    // margin-left: auto;
+    height: auto;
   }
 
   // @media (min-width: $d-width) {
