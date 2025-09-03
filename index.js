@@ -5,4 +5,7 @@ import "./assets/js/flip.js";
 import "./assets/js/tabs.js";
 import "./assets/js/price.js";
 import "./assets/js/modal-demo.js";
+import "./assets/js/modal-connect.js";
+import "./assets/js/modal-consultation.js";
+import "./assets/js/modal-callme.js";
 import "./assets/js/changePrice.js";
