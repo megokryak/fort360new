@@ -49,15 +49,15 @@ def deploy_frontend():
     build_frontend(BUILD_DIR)
 
     # dist
-    DISTR_DIR = "/home/bobah/projects/tsg/fort360new/docs"
-    REMOTE_DIR = "/opt/tsg/fort360/"
+    DISTR_DIR = "/home/bobah/projects/tsg/fort360new/docs/"
+    REMOTE_DIR = "/opt/tsg/fort360/public/"
 
     # remove old
-    command = "rm -rf {}public/".format(REMOTE_DIR)
+    command = "rm -rf {}".format(REMOTE_DIR)
     print(command)
     c.run(command)
 
-    command = "mkdir {}public/".format(REMOTE_DIR)
+    command = "mkdir {}".format(REMOTE_DIR)
     print(command)
     c.run(command)
 
@@ -71,7 +71,7 @@ def deploy_frontend():
     print(command)
     os.system(command)
 
-    command = "chmod g+rX -R {}public/".format(REMOTE_DIR)
+    command = "chmod g+rX -R {}".format(REMOTE_DIR)
     #command = "chown www-data:www-data -R {}build/".format(REMOTE_DIR)
     print(command)
     c.run(command)
