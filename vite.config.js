@@ -12,8 +12,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "pages/about/index.html"),
-        contacts: resolve(__dirname, "pages/contacts/index.html"),
+        reg: resolve(__dirname, "pages/reg/index.html"),
       },
       output: {
         // сохраняем структуру ассетов

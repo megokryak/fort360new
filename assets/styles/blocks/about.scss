@@ -45,6 +45,7 @@
   height: 75px;
   background: transparent url("../../images/svg/video_icon_rutube.svg")
     no-repeat center / cover;
+  z-index: 2;
 
   @media (min-width: $d-width) {
     width: 150px;
@@ -56,6 +57,40 @@
 
 .about__img-rutube {
   border-radius: 8px;
+}
+
+.about__link-video {
+  margin-top: 30px;
+
+  @media (min-width: $d-width) {
+    width: calc(549 / 960 * 100%);
+    margin-top: 0;
+  }
+
+  @media (min-width: $f-width) {
+    width: calc(883 / 1340 * 100%);
+  }
+}
+
+.about__rutube-player-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.about__rutube-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.about__rutube-player--active {
+  display: block;
 }
 
 .about__list {

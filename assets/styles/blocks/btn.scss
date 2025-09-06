@@ -4,7 +4,8 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 500;
-  display: block;
+  display: flex;
+  justify-content: center;
   color: $colorBlack;
   background-color: $colorOrange;
   padding: 17px 18px;

@@ -327,14 +327,17 @@
         </div>
         <!-- Кнопки обратной связи и демо доступа -->
         <div class="header__callback">
-          <button type="button" class="header__btn-demo btn btn--demo">
-            <!-- <span class="header__btn-demo--mobile">Демо-версия</span> -->
+          <a
+            href="https://erp.fort360.ru"
+            class="header__btn-demo btn btn--demo"
+          >
+            <span class="header__btn-demo--mobile">Демо-версия</span>
             <span class="header__btn-demo--desktop">Демо</span>
-          </button>
-          <a href="https://erp.fort360.ru"><button type="button" class="header__btn btn">
-            <!-- <span class="header__btn--mobile">Подключиться</span> -->
+          </a>
+          <a href="https://erp.fort360.ru" class="header__btn btn">
+            <span class="header__btn--mobile">Подключиться</span>
             <span class="header__btn--desktop">Авторизация</span>
-          </button></a>
+          </a>
         </div>
       </div>
     </header>
@@ -1283,36 +1286,20 @@
       <!-- Блок о системе -->
       <section id="system__anchor_link" class="main__about about">
         <div class="about__container container">
-          <!-- <iframe width="850" height="530" src="https://rutube.ru/play/embed/bf6940d8c9127cf1d9b7cb6d2989ff67/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> -->
           <h2 class="about__title">О системе</h2>
-          <a href="#" class="about__link-video">
-            <span class="about__play-icon"></span>
-            <picture>
-              <source
-                media="(min-width: 1920px)"
-                srcset="
-                  assets/images/oblojka_1920.jpg    1x,
-                  assets/images/oblojka@2x_1920.jpg 2x
-                "
-              />
-              <source
-                media="(min-width: 1200px)"
-                srcset="
-                  assets/images/oblojka_1200.jpg    1x,
-                  assets/images/oblojka@2x_1200.jpg 2x
-                "
-              />
-              <img
-                src="assets/images/oblojka.jpg"
-                srcset="assets/images/oblojka@2x.jpg"
-                alt="rutube"
-                class="about__img-rutube"
+          <div class="about__link-video">
+            <div class="about__rutube-player-wrapper">
+              <iframe
+                class="about__rutube-player"
                 width="330"
                 height="186"
-              />
-            </picture>
-            <span class="visually-hidden">Смотреть на Rutebe</span>
-          </a>
+                src="https://rutube.ru/play/embed/bf6940d8c9127cf1d9b7cb6d2989ff67/?autoplay=1"
+                frameborder="0"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
           <ul class="about__list">
             <li class="about__item">
               В быстро развивающемся мире технологий очень важно иметь
@@ -1393,7 +1380,9 @@
               >Мы готовы провести презентацию ФОРТ360, обсудить Вашу задачу и
               приступить к реализации</span
             >
-            <button class="about__btn open--consultation" type="button">Отправить запрос</button>
+            <button class="about__btn open--consultation" type="button">
+              Отправить запрос
+            </button>
           </div>
         </div>
       </section>
@@ -4101,7 +4090,9 @@
                       </dt>
                       <dd id="card__price">Бесплатно</dd>
                     </div>
-                    <button class="card__btn-primary open--connect">Подключиться</button>
+                    <button class="card__btn-primary open--connect">
+                      Подключиться
+                    </button>
                   </dl>
                 </li>
                 <li class="swiper-slide price__card card" aria-live="polite">
@@ -4423,7 +4414,9 @@
                       <dd id="card__price">10 000 ₽</dd>
                     </div>
 
-                    <button class="card__btn-primary open--connect">Подключиться</button>
+                    <button class="card__btn-primary open--connect">
+                      Подключиться
+                    </button>
                   </dl>
                 </li>
                 <li class="swiper-slide price__card card" aria-live="polite">
@@ -5150,7 +5143,10 @@
             id="support__anchor_link"
             class="certificates__wrapper-btn-modal"
           >
-            <button class="certificates__btn-modal open--consultation" type="button">
+            <button
+              class="certificates__btn-modal open--consultation"
+              type="button"
+            >
               ОТПРАВИТЬ ЗАПРОС
             </button>
           </div>

@@ -1,0 +1,246 @@
+@use "../common/variables" as *;
+
+.registration {
+  background: transparent;
+  border-radius: 6px;
+
+  @media (min-width: $d-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.registration__title {
+  font-size: 24px;
+  line-height: 28px;
+  color: $colorBlack;
+  text-transform: uppercase;
+
+  @media (min-width: $d-width) {
+    font-size: 32px;
+    line-height: 38px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $f-width) {
+    padding-right: 100px;
+  }
+}
+
+.registration__wrapper-input {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @media (min-width: $d-width) {
+    margin-top: 0;
+    flex-direction: row;
+    column-gap: 30px;
+    row-gap: 56px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $f-width) {
+    margin-top: 45px;
+    row-gap: 40px;
+  }
+}
+
+.registration__input {
+  font-size: 14px;
+  line-height: 22px;
+  color: $colorGrayLight;
+  background: transparent;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $colorGrayDark;
+  padding: 0 0 16px 0;
+
+  &::placeholder {
+    color: $colorGray;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @media (min-width: $f-width) {
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 14px;
+  }
+}
+
+textarea.registration__input {
+  padding-bottom: 0;
+  line-height: 20px;
+}
+
+.registration__text {
+  font-size: 16px;
+  line-height: 22px;
+  color: $colorWhite;
+  text-transform: uppercase;
+
+  @media (min-width: $d-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.registration__label {
+  @media (min-width: $d-width) {
+    width: 100%;
+  }
+  @media (min-width: $f-width) {
+    font-size: 18px;
+  }
+}
+
+.registration__label--name,
+.registration__label--surname {
+  @media (min-width: $d-width) {
+    width: calc(50% - 15px);
+  }
+}
+
+.registration__label--textarea {
+  @media (min-width: $d-width) {
+    width: 100%;
+  }
+}
+
+.registration__label--personal {
+  margin-top: 42px;
+  width: 100%;
+  display: block;
+
+  @media (min-width: $d-width) {
+    margin-top: 62px;
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+.registration__label--personal span {
+  display: block;
+  font-size: 15px;
+  line-height: 24px;
+  color: $colorBlack;
+
+  position: relative;
+  padding-left: 28px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 17px;
+    height: 17px;
+    background: transparent;
+    border: 1px solid $colorBlack;
+    border-radius: 5px;
+  }
+
+  @media (min-width: $d-width) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.registration__input--checkbox {
+  width: auto;
+}
+
+.registration__input--checkbox:checked ~ span {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: $colorWhite;
+    border-radius: 1px;
+    left: 3.5px;
+    top: 6.5px;
+  }
+}
+
+.registration__button {
+  font-size: 16px;
+  line-height: 16px;
+  color: $colorBlack;
+  text-transform: uppercase;
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  width: 100%;
+  border: 1px solid $colorBlack;
+  border-radius: 6px;
+  margin-top: 12px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: transparent url("../../images/svg/arrow_small_icon.svg")
+      no-repeat center / cover;
+  }
+
+  @media (min-width: $d-width) {
+    margin-top: 20px;
+    padding: 26px 38px;
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
+
+.registration__label-text {
+  color: $colorWhite;
+}
+
+.registration__label--select {
+  font-size: 14px;
+  line-height: 22px;
+  color: $colorGrayLight;
+  background: transparent;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $colorGrayDark;
+  padding: 0 0 16px 0;
+
+  &::placeholder {
+    color: $colorGray;
+  }
+
+  @media (min-width: $f-width) {
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 14px;
+  }
+}
+
+.registration__select {
+  font-size: 14px;
+  line-height: 22px;
+  color: $colorGray;
+  background: transparent;
+  display: block;
+  width: 100%;
+  border: none;
+
+  @media (min-width: $f-width) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.registration__select option {
+  background: transparent;
+}
