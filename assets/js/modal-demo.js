@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       submitButton.disabled = true;
 
       try {
-          const url = 'http://tsg:9850/portal/demo/'
+          const url = '/portal/demo/'
           const response = await fetch(url, {
               method: 'POST',
               headers: {

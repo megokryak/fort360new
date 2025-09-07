@@ -15,6 +15,32 @@
       content="форт360, правление чоп, CRM-система для охраны, табелирование ЧОП, кадровый учет для ЧОП, система управления для ЧОП, программное обеспечение для ЧОП, расчёт зарплаты, ERP ЧОП, CRM для охранного бизнеса, автоматизированная система для ЧОП, портал для охраны, CRM ЧОП, приложение для чоп, ERP-система для охраны, комплекс для управления и автоматизации чоп, учет рабочего времени"
     />
     <title>ФОРТ360 — Автоматизация деятельности ЧОП</title>
+    <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+         m[i].l=1*new Date();
+         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+         ym(97590258, "init", {
+              clickmap:true,
+              trackLinks:true,
+              accurateTrackBounce:true
+         });
+    </script>
+<!--     <script type="text/javascript">
+      (function(d, w, c) {
+          w.ChatraID = 'FxwmYxZxt4eABerQq';
+          var s = d.createElement('script');
+          w[c] = w[c] || function() {
+              (w[c].q = w[c].q || []).push(arguments);
+          };
+          s.async = true;
+          s.src = 'https://call.chatra.io/chatra.js';
+          if (d.head) d.head.appendChild(s);
+      })(document, window, 'Chatra');
+
+    </script> -->
   </head>
 
   <body class="page">
@@ -343,12 +369,14 @@
     </header>
     <main class="page__main main">
       <h1 class="visually-hidden">ФОРТ360 - регистрация на платформе</h1>
+
+
       <!-- Форма -->
       <section class="main__form-reg form-reg">
         <div class="form-reg__container container">
           <form
             action="#"
-            class="form-reg___registration registration"
+            class="form-reg___registration registration reg-form"
             method="post"
           >
             <h2 class="registration__title">
@@ -358,19 +386,17 @@
               <label class="registration__label registration__label--name">
                 <input
                   type="text"
-                  name="name"
+                  name="firstname"
                   class="registration__input"
-                  placeholder="Ваше имя"
-                  required
+                  placeholder="Имя"
                 />
               </label>
               <label class="registration__label registration__label--surname">
                 <input
                   type="text"
-                  name="surname"
+                  name="lastname"
                   class="registration__input"
-                  placeholder="Ваша фамилия"
-                  required
+                  placeholder="Фамилия"
                 />
               </label>
               <label class="registration__label">
@@ -379,16 +405,14 @@
                   name="organization"
                   class="registration__input"
                   placeholder="Организация"
-                  required
                 />
               </label>
               <label class="registration__label">
                 <input
-                  type="email"
+                  type="text"
                   name="email"
                   class="registration__input"
                   placeholder="Эл. почта"
-                  required
                 />
               </label>
               <label class="registration__label">
@@ -397,19 +421,19 @@
                   name="password"
                   class="registration__input"
                   placeholder="Пароль"
-                  required
                 />
               </label>
             </div>
             <label class="registration__label registration__label--personal">
               <input
                 type="checkbox"
+                id="reg_personal_data"
+                name="reg_personal_data"
                 class="visually-hidden registration__input registration__input--checkbox"
-                required
               />
               <span>Я согласен на обработку персональных данных</span>
             </label>
-            <button type="submit" class="registration__button">
+            <button type="submit" class="registration__button reg-submit">
               Отправить запрос
             </button>
           </form>
@@ -640,284 +664,7 @@
       </div>
     </footer>
 
-    <div class="modal modal--demo modal--close">
-      <div class="modal__container">
-        <form
-          action="#"
-          class="modal___registration registration demo-form"
-          method="post"
-        >
-          <div class="registration__wrapper">
-            <h2 class="registration__title">
-              Заполните форму для получения демо-доступа
-            </h2>
-            <div class="registration__wrapper-input">
-              <label for="name" class="registration__label">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="registration__input"
-                  placeholder="Ваше имя"
-                />
-              </label>
-              <label for="organization" class="registration__label">
-                <input
-                  type="text"
-                  id="organization"
-                  name="organization"
-                  class="registration__input"
-                  placeholder="Организация"
-                />
-              </label>
-              <label for="phone" class="registration__label">
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  class="registration__input"
-                  placeholder="Телефон"
-                />
-              </label>
-              <label for="email" class="registration__label">
-                <input
-                  type="text"
-                  id="email"
-                  name="email"
-                  class="registration__input"
-                  placeholder="E-mail"
-                />
-              </label>
 
-              <label class="registration__label registration__label--personal">
-                <input
-                  type="checkbox"
-                  id="demo_personal_data"
-                  name="personal_data"
-                  class="visually-hidden registration__input registration__input--checkbox"
-                />
-                <span class="registration__label-text"
-                  >Я согласен на обработку персональных данных</span
-                >
-              </label>
-
-              <button type="submit" class="registration__button demo-submit">
-                Отправить запрос
-              </button>
-            </div>
-          </div>
-        </form>
-        <button class="modal__close-btn" type="button">
-          <span class="visually-hidden">Закрыть модальное окно</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="modal modal--consultation modal--close">
-      <div class="modal__container">
-        <form
-          action="#"
-          class="modal___registration registration"
-          method="post"
-        >
-          <div class="registration__wrapper">
-            <h2 class="registration__title">
-              Заполните форму для получения консультации
-            </h2>
-            <div class="registration__wrapper-input">
-              <label for="name" class="registration__label">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="registration__input"
-                  placeholder="Ваше имя"
-                  required
-                />
-              </label>
-              <label for="organization" class="registration__label">
-                <input
-                  type="text"
-                  id="organization"
-                  name="organization"
-                  class="registration__input"
-                  placeholder="Организация"
-                  required
-                />
-              </label>
-              <label for="phone" class="registration__label">
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  class="registration__input"
-                  placeholder="Телефон"
-                  required
-                />
-              </label>
-              <label for="email" class="registration__label">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="registration__input"
-                  placeholder="E-mail"
-                  required
-                />
-              </label>
-              <label
-                for="message"
-                class="registration__label registration__label--textarea"
-              >
-                <textarea
-                  id="message"
-                  name="message"
-                  class="registration__input"
-                  placeholder="Ваш запрос"
-                  required
-                ></textarea>
-              </label>
-              <label class="registration__label registration__label--personal">
-                <input
-                  type="checkbox"
-                  name="personal_data"
-                  class="visually-hidden registration__input registration__input--checkbox"
-                  required
-                />
-                <span class="registration__label-text"
-                  >Я согласен на обработку персональных данных</span
-                >
-              </label>
-              <button type="submit" class="registration__button">
-                Отправить запрос
-              </button>
-            </div>
-          </div>
-        </form>
-        <button class="modal__close-btn" type="button">
-          <span class="visually-hidden">Закрыть модальное окно</span>
-        </button>
-      </div>
-    </div>
-    <div class="modal modal--connect modal--close">
-      <div class="modal__container">
-        <form
-          action="#"
-          class="modal___registration registration"
-          method="post"
-        >
-          <div class="registration__wrapper">
-            <h2 class="registration__title">
-              Заполните форму для оформления заявки на подключение
-            </h2>
-            <div class="registration__wrapper-input">
-              <label for="name" class="registration__label">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="registration__input"
-                  placeholder="Ваше имя"
-                  required
-                />
-              </label>
-              <label for="organization" class="registration__label">
-                <input
-                  type="text"
-                  id="organization"
-                  name="organization"
-                  class="registration__input"
-                  placeholder="Организация"
-                  required
-                />
-              </label>
-              <label for="phone" class="registration__label">
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  class="registration__input"
-                  placeholder="Телефон"
-                  required
-                />
-              </label>
-              <label for="email" class="registration__label">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="registration__input"
-                  placeholder="E-mail"
-                  required
-                />
-              </label>
-              <label
-                for="message"
-                class="registration__label registration__label--select"
-              >
-                <select
-                  name="registration-selected"
-                  class="registration__select"
-                >
-                  <option value="start">Старт</option>
-                  <option value="command">Команда</option>
-                  <option value="company">Компания</option>
-                  <option value="corporation">Корпорация</option>
-                </select>
-              </label>
-              <label class="registration__label registration__label--personal">
-                <input
-                  type="checkbox"
-                  name="personal_data"
-                  class="visually-hidden registration__input registration__input--checkbox"
-                  required
-                />
-                <span class="registration__label-text"
-                  >Я согласен на обработку персональных данных</span
-                >
-              </label>
-              <button type="submit" class="registration__button">
-                Отправить запрос
-              </button>
-            </div>
-          </div>
-        </form>
-        <button class="modal__close-btn" type="button">
-          <span class="visually-hidden">Закрыть модальное окно</span>
-        </button>
-      </div>
-    </div>
-    <div class="modal modal--call-me modal--close">
-      <div class="modal__container">
-        <form
-          action="#"
-          class="modal___registration registration"
-          method="post"
-        >
-          <div class="registration__wrapper">
-            <h2 class="registration__title">Заказать звонок</h2>
-            <div class="registration__wrapper-input">
-              <label for="phone" class="registration__label">
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  class="registration__input"
-                  placeholder="Телефон"
-                  required
-                />
-              </label>
-              <button type="submit" class="registration__button">
-                Отправить запрос
-              </button>
-            </div>
-          </div>
-        </form>
-        <button class="modal__close-btn" type="button">
-          <span class="visually-hidden">Закрыть модальное окно</span>
-        </button>
-      </div>
-    </div>
-    <script type="module" src="/index.js"></script>
+    <script type="module" src="/pages/reg/index.js"></script>
   </body>
 </html>
