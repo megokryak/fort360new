@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <link rel="stylesheet" href="/assets/styles/styles.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -397,14 +397,17 @@
           </div>
           <!-- Кнопки видео и презентация -->
           <div class="ups__wrapper-btn-video">
-            <button
+
+              <button
               type="button"
               class="usp__btn-video btn__video btn__video--border-left"
+              onclick="location.href='#system__anchor_link'"
             >
               <span class="btn-video__text">Видео</span>
             </button>
             <button
               type="button"
+              id="downloadPrezButton"
               class="usp__btn-video btn__video btn__video--border-right btn__presentasion"
             >
               <span class="btn-video__text">Презентация</span>
@@ -3205,20 +3208,28 @@
       <!-- Форма -->
       <section class="main__feedback feedback">
         <div class="feedback__container container">
-          <form action="#" class="feedback___subscribe subscribe" method="post">
+          <form action="#" class="feedback___subscribe subscribe consult2-form" method="post">
             <div class="subscribe__wrapper">
               <h2 class="subscribe__title">
                 Заполните форму для получения консультации
               </h2>
               <div class="subscribe__wrapper-input">
-                <label for="name" class="subscribe__label">
+                <label for="firstname" class="subscribe__label">
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    id="firstname"
+                    name="firstname"
                     class="subscribe__input"
-                    placeholder="Ваше имя"
-                    required
+                    placeholder="Имя"
+                  />
+                </label>
+                <label for="lastname" class="subscribe__label">
+                  <input
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    class="subscribe__input"
+                    placeholder="Фамилия"
                   />
                 </label>
                 <label for="organization" class="subscribe__label">
@@ -3228,7 +3239,6 @@
                     name="organization"
                     class="subscribe__input"
                     placeholder="Организация"
-                    required
                   />
                 </label>
                 <label for="phone" class="subscribe__label">
@@ -3238,17 +3248,15 @@
                     name="phone"
                     class="subscribe__input"
                     placeholder="Телефон"
-                    required
                   />
                 </label>
                 <label for="email" class="subscribe__label">
                   <input
-                    type="email"
+                    type="text"
                     id="email"
                     name="email"
                     class="subscribe__input"
                     placeholder="E-mail"
-                    required
                   />
                 </label>
                 <label
@@ -3260,7 +3268,6 @@
                     name="message"
                     class="subscribe__input"
                     placeholder="Ваш запрос"
-                    required
                   ></textarea>
                 </label>
               </div>
@@ -3274,11 +3281,12 @@
                 <input
                   type="checkbox"
                   class="visually-hidden subscribe__input subscribe__input--checkbox"
-                  required
+                  id="consult_personal_data2"
+                  name="consult_personal_data2"
                 />
                 <span>Я согласен на обработку персональных данных</span>
               </label>
-              <button type="submit" class="subscribe__button">
+              <button type="submit" class="subscribe__button consult-submit2">
                 Отправить запрос
               </button>
             </div>
@@ -5429,13 +5437,22 @@
               Заполните форму для получения демо-доступа
             </h2>
             <div class="subscribe__wrapper-input">
-              <label for="name" class="subscribe__label">
+              <label for="firstname" class="subscribe__label">
                 <input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="firstname"
+                  name="firstname"
                   class="subscribe__input"
-                  placeholder="Ваше имя"
+                  placeholder="Имя"
+                />
+              </label>
+              <label for="lastname" class="subscribe__label">
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  class="subscribe__input"
+                  placeholder="Фамилия"
                 />
               </label>
               <label for="organization" class="subscribe__label">
@@ -5492,20 +5509,28 @@
 
     <div class="modal modal--consultation modal--close">
       <div class="modal__container">
-        <form action="#" class="modal___subscribe subscribe" method="post">
+        <form action="#" class="modal___subscribe subscribe consult-form" method="post">
           <div class="subscribe__wrapper">
             <h2 class="subscribe__title">
               Заполните форму для получения консультации
             </h2>
             <div class="subscribe__wrapper-input">
-              <label for="name" class="subscribe__label">
+              <label for="firstname" class="subscribe__label">
                 <input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="firstname"
+                  name="firstname"
                   class="subscribe__input"
-                  placeholder="Ваше имя"
-                  required
+                  placeholder="Имя"
+                />
+              </label>
+              <label for="lastname" class="subscribe__label">
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  class="subscribe__input"
+                  placeholder="Фамилия"
                 />
               </label>
               <label for="organization" class="subscribe__label">
@@ -5515,7 +5540,6 @@
                   name="organization"
                   class="subscribe__input"
                   placeholder="Организация"
-                  required
                 />
               </label>
               <label for="phone" class="subscribe__label">
@@ -5525,17 +5549,15 @@
                   name="phone"
                   class="subscribe__input"
                   placeholder="Телефон"
-                  required
                 />
               </label>
               <label for="email" class="subscribe__label">
                 <input
-                  type="email"
+                  type="text"
                   id="email"
                   name="email"
                   class="subscribe__input"
                   placeholder="E-mail"
-                  required
                 />
               </label>
               <label
@@ -5547,26 +5569,26 @@
                   name="message"
                   class="subscribe__input"
                   placeholder="Ваш запрос"
-                  required
                 ></textarea>
               </label>
               <label class="subscribe__label subscribe__label--personal">
                 <input
                   type="checkbox"
-                  name="personal_data"
+                  id="consult_personal_data"
+                  name="consult_personal_data"
                   class="visually-hidden subscribe__input subscribe__input--checkbox"
-                  required
                 />
                 <span class="subscribe__label-text"
                   >Я согласен на обработку персональных данных</span
                 >
               </label>
-              <button type="submit" class="subscribe__button">
+              <button type="submit" class="subscribe__button consult-submit">
                 Отправить запрос
               </button>
             </div>
           </div>
         </form>
+
         <button class="modal__close-btn" type="button">
           <span class="visually-hidden">Закрыть модальное окно</span>
         </button>
@@ -5574,20 +5596,28 @@
     </div>
     <div class="modal modal--connect modal--close">
       <div class="modal__container">
-        <form action="#" class="modal___subscribe subscribe" method="post">
+        <form action="#" class="modal___subscribe subscribe connect-form" method="post">
           <div class="subscribe__wrapper">
             <h2 class="subscribe__title">
               Заполните форму для оформления заявки на подключение
             </h2>
             <div class="subscribe__wrapper-input">
-              <label for="name" class="subscribe__label">
+              <label for="firstname" class="subscribe__label">
                 <input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="firstname"
+                  name="firstname"
                   class="subscribe__input"
-                  placeholder="Ваше имя"
-                  required
+                  placeholder="Имя"
+                />
+              </label>
+              <label for="lastname" class="subscribe__label">
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  class="subscribe__input"
+                  placeholder="Фамилия"
                 />
               </label>
               <label for="organization" class="subscribe__label">
@@ -5597,7 +5627,6 @@
                   name="organization"
                   class="subscribe__input"
                   placeholder="Организация"
-                  required
                 />
               </label>
               <label for="phone" class="subscribe__label">
@@ -5607,17 +5636,15 @@
                   name="phone"
                   class="subscribe__input"
                   placeholder="Телефон"
-                  required
                 />
               </label>
               <label for="email" class="subscribe__label">
                 <input
-                  type="email"
+                  type="text"
                   id="email"
                   name="email"
                   class="subscribe__input"
                   placeholder="E-mail"
-                  required
                 />
               </label>
               <label
@@ -5634,15 +5661,15 @@
               <label class="subscribe__label subscribe__label--personal">
                 <input
                   type="checkbox"
-                  name="personal_data"
+                  name="connect_personal_data"
+                  id="connect_personal_data"
                   class="visually-hidden subscribe__input subscribe__input--checkbox"
-                  required
                 />
                 <span class="subscribe__label-text"
                   >Я согласен на обработку персональных данных</span
                 >
               </label>
-              <button type="submit" class="subscribe__button">
+              <button type="submit" class="subscribe__button connect-submit">
                 Отправить запрос
               </button>
             </div>
@@ -5655,7 +5682,7 @@
     </div>
     <div class="modal modal--call-me modal--close">
       <div class="modal__container">
-        <form action="#" class="modal___subscribe subscribe" method="post">
+        <form action="#" class="modal___subscribe subscribe callme-form" method="post">
           <div class="subscribe__wrapper">
             <h2 class="subscribe__title">Заказать звонок</h2>
             <div class="subscribe__wrapper-input">
@@ -5666,10 +5693,9 @@
                   name="phone"
                   class="subscribe__input"
                   placeholder="Телефон"
-                  required
                 />
               </label>
-              <button type="submit" class="subscribe__button">
+              <button type="submit" class="subscribe__button callme-submit">
                 Отправить запрос
               </button>
             </div>

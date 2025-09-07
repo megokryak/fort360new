@@ -1,7 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const modalCallMe = document.querySelector(".modal--call-me");
+import { notify, validateEmail } from './utils.js';
 
-  const closeBtnClallMe = modalCallMe.querySelector(".modal__close-btn");
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.querySelector(".modal--call-me");
+
+  const closeBtnClallMe = modal.querySelector(".modal__close-btn");
   const openBtnsCallMe = document.querySelectorAll(".callback");
 
   const openModal = (modalCB) => {
@@ -20,25 +22,85 @@ document.addEventListener("DOMContentLoaded", () => {
   openBtnsCallMe.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      openModal(modalCallMe);
+      openModal(modal);
     });
   });
 
   // Закрытие по крестику
-  closeBtnClallMe?.addEventListener("click", () => closeModal(modalCallMe));
+  closeBtnClallMe?.addEventListener("click", () => closeModal(modal));
 
   // Закрытие по клику вне .modal-demo__container (по фону)
-  modalCallMe.addEventListener("click", (e) => {
+  modal.addEventListener("click", (e) => {
     if (!e.target.closest(".modal__container")) {
-      closeModal(modalCallMe);
+      closeModal(modal);
     }
   });
 
   // Дополнительно: закрытие по Esc
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !modalCallMe.classList.contains("modal--close")) {
-      closeModal(modalCallMe);
+    if (e.key === "Escape" && !modal.classList.contains("modal--close")) {
+      closeModal(modal);
     }
+  });
+
+  const form = document.querySelector('.callme-form');
+  // const personalDataCheckbox = document.getElementById('consult_personal_data');
+  const submitButton = document.querySelector('.callme-submit');
+
+
+  // Функция для сброса формы
+  function resetForm() {
+      form.reset();
+  }
+
+  // Обработчик отправки формы
+  form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const formValues = {
+          firstname: 'запрос обратного звонка',
+          lastname: formData.get('lastname'),
+          organization: formData.get('organization'),
+          phone: formData.get('phone'),
+          email: formData.get('email'),
+          text: formData.get('message'),
+          personal_data: formData.get('consult_personal_data') ? true : false,
+      };
+
+      if (!formValues.phone) {
+          notify("Ошибка!", "Пожалуйста, заполните поле «Телефон»", 'error');
+          return;
+      }
+
+      submitButton.disabled = true;
+
+      try {
+        const url = 'http://tsg:9850/portal/support/'
+          const response = await fetch(url, {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formValues),
+          });
+
+          if (!response.ok) {
+              throw new Error('Ошибка сервера');
+          }
+
+          notify("Успех!", "Заявка обратный звонок отправлена", 'success');
+          resetForm();
+          closeModal(modal)
+      } catch (error) {
+          if (error.response && error.response.data && error.response.data.username) {
+              notify("Ошибка!", error.response.data.username[0], 'error');
+          } else {
+              notify("Ошибка!", error.message, 'error');
+          }
+      } finally {
+          submitButton.disabled = false;
+      }
   });
 
 });

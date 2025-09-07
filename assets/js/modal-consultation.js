@@ -1,11 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const modalConsultation = document.querySelector(".modal--consultation");
+import { notify, validateEmail } from './utils.js';
 
-  const closeBtnConsultation = modalConsultation.querySelector(".modal__close-btn");
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.querySelector(".modal--consultation");
+
+  const closeBtnConsultation = modal.querySelector(".modal__close-btn");
   const openBtnsConsultation = document.querySelectorAll(".open--consultation");
 
 
   const openModal = (modalCB) => {
+    resetForm()
     modalCB.classList.remove("modal--close");
     document.body.style.overflow = "hidden"; // блокируем скролл страницы
   };
@@ -21,20 +24,20 @@ document.addEventListener("DOMContentLoaded", () => {
   openBtnsConsultation.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      openModal(modalConsultation);
+      openModal(modal);
     });
   });
 
 
   // Закрытие по крестику
   closeBtnConsultation?.addEventListener("click", () =>
-    closeModal(modalConsultation)
+    closeModal(modal)
   );
 
   // Закрытие по клику вне .modal-demo__container (по фону)
-  modalConsultation.addEventListener("click", (e) => {
+  modal.addEventListener("click", (e) => {
     if (!e.target.closest(".modal__container")) {
-      closeModal(modalConsultation);
+      closeModal(modal);
     }
   });
 
@@ -43,10 +46,103 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (
       e.key === "Escape" &&
-      !modalConsultation.classList.contains("modal--close")
+      !modal.classList.contains("modal--close")
     ) {
-      closeModal(modalConsultation);
+      closeModal(modal);
     }
+  });
+
+
+  const form = document.querySelector('.consult-form');
+  const personalDataCheckbox = document.getElementById('consult_personal_data');
+  const submitButton = document.querySelector('.consult-submit');
+
+
+  // Функция для сброса формы
+  function resetForm() {
+      form.reset();
+      personalDataCheckbox.checked = false;
+  }
+
+  // Обработчик отправки формы
+  form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const formValues = {
+          firstname: formData.get('firstname'),
+          lastname: formData.get('lastname'),
+          organization: formData.get('organization'),
+          phone: formData.get('phone'),
+          email: formData.get('email'),
+          text: formData.get('message'),
+          personal_data: formData.get('consult_personal_data') ? true : false,
+      };
+
+      // Проверка на пустые поля
+      if (!formValues.firstname) {
+          notify("Ошибка!", "Пожалуйста, заполните поле Имя»", 'error');
+          return;
+      }
+      if (!formValues.lastname) {
+          notify("Ошибка!", "Пожалуйста, заполните поле Фамилия»", 'error');
+          return;
+      }
+      if (!formValues.organization) {
+          notify("Ошибка!", "Пожалуйста, заполните поле «Организация»", 'error');
+          return;
+      }
+      if (!formValues.phone) {
+          notify("Ошибка!", "Пожалуйста, заполните поле «Телефон»", 'error');
+          return;
+      }
+      if (!formValues.email) {
+          notify("Ошибка!", "Пожалуйста, заполните поле «E-mail»", 'error');
+          return;
+      }
+      if (!validateEmail(formValues.email)) {
+          notify("Ошибка!", `Почта указана некорректно: ${formValues.email}`, 'error');
+          return;
+      }
+      if (!formValues.personal_data) {
+          notify("Ошибка!", "Пожалуйста, согласитесь на обработку персональных данных", 'error');
+          return;
+      }
+
+      if (!validateEmail(formValues.email)) {
+          notify("Ошибка!", `Почта указана некорректно: ${formValues.email}`, 'error');
+          return;
+      }
+
+      submitButton.disabled = true;
+
+      try {
+          const url = 'http://tsg:9850/portal/support/'
+          const response = await fetch(url, {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formValues),
+          });
+
+          if (!response.ok) {
+              throw new Error('Ошибка сервера');
+          }
+
+          notify("Успех!", "Запрос на консультацию отправлен", 'success');
+          resetForm();
+          closeModal(modal);
+
+      } catch (error) {
+          if (error.response && error.response.data && error.response.data.username) {
+              notify("Ошибка!", error.response.data.username[0], 'error');
+          } else {
+              notify("Ошибка!", error.message, 'error');
+          }
+      } finally {
+          submitButton.disabled = false;
+      }
   });
 });
 
