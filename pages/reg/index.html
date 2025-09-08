@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/assets/styles/styles.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -16,19 +15,38 @@
     />
     <title>ФОРТ360 — Автоматизация деятельности ЧОП</title>
     <script type="text/javascript">
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-         m[i].l=1*new Date();
-         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
 
-         ym(97590258, "init", {
-              clickmap:true,
-              trackLinks:true,
-              accurateTrackBounce:true
-         });
+      ym(97590258, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
     </script>
-<!--     <script type="text/javascript">
+    <!--     <script type="text/javascript">
       (function(d, w, c) {
           w.ChatraID = 'FxwmYxZxt4eABerQq';
           var s = d.createElement('script');
@@ -370,7 +388,6 @@
     <main class="page__main main">
       <h1 class="visually-hidden">ФОРТ360 - регистрация на платформе</h1>
 
-
       <!-- Форма -->
       <section class="main__form-reg form-reg">
         <div class="form-reg__container container">
@@ -663,7 +680,6 @@
         </div>
       </div>
     </footer>
-
 
     <script type="module" src="/pages/reg/index.js"></script>
   </body>
