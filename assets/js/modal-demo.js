@@ -69,11 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Проверка на пустые поля
       if (!formValues.firstname) {
-          notify("Ошибка!", "Пожалуйста, заполните поле Имя»", 'error');
+          notify("Ошибка!", "Пожалуйста, заполните поле «Имя»", 'error');
           return;
       }
       if (!formValues.lastname) {
-          notify("Ошибка!", "Пожалуйста, заполните поле Фамилия»", 'error');
+          notify("Ошибка!", "Пожалуйста, заполните поле «Фамилия»", 'error');
           return;
       }
       if (!formValues.organization) {
