@@ -7,12 +7,12 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 export default defineConfig({
   base: "./",
   build: {
-    outDir: "docs",
+    outDir: "dist",
     emptyOutDir: true,
     rollupOptions: {
       input: {
         index: resolve(__dirname, "index.html"),
-        reg: resolve(__dirname, "pages/reg/index.html"),
+        reg: resolve(__dirname, "reg.html"),
       },
       output: {
         // сохраняем структуру ассетов
