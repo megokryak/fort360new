@@ -13,3 +13,4 @@ import "./assets/js/consultation.js";
 import "./assets/js/modal-callme.js";
 import "./assets/js/changePrice.js";
 import "./assets/js/downloader.js";
+import "./assets/js/validation.js";

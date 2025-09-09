@@ -76,7 +76,8 @@
 
 .card__badge {
   flex: 0 0 20px;
-  display: block;
+  // display: block;
+  display: none;
   margin-left: 5px;
   margin-right: auto;
   width: 20px;
@@ -144,9 +145,11 @@
   width: 29px;
   height: 28px;
   margin-right: calc((50% - 29px) / 2);
+  margin-left: auto;
 
   @media (min-width: $d-width) {
     margin-right: 0;
+    margin-left: 0;
   }
 }
 

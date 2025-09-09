@@ -151,7 +151,7 @@
   color: $colorWhite;
   letter-spacing: -0.6px;
 
-  @media (min-width: $f-width) {
+  @media (min-width: $d-width) {
     font-size: 18px;
     line-height: 27px;
   }
@@ -239,6 +239,11 @@
   font-size: 15px;
   line-height: 22px;
   color: $colorBlack;
+
+  @media (min-width: $d-width) {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
 
 .cases__wrapper-pagination {

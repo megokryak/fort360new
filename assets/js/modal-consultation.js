@@ -1,4 +1,4 @@
-import { notify, validateEmail } from './utils.js';
+import { notify, validateEmail } from "./utils.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.querySelector(".modal--consultation");
@@ -6,9 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtnConsultation = modal.querySelector(".modal__close-btn");
   const openBtnsConsultation = document.querySelectorAll(".open--consultation");
 
-
   const openModal = (modalCB) => {
-    resetForm()
+    resetForm();
     modalCB.classList.remove("modal--close");
     document.body.style.overflow = "hidden"; // блокируем скролл страницы
   };
@@ -18,8 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = ""; // возвращаем скролл
   };
 
-
-
   // Открытие по кнопкам .about-btn (их может быть несколько)
   openBtnsConsultation.forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -28,11 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
   // Закрытие по крестику
-  closeBtnConsultation?.addEventListener("click", () =>
-    closeModal(modal)
-  );
+  closeBtnConsultation?.addEventListener("click", () => closeModal(modal));
 
   // Закрытие по клику вне .modal-demo__container (по фону)
   modal.addEventListener("click", (e) => {
@@ -41,110 +35,151 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
   // Дополнительно: закрытие по Esc
   document.addEventListener("keydown", (e) => {
-    if (
-      e.key === "Escape" &&
-      !modal.classList.contains("modal--close")
-    ) {
+    if (e.key === "Escape" && !modal.classList.contains("modal--close")) {
       closeModal(modal);
     }
   });
 
-
-  const form = document.querySelector('.consult-form');
-  const personalDataCheckbox = document.getElementById('consult_personal_data');
-  const submitButton = document.querySelector('.consult-submit');
-
+  const form = document.querySelector(".consult-form");
+  const personalDataCheckbox = document.getElementById("consult_personal_data");
+  const submitButton = document.querySelector(".consult-submit");
 
   // Функция для сброса формы
   function resetForm() {
-      form.reset();
-      personalDataCheckbox.checked = false;
+    form.reset();
+    personalDataCheckbox.checked = false;
   }
 
   // Обработчик отправки формы
-  form.addEventListener('submit', async (event) => {
-      event.preventDefault();
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-      const formData = new FormData(form);
-      const formValues = {
-          firstname: formData.get('firstname'),
-          lastname: formData.get('lastname'),
-          organization: formData.get('organization'),
-          phone: formData.get('phone'),
-          email: formData.get('email'),
-          text: formData.get('message'),
-          personal_data: formData.get('consult_personal_data') ? true : false,
-      };
+    const formData = new FormData(form);
+    const formValues = {
+      firstname: formData.get("firstname"),
+      lastname: formData.get("lastname"),
+      organization: formData.get("organization"),
+      phone: formData.get("phone"),
+      email: formData.get("email"),
+      text: formData.get("message"),
+      personal_data: formData.get("consult_personal_data") ? true : false,
+    };
 
-      // Проверка на пустые поля
-      if (!formValues.firstname) {
-          notify("Ошибка!", "Пожалуйста, заполните поле «Имя»", 'error');
-          return;
-      }
-      if (!formValues.lastname) {
-          notify("Ошибка!", "Пожалуйста, заполните поле «Фамилия»", 'error');
-          return;
-      }
-      if (!formValues.organization) {
-          notify("Ошибка!", "Пожалуйста, заполните поле «Организация»", 'error');
-          return;
-      }
-      if (!formValues.phone) {
-          notify("Ошибка!", "Пожалуйста, заполните поле «Телефон»", 'error');
-          return;
-      }
-      if (!formValues.email) {
-          notify("Ошибка!", "Пожалуйста, заполните поле «E-mail»", 'error');
-          return;
-      }
-      if (!validateEmail(formValues.email)) {
-          notify("Ошибка!", `Почта указана некорректно: ${formValues.email}`, 'error');
-          return;
-      }
-      if (!formValues.personal_data) {
-          notify("Ошибка!", "Пожалуйста, согласитесь на обработку персональных данных", 'error');
-          return;
+    // Проверка на пустые поля
+    if (!formValues.firstname) {
+      notify("Ошибка!", "Пожалуйста, заполните поле «Имя»", "error");
+      return;
+    }
+    if (!formValues.lastname) {
+      notify("Ошибка!", "Пожалуйста, заполните поле «Фамилия»", "error");
+      return;
+    }
+    if (!formValues.organization) {
+      notify("Ошибка!", "Пожалуйста, заполните поле «Организация»", "error");
+      return;
+    }
+    if (!formValues.phone) {
+      notify("Ошибка!", "Пожалуйста, заполните поле «Телефон»", "error");
+      return;
+    }
+    if (!formValues.email) {
+      notify("Ошибка!", "Пожалуйста, заполните поле «E-mail»", "error");
+      return;
+    }
+    if (!validateEmail(formValues.email)) {
+      notify(
+        "Ошибка!",
+        `Почта указана некорректно: ${formValues.email}`,
+        "error"
+      );
+      return;
+    }
+    if (!formValues.personal_data) {
+      notify(
+        "Ошибка!",
+        "Пожалуйста, согласитесь на обработку персональных данных",
+        "error"
+      );
+      return;
+    }
+
+    if (!validateEmail(formValues.email)) {
+      notify(
+        "Ошибка!",
+        `Почта указана некорректно: ${formValues.email}`,
+        "error"
+      );
+      return;
+    }
+
+    submitButton.disabled = true;
+
+    try {
+      const url = "/portal/support/";
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formValues),
+      });
+
+      if (!response.ok) {
+        throw new Error("Ошибка сервера");
       }
 
-      if (!validateEmail(formValues.email)) {
-          notify("Ошибка!", `Почта указана некорректно: ${formValues.email}`, 'error');
-          return;
+      notify("Успех!", "Запрос на консультацию отправлен", "success");
+      resetForm();
+      closeModal(modal);
+    } catch (error) {
+      if (
+        error.response &&
+        error.response.data &&
+        error.response.data.username
+      ) {
+        notify("Ошибка!", error.response.data.username[0], "error");
+      } else {
+        notify("Ошибка!", error.message, "error");
       }
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
 
-      submitButton.disabled = true;
+  // Добавление маски в телефон
+  const phoneInput = document.querySelector(".modal--consultation #phone");
 
-      try {
-          const url = '/portal/support/'
-          const response = await fetch(url, {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(formValues),
-          });
+  phoneInput.addEventListener("input", function () {
+    let inputValue = phoneInput.value.replace(/\D/g, ""); // Убираем все нецифровые символы
 
-          if (!response.ok) {
-              throw new Error('Ошибка сервера');
-          }
+    // Ограничиваем длину ввода до 10 цифр
+    if (inputValue.length > 11) inputValue = inputValue.slice(0, 11);
 
-          notify("Успех!", "Запрос на консультацию отправлен", 'success');
-          resetForm();
-          closeModal(modal);
+    // Форматируем номер по маске
+    let formattedValue = "";
 
-      } catch (error) {
-          if (error.response && error.response.data && error.response.data.username) {
-              notify("Ошибка!", error.response.data.username[0], 'error');
-          } else {
-              notify("Ошибка!", error.message, 'error');
-          }
-      } finally {
-          submitButton.disabled = false;
-      }
+    if (inputValue.length > 1) {
+      formattedValue = "+7 (" + inputValue.slice(1, 4);
+    }
+    if (inputValue.length > 4) {
+      formattedValue += ") " + inputValue.slice(4, 7);
+    }
+    if (inputValue.length > 7) {
+      formattedValue += "-" + inputValue.slice(7, 9);
+    }
+    if (inputValue.length > 9) {
+      formattedValue += "-" + inputValue.slice(9, 11);
+    }
+
+    // Если введено меньше, чем 2 символа, оставляем только +7
+    if (inputValue.length <= 1) {
+      formattedValue = "+7";
+    }
+
+    phoneInput.value = formattedValue;
   });
 });
-
 
 // 2 модалки 1 на странице

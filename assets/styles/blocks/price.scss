@@ -326,9 +326,9 @@ li.price__card {
     width: calc(100% / 4);
     padding: 22px 32px;
 
-    &:first-child {
-      padding-left: 0;
-    }
+    // &:first-child {
+    //   padding-left: 0;
+    // }
 
     &:last-child {
       border-right: none;
