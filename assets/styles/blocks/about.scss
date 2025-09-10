@@ -179,11 +179,11 @@
 
 .about__together-list {
   display: flex;
-  column-gap: 30px;
-  justify-content: center;
+  // column-gap: 30px;
+  // justify-content: center;
 
   @media (min-width: $d-width) {
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 }
 
