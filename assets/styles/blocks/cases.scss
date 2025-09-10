@@ -40,13 +40,14 @@
   line-height: 23px;
   color: $colorBlack;
   margin-top: 33px;
-  letter-spacing: -0.6px;
+  letter-spacing: -0.9px;
 
   @media (min-width: $d-width) {
     font-size: 18px;
     line-height: 27px;
     order: 2;
     margin-top: 27px;
+    letter-spacing: 0;
   }
 
   @media (min-width: $f-width) {
