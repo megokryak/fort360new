@@ -250,6 +250,7 @@ textarea.subscribe__input {
 }
 
 .subscribe__select {
+  appearance: none;
   font-size: 14px;
   line-height: 22px;
   color: $colorGray;
@@ -257,6 +258,11 @@ textarea.subscribe__input {
   display: block;
   width: 100%;
   border: none;
+  position: relative;
+
+  &:focus-visible {
+    outline: none;
+  }
 
   @media (min-width: $f-width) {
     font-size: 18px;
@@ -265,5 +271,13 @@ textarea.subscribe__input {
 }
 
 .subscribe__select option {
-  background: transparent;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  appearance: none;
+  background: $colorGrayDark;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: $colorGrayLight;
 }

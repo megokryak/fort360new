@@ -5730,7 +5730,6 @@
                 class="subscribe__label subscribe__label--select"
               >
                 <select name="subscribe-selected" class="subscribe__select">
-                  <option value="start">Старт</option>
                   <option value="command">Команда</option>
                   <option value="company">Компания</option>
                   <option value="corporation">Корпорация</option>
@@ -5792,6 +5791,791 @@
             </div>
           </div>
         </form>
+        <button class="modal__close-btn" type="button">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+        </button>
+      </div>
+    </div>
+    <div class="modal modal--functional">
+      <div class="modal__container modal__container--functional">
+        <div class="functional__wrapper">
+          <!-- Слайдер разделов -->
+          <div class="functional__slider">
+            <ul class="swiper-wrapper functional__list">
+              <li
+                class="swiper-slide functional__item functional__item--active"
+                data-tab="1"
+              >
+                Постовая охрана
+              </li>
+              <li class="swiper-slide functional__item" data-tab="2">
+                Делопроизводство
+              </li>
+              <li class="swiper-slide functional__item" data-tab="3">Кадры</li>
+              <li class="swiper-slide functional__item" data-tab="4">
+                Совместная работа
+              </li>
+              <li class="swiper-slide functional__item" data-tab="5">
+                Мобильный доклад
+              </li>
+              <li class="swiper-slide functional__item" data-tab="6">
+                Дежурная служба
+              </li>
+              <li class="swiper-slide functional__item" data-tab="7">
+                Транспортные средства
+              </li>
+              <li class="swiper-slide functional__item" data-tab="8">
+                Склад и материальное обеспечание
+              </li>
+              <li class="swiper-slide functional__item" data-tab="9">
+                Патрульный обход
+              </li>
+            </ul>
+          </div>
+          <!-- Слайдер изображений -->
+          <div class="functional__wrapper-main-img">
+            <div class="swiper functional__img-slider" data-tab="1">
+              <ul class="swiper-wrapper functional__img-list">
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img01-slider-item.png"
+                      srcset="assets/images/img01-slider-item@2x.png"
+                      alt="Слайд 1"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт и хранение информации об объектах и постах охраны,
+                    статусе, контрагенте, ответственном начальнике подразделения
+                    охранной организации и охраннике на посту
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img01_2-slider-item.png"
+                      srcset="assets/images/img01_2-slider-item@2x.png"
+                      alt="Слайд 2"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт и хранение информации об объектах и постах охраны,
+                    статусе, контрагенте, ответственном начальнике подразделения
+                    охранной организации и охраннике на посту
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img01_3-slider-item.png"
+                      srcset="assets/images/img01_3-slider-item@2x.png"
+                      alt="Слайд 3"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Формирование графиков смен, планирование ресурса охранников
+                    с подтверждением факта заступления на пост через оператора
+                    или мобильное приложение
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img01_4-slider-item.png"
+                      srcset="assets/images/img01_4-slider-item@2x.png"
+                      alt="Слайд 4"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Ежесуточный автоматизированный отчёт о событиях
+                    на охраняемых объектах, инцидентах на постах, результатах
+                    устранения последствий происшествий, итогах работы
+                    проверяющих и т.п.
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img01_5-slider-item.png"
+                      srcset="assets/images/img01_5-slider-item@2x.png"
+                      alt="Слайд 5"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Все объекты охраны нанесены на интерактивную карту
+                    с возможностью оперативного просмотра информации постах
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper functional__img-slider" data-tab="2">
+              <ul class="swiper-wrapper functional__img-list">
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img02-slider-item.png"
+                      srcset="assets/images/img02-slider-item@2x.png"
+                      alt="Слайд 1"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Хранение и анализ информации, касающейся сотрудников,
+                    контрагентов, договоров, объектов, служебных постов,
+                    транспортных средств и т.п.
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img02_1-slider-item.png"
+                      srcset="assets/images/img02_1-slider-item@2x.png"
+                      alt="Слайд 2"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Поддержание базы необходимых документов в актуальном
+                    состоянии для удобства работы и снижения риска ошибок
+                    в совместной деятельности подразделений
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img02_2-slider-item.png"
+                      srcset="assets/images/img02_2-slider-item@2x.png"
+                      alt="Слайд 3"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Ведение реестра договоров с клиентами организации,
+                    уведомления о приближении даты окончания сроков действия
+                    юридически значимых и иных документов
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img02_3-slider-item.png"
+                      srcset="assets/images/img02_3-slider-item@2x.png"
+                      alt="Слайд 4"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Готовые отчёты по контрагентам, договорам, объектам, постам
+                    и конструктор отчётов, позволяющий собрать свой собственный
+                    вид отчёта
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img02_4-slider-item.png"
+                      srcset="assets/images/img02_4-slider-item@2x.png"
+                      alt="Слайд 5"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Система напоминаний о сроках действия документов
+                    для планирования деятельности ответственных сотрудников
+                    подразделений
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper functional__img-slider" data-tab="3">
+              <ul class="swiper-wrapper functional__img-list">
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img03-slider-item.png"
+                      srcset="assets/images/img03-slider-item@2x.png"
+                      alt="Слайд 1"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт, хранение и анализ информации, касающейся сотрудников
+                    компании – должности, квалификации, месте работы,
+                    индивидуальных особенностей, уровня знаний должностных
+                    инструкций и т.п.
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img03_2-slider-item.png"
+                      srcset="assets/images/img03_2-slider-item@2x.png"
+                      alt="Слайд 2"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт, хранение и анализ информации, касающейся сотрудников
+                    компании – должности, квалификации, месте работы,
+                    индивидуальных особенностей, уровня знаний должностных
+                    инструкций и т.п.
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img03_3-slider-item.png"
+                      srcset="assets/images/img03_3-slider-item@2x.png"
+                      alt="Слайд 3"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт отраслевых документов (УЧО, ЛК, Периодической проверки,
+                    медицинских справок и т.п.), их соответствия месту работы,
+                    контроль их наличия и сроков действия в режиме реального
+                    времени
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img03_4-slider-item.png"
+                      srcset="assets/images/img03_4-slider-item@2x.png"
+                      alt="Слайд 4"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт материальных ценностей предприятия, закрепленных за
+                    персоналом
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img03_5-slider-item.png"
+                      srcset="assets/images/img03_5-slider-item@2x.png"
+                      alt="Слайд 5"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт рабочего времени сотрудников, формирование табелей
+                    подразделений за выбранный период на базе ставки сотрудника
+                    или поста охраны
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper functional__img-slider" data-tab="4">
+              <ul class="swiper-wrapper functional__img-list">
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img04-slider-item.png"
+                      srcset="assets/images/img04-slider-item@2x.png"
+                      alt="Слайд 1"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Адресная книга сотрудников аппарата управления Компании
+                    содержит их актуальные контактные данные и персональный
+                    статус
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img04_2-slider-item.png"
+                      srcset="assets/images/img04_2-slider-item@2x.png"
+                      alt="Слайд 2"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Запуск новых проектов и завершение действующих проходит
+                    по запланированной траектории благодаря блоку задач и заявок
+                    для совместной работы
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img04_3-slider-item.png"
+                      srcset="assets/images/img04_3-slider-item@2x.png"
+                      alt="Слайд 3"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Настроенные рабочие процессы посредством постановки задач
+                    сотрудникам, распределение обязанностей и контроль сроков
+                    выполнения
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img04_4-slider-item.png"
+                      srcset="assets/images/img04_4-slider-item@2x.png"
+                      alt="Слайд 4"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Раздел «Правовой центр» позволяет своевременно решать задачи
+                    сопровождения новых и действующих проектов, обеспечивая
+                    юридическую поддержку руководителей и снижение дебиторской
+                    задолженности
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img04_5-slider-item.png"
+                      srcset="assets/images/img04_5-slider-item@2x.png"
+                      alt="Слайд 5"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Предустановленные отчёты по любому справочнику и модулю
+                    программы – по задачам и заявкам, персоналу, контрагентам,
+                    договорам, объектам и постам, материальным ценностям
+                    помогают получить необходимую информацию для принятия
+                    управленческих решений
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper functional__img-slider" data-tab="5">
+              <ul class="swiper-wrapper functional__img-list">
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img05-slider-item.png"
+                      srcset="assets/images/img05-slider-item@2x.png"
+                      alt="Слайд 1"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Доклад с фото и геопозицией сотрудника через приложение для
+                    смартфона регистрирует заступления и снятия с постов,
+                    доклады о событиях и т.п.
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img05_2-slider-item.png"
+                      srcset="assets/images/img05_2-slider-item@2x.png"
+                      alt="Слайд 2"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Системный журнал докладов содержит информацию обо всех
+                    зарегистрированных в системе докладах, их содержании
+                    и результатах обработки зарегистрированных событий на постах
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img05_3-slider-item.png"
+                      srcset="assets/images/img05_3-slider-item@2x.png"
+                      alt="Слайд 3"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Дополнительные доклады по установленному графику с помощью
+                    приложения снимают нагрузку с операторов по контролю наличия
+                    сотрудников на постах
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img05_4-slider-item.png"
+                      srcset="assets/images/img05_4-slider-item@2x.png"
+                      alt="Слайд 4"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Служба контроля качества – система уведомит ответственного
+                    сотрудника об отклонениях в докладе для немедленной реакции
+                    и проведения дополнительной проверки
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper functional__img-slider" data-tab="6">
+              <ul class="swiper-wrapper functional__img-list">
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img06-slider-item.png"
+                      srcset="assets/images/img06-slider-item@2x.png"
+                      alt="Слайд 1"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Регистрация докладов по уникальному коду поста, ФИО
+                    охранника и парольной фразе с автоматической отметкой
+                    в электронном табеле учёта рабочего времени всего
+                    за 3 секунды
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img06_2-slider-item.png"
+                      srcset="assets/images/img06_2-slider-item@2x.png"
+                      alt="Слайд 2"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Подтверждение запланированной пересменки по графику для
+                    многопостовых объектов посредством доклада от старшего смены
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img06_3-slider-item.png"
+                      srcset="assets/images/img06_3-slider-item@2x.png"
+                      alt="Слайд 3"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Автоматизированный отчёт дежурной службы за сутки для
+                    руководителей о событиях, происшествиях, незанятых постах,
+                    результатах проверки службы, нарушениях, опоздавших на смену
+                    и т.п.
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img06_4-slider-item.png"
+                      srcset="assets/images/img06_4-slider-item@2x.png"
+                      alt="Слайд 4"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    На основании выбранных параметров за выбранный период
+                    за 2 клика формируются отчёты за выбранный период
+                    по докладам и событиям, контролю службы проверяющими
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper functional__img-slider" data-tab="7">
+              <ul class="swiper-wrapper functional__img-list">
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img07-slider-item.png"
+                      srcset="assets/images/img07-slider-item@2x.png"
+                      alt="Слайд 1"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт материальных ценностей предприятия, закрепленных за ТС
+                    с указанием даты закрепления, наименования и стоимости
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img07_2-slider-item.png"
+                      srcset="assets/images/img07_2-slider-item@2x.png"
+                      alt="Слайд 2"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт, хранение и анализ информации, касающейся транспортных
+                    средств компании – марка, модель, год выпуска, ГРЗ,
+                    характеристики, статус эксплуатации, копии документов,
+                    данные полисов страхования, договоров лизинга, доверенностей
+                    и т.п.
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img07_3-slider-item.png"
+                      srcset="assets/images/img07_3-slider-item@2x.png"
+                      alt="Слайд 3"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт проведённых плановых и внеплановых работ
+                    по техническому обслуживанию, ремонту и установке
+                    дополнительного оборудования с указанием даты и места
+                    проведения, стоимости и прикреплением копии заказ-наряда,
+                    счёта и других документов
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img07_4-slider-item.png"
+                      srcset="assets/images/img07_4-slider-item@2x.png"
+                      alt="Слайд 4"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт расхода ГСМ с привязкой к данным пробега и периоду
+                    эксплуатации ТС, прикрепление дополнительной информации
+                    и документального подтверждения понесенных затрат
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img07_5-slider-item.png"
+                      srcset="assets/images/img07_5-slider-item@2x.png"
+                      alt="Слайд 5"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Закрепление водителей, допущенных к эксплуатации ТС
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper functional__img-slider" data-tab="8">
+              <ul class="swiper-wrapper functional__img-list">
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img08-slider-item.png"
+                      srcset="assets/images/img08-slider-item@2x.png"
+                      alt="Слайд 1"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Оформление заявок по установленной форме на обеспечение
+                    имуществом объектов, постов, сотрудников позволяет
+                    своевременно и эффективно обеспечить снабжение структурных
+                    подразделений необходимыми ресурсами
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img08_2-slider-item.png"
+                      srcset="assets/images/img08_2-slider-item@2x.png"
+                      alt="Слайд 2"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Планирование потребностей для обеспечения объектов охраны
+                    или выполнения других служебных задач позволяет достичь
+                    оптимизации логистики и снизить риски нехватки имущества
+                    на складе (функция «Неснижаемый остаток»)
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img08_3-slider-item.png"
+                      srcset="assets/images/img08_3-slider-item@2x.png"
+                      alt="Слайд 3"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт материальных ценностей предприятия – закупка,
+                    оприходование, выдача, списание и закрепление их за объектом
+                    охраны или персоналом
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img08_4-slider-item.png"
+                      srcset="assets/images/img08_4-slider-item@2x.png"
+                      alt="Слайд 4"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Учёт материальных ценностей предприятия – закупка,
+                    оприходование, выдача, списание и закрепление их за объектом
+                    охраны или персоналом
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper functional__img-slider" data-tab="9">
+              <ul class="swiper-wrapper functional__img-list">
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img09-slider-item.png"
+                      srcset="assets/images/img09-slider-item@2x.png"
+                      alt="Слайд 1"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Система контроля пеших патрульных позволяет повысить
+                    безопасность объектов, улучшить дисциплину и обеспечить
+                    эффективное выполнение задач обхода территории охраняемых
+                    объектов
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img09_2-slider-item.png"
+                      srcset="assets/images/img09_2-slider-item@2x.png"
+                      alt="Слайд 2"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Точное отслеживание маршрутов и мониторинг перемещений
+                    патрульных в реальном времени с помощью GPS или NFS-меток
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img09_3-slider-item.png"
+                      srcset="assets/images/img09_3-slider-item@2x.png"
+                      alt="Слайд 3"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Генерация электронных отчётов для анализа эффективности
+                    патрулирования
+                  </p>
+                </li>
+                <li class="swiper-slide functional__img-item">
+                  <picture>
+                    <img
+                      src="assets/images/img09_4-slider-item.png"
+                      srcset="assets/images/img09_4-slider-item@2x.png"
+                      alt="Слайд 4"
+                      class="functional__img"
+                      width="310"
+                      height="207"
+                    />
+                  </picture>
+                  <p class="functional__img-text">
+                    Генерация электронных отчётов для анализа эффективности
+                    патрулирования
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <button class="modal__close-btn" type="button">
           <span class="visually-hidden">Закрыть модальное окно</span>
         </button>

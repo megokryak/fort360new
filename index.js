@@ -11,6 +11,7 @@ import "./assets/js/modal-connect.js";
 import "./assets/js/modal-consultation.js";
 import "./assets/js/consultation.js";
 import "./assets/js/modal-callme.js";
+import "./assets/js/modal-functional.js";
 import "./assets/js/changePrice.js";
 import "./assets/js/downloader.js";
 import "./assets/js/validation.js";

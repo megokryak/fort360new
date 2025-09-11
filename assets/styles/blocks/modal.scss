@@ -92,3 +92,74 @@
 .modal--call-me .subscribe__label {
   width: 100%;
 }
+
+.modal--functional {
+  width: 100%;
+  height: 100%;
+}
+
+.modal__container--functional {
+  width: 100%;
+
+  @media (min-width: $f-width) {
+    padding-left: 290px;
+    padding-right: 290px;
+    height: 866px;
+  }
+}
+
+.modal__container--functional .functional__wrapper {
+  @media (min-width: $f-width) {
+    background: $colorBlack;
+    padding-top: 0;
+    width: 100%;
+    padding: 60px;
+    box-sizing: border-box;
+  }
+}
+
+.modal__container--functional .functional__slider {
+  @media (min-width: $f-width) {
+    width: 340px;
+  }
+}
+
+.modal__container--functional .functional__wrapper-main-img {
+  @media (min-width: $f-width) {
+    order: 2;
+    margin-left: 0;
+    width: 800px;
+    // height: 535px;
+    margin-left: 74px;
+  }
+}
+
+.modal__container--functional .functional__wrapper-text {
+  display: none;
+}
+
+.modal__container--functional .functional__img-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.modal__container--functional .functional__img-item,
+.modal__container--functional .functional__img-list {
+  height: 100%;
+  width: 100% !important;
+}
+
+.modal__container--functional .functional__img {
+  object-fit: contain;
+  height: 100%;
+}
+
+.modal__container--functional .functional__img-slider {
+  overflow: visible;
+}
+
+.modal__container--functional .modal__close-btn {
+  @media (min-width: $f-width) {
+    right: 200px;
+  }
+}
