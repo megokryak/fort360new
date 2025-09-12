@@ -149,9 +149,25 @@
   width: 100% !important;
 }
 
+.modal__container--functional .functional__img-item {
+  border: none;
+}
+
 .modal__container--functional .functional__img {
   object-fit: contain;
-  height: 100%;
+  height: auto;
+  border: 1px solid $colorGray;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.modal__container--functional .functional__img-text {
+  color: $colorWhite;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 51px;
+  padding-right: 45%;
 }
 
 .modal__container--functional .functional__img-slider {
@@ -162,4 +178,74 @@
   @media (min-width: $f-width) {
     right: 200px;
   }
+}
+
+.modal__wrapper-pagination {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-top: 30px;
+
+  @media (min-width: $d-width) {
+    order: 3;
+    column-gap: 24px;
+    width: auto;
+  }
+
+  @media (min-width: $f-width) {
+    grid-column: 1;
+    grid-row: 3;
+    justify-content: start;
+    align-self: flex-end;
+    margin-top: 0;
+    position: absolute;
+    right: 350px;
+    bottom: 150px;
+  }
+}
+
+.modal__pagination-btn {
+  display: none;
+
+  @media (min-width: $d-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid $colorGray;
+  }
+}
+
+.modal__pagination-btn--next svg {
+  transform: rotate(180deg);
+}
+
+.modal__pagination-list {
+  display: flex;
+  column-gap: 24px;
+}
+
+.modal__pagination-item {
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__pagination-item--active .modal__mark {
+  background: $colorOrange;
+  width: 10px;
+  height: 10px;
+}
+
+.modal__mark {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $colorGray;
 }
