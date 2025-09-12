@@ -10411,7 +10411,7 @@
       initFunctionalSwiper();
     });
 
-    const swiperImg = new Swiper(".functional__img-slider", {
+    const swiperImg = new Swiper(".functional .functional__img-slider", {
       // Основные параметры
       loop: false,
       centeredSlides: false,
@@ -10428,6 +10428,36 @@
         1200: {
           spaceBetween: 30,
         },
+        1920: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+      },
+    });
+
+    const swiperModalImg = new Swiper(".modal .functional__img-slider", {
+      // Основные параметры
+      loop: false,
+      centeredSlides: false,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+
+      navigation: {
+        nextEl: ".modal__pagination-btn--next",
+        prevEl: ".modal__pagination-btn--prev",
+      },
+      pagination: {
+        el: ".modal__pagination-list",
+        clickable: true,
+        bulletClass: "modal__pagination-item", // класс элемента-ли
+        bulletActiveClass: "modal__pagination-item--active", // добавь в CSS
+        renderBullet: (index, className) => {
+          // Можно просто вернуть пустой span, т.к. у тебя уже есть своя разметка
+          return `<li class="${className}"><span class="modal__mark"></span></li>`;
+        },
+      },
+      // Адаптивность
+      breakpoints: {
         1920: {
           slidesPerView: 1,
           spaceBetween: 30,

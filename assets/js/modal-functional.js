@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.querySelector(".modal--functional");
 
   const closeBtnFunctional = modal.querySelector(".modal__close-btn");
-  const openBtnsFunctional = modal.querySelectorAll(".callback");
+  const openBtnsFunctional = document.querySelectorAll(
+    ".main__functional .functional__img"
+  );
 
   const openModal = (modalCB) => {
     modalCB.classList.remove("modal--close");
@@ -14,13 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = ""; // возвращаем скролл
   };
 
-  // Открытие по кнопкам .about-btn (их может быть несколько)
-  openBtnsFunctional.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      openModal(modal);
+  if (window.innerWidth >= 1920) {
+    // Открытие по кнопкам .about-btn (их может быть несколько)
+    openBtnsFunctional.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        openModal(modal);
+      });
     });
-  });
+  }
 
   // Закрытие по крестику
   closeBtnFunctional?.addEventListener("click", () => closeModal(modal));
@@ -38,8 +42,4 @@ document.addEventListener("DOMContentLoaded", () => {
       closeModal(modal);
     }
   });
-
-  const form = document.querySelector(".callme-form");
-  // const personalDataCheckbox = document.getElementById('consult_personal_data');
-  const submitButton = document.querySelector(".callme-submit");
 });
