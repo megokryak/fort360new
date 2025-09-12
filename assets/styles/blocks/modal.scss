@@ -186,6 +186,7 @@
   width: 100%;
   justify-content: center;
   margin-top: 30px;
+  z-index: 10;
 
   @media (min-width: $d-width) {
     order: 3;
@@ -218,6 +219,10 @@
     border-radius: 50%;
     border: 1px solid $colorGray;
   }
+}
+
+.modal__pagination-btn svg path {
+  stroke: $colorWhite;
 }
 
 .modal__pagination-btn--next svg {
