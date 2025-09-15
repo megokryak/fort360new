@@ -1,51 +1,10 @@
-import { notify, validateEmail } from './utils.js';
+import { notify, validateEmail } from '/assets/js/utils.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.querySelector(".modal--demo");
-  const closeBtn = modal.querySelector(".modal__close-btn");
-  const openBtns = document.querySelectorAll(".btn--demo");
-
-  // Открытие по кнопкам .btn--demo (их может быть несколько)
-  openBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      openModal(modal);
-    });
-  });
-
-  // Закрытие по крестику
-  closeBtn?.addEventListener("click", () => closeModal(modal));
-
-  // Закрытие по клику вне .modal-demo__container (по фону)
-  modal.addEventListener("click", (e) => {
-    if (!e.target.closest(".modal__container")) {
-      closeModal(modal);
-    }
-  });
-
-  // Дополнительно: закрытие по Esc
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !modal.classList.contains("modal--close")) {
-      closeModal(modal);
-    }
-  });
-
-  const openModal = (modalCB) => {
-    resetForm()
-    modalCB.classList.remove("modal--close");
-    document.body.style.overflow = "hidden"; // блокируем скролл страницы
-  };
-
-  const closeModal = (modalCB) => {
-    modalCB.classList.add("modal--close");
-    document.body.style.overflow = ""; // возвращаем скролл
-  };
-
-
   // Получение элементов формы
-  const form = document.querySelector('.demo-form');
-  const personalDataCheckbox = document.getElementById('demo_personal_data');
-  const submitButton = document.querySelector('.demo-submit');
+  const form = document.querySelector('.reg-form');
+  const personalDataCheckbox = document.getElementById('reg_personal_data');
+  const submitButton = document.querySelector('.reg-submit');
 
   // Функция для сброса формы
   function resetForm() {
@@ -59,12 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const formData = new FormData(form);
       const formValues = {
-          firstname: formData.get('firstname') || '',
-          lastname: formData.get('lastname') || '',
-          organization: formData.get('organization') || '',
-          phone: formData.get('phone') || '',
-          email: formData.get('email') || '',
-          personal_data: formData.get('personal_data') ? true : false,
+          firstname: formData.get('firstname'),
+          lastname: formData.get('lastname'),
+          organization: formData.get('organization'),
+          password: formData.get('password'),
+          email: formData.get('email'),
+          personal_data: formData.get('reg_personal_data') ? true : false,
       };
 
       // Проверка на пустые поля
@@ -80,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
           notify("Ошибка!", "Пожалуйста, заполните поле «Организация»", 'error');
           return;
       }
-      if (!formValues.phone) {
-          notify("Ошибка!", "Пожалуйста, заполните поле «Телефон»", 'error');
+      if (!formValues.password) {
+          notify("Ошибка!", "Пожалуйста, заполните поле «Пароль»", 'error');
           return;
       }
       if (!formValues.email) {
@@ -105,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       submitButton.disabled = true;
 
       try {
-          const url = '/portal/demo/'
+          const url = '/portal/reg/'
           const response = await fetch(url, {
               method: 'POST',
               headers: {
@@ -118,9 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
               throw new Error('Ошибка сервера');
           }
 
-          notify("Успех!", "Заявка на демо-доступ отправлена", 'success');
+          notify("Успех!", "Регистрация завершена", 'success');
           resetForm();
-          closeModal(modal);
 
       } catch (error) {
           if (error.response && error.response.data && error.response.data.username) {

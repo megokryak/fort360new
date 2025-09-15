@@ -58,12 +58,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formData = new FormData(form);
     const formValues = {
-      firstname: formData.get("firstname"),
-      lastname: formData.get("lastname"),
-      organization: formData.get("organization"),
-      phone: formData.get("phone"),
-      email: formData.get("email"),
-      text: formData.get("message"),
+      firstname: formData.get("firstname") || '',
+      lastname: formData.get("lastname") || '',
+      organization: formData.get("organization") || '',
+      phone: formData.get("phone") || '',
+      email: formData.get("email") || '',
+      text: formData.get("message") || '',
       personal_data: formData.get("consult_personal_data") ? true : false,
     };
 

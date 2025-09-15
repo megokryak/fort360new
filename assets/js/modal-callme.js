@@ -56,15 +56,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formData = new FormData(form);
     const formValues = {
-      firstname: "запрос обратного звонка",
-      lastname: formData.get("lastname"),
-      organization: formData.get("organization"),
-      phone: formData.get("phone"),
-      email: formData.get("email"),
-      text: formData.get("message"),
+      firstname: formData.get("firstname") || '',
+      lastname: formData.get("lastname") || '',
+      organization: formData.get("organization") || '',
+      phone: formData.get("phone") || '',
+      email: formData.get("phone") || '',
+      text: 'запрос обратного звонка',
       personal_data: formData.get("consult_personal_data") ? true : false,
     };
 
+
+    if (!formValues.firstname) {
+      notify("Ошибка!", "Пожалуйста, заполните поле «Имя»", "error");
+      return;
+    }
     if (!formValues.phone) {
       notify("Ошибка!", "Пожалуйста, заполните поле «Телефон»", "error");
       return;

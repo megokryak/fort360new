@@ -6,13 +6,21 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   base: "./",
+  server: {
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/reg\/?$/, to: '/reg.html' },
+        { from: /^\/$/, to: '/index.html' }
+      ]
+    }
+  },
   build: {
     outDir: "dist",
     emptyOutDir: true,
     rollupOptions: {
       input: {
         index: resolve(__dirname, "index.html"),
-        reg: resolve(__dirname, "reg.html"),
+        reg: resolve(__dirname, "reg.html"),        // добавляем reg.html
       },
       output: {
         // сохраняем структуру ассетов

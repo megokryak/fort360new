@@ -49,7 +49,7 @@ def deploy_frontend():
     build_frontend(BUILD_DIR)
 
     # dist
-    DISTR_DIR = "/home/bobah/projects/tsg/fort360new/docs/"
+    DISTR_DIR = "/home/bobah/projects/tsg/fort360new/dist/"
     REMOTE_DIR = "/opt/tsg/fort360/public/"
 
     # remove old
@@ -78,7 +78,7 @@ def deploy_frontend():
 
 
     # remove local build
-    command = 'rm -rf {}/docs'.format(BUILD_DIR)
+    command = 'rm -rf {}/dist'.format(BUILD_DIR)
     print(command)
     os.system(command)
 
