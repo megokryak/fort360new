@@ -13,6 +13,7 @@
 .about__title {
   font-size: 42px;
   line-height: 50px;
+  font-weight: 700;
   color: $colorBlack;
   text-transform: uppercase;
 
@@ -208,6 +209,7 @@
   border-radius: 6px;
   box-sizing: border-box;
   margin-top: 32px;
+  font-weight: 500;
 
   &::after {
     content: "";
@@ -224,6 +226,11 @@
     font-size: 20px;
     line-height: 20px;
     padding: 26px 30px 26px 30px;
+
+    &::after {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   @media (min-width: $f-width) {
@@ -293,6 +300,10 @@
     line-height: 20px;
     margin-top: 55px;
     padding: 26px 30px 24px 30px;
+    &::after {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   @media (min-width: $f-width) {

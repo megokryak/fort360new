@@ -97,11 +97,15 @@
 
   @media (min-width: $d-width) {
     padding: 16px 37px;
+    font-size: 20px;
+    line-height: 20px;
 
     &::after {
       content: "";
       display: block;
       margin-left: 16px;
+      width: 20px;
+      height: 20px;
     }
 
     &::before {
@@ -118,6 +122,10 @@
   &::before {
     display: none;
   }
+}
+
+.btn-video__text {
+  font-weight: 500;
 }
 
 .btn__video--border-left {

@@ -225,20 +225,23 @@
 .price__specs-cell--details {
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 28px;
-    margin-left: auto;
-    width: 20px;
-    height: 20px;
-    border: 1px solid $colorGray;
-    border-radius: 50%;
-    background: url("../../images/svg/arrow_down.svg") no-repeat center;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   right: 0;
+  //   top: 28px;
+  //   margin-left: auto;
+  //   width: 20px;
+  //   height: 20px;
+  //   border: 1px solid $colorGray;
+  //   border-radius: 50%;
+  //   background: url("../../images/svg/arrow_down.svg") no-repeat center;
+  // }
 }
 
 /* Скрытые списки по умолчанию */

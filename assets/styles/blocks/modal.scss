@@ -111,6 +111,13 @@
 }
 
 .modal__container--functional .functional__wrapper {
+  border-radius: 8px;
+  border: 1px solid $colorGray;
+
+  @media (min-width: $d-width) {
+    border-radius: 20px;
+  }
+
   @media (min-width: $f-width) {
     background: $colorBlack;
     padding-top: 0;

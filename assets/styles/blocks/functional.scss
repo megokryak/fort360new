@@ -2,7 +2,7 @@
 
 .functional {
   background: $colorBlack url("../../images/bc_functional.jpg") no-repeat top
-    center;
+    center / cover;
 }
 
 div.functional__container {
@@ -13,6 +13,7 @@ div.functional__container {
 
 .functional__title {
   font-size: 42px;
+  font-weight: 700;
   line-height: 50px;
   color: $colorWhite;
   text-transform: uppercase;
@@ -31,6 +32,7 @@ div.functional__container {
 .functional__description {
   font-size: 16px;
   line-height: 24px;
+  font-weight: 500;
   color: $colorWhite;
   text-transform: uppercase;
   margin-top: 30px;
@@ -89,6 +91,7 @@ div.functional__container {
   width: max-content;
   font-size: 16px;
   line-height: 24px;
+  font-weight: 500;
   color: $colorWhite;
   text-transform: uppercase;
   padding: 10px 14px 7px 14px;
@@ -123,6 +126,7 @@ div.functional__container {
       right: -3px;
       width: 4px;
       height: 100%;
+      border-radius: 2px;
       background: $colorOrange;
     }
   }
@@ -190,6 +194,7 @@ div.functional__container {
   color: $colorWhite;
   font-size: 15px;
   line-height: 23px;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   row-gap: 15px;
@@ -253,6 +258,22 @@ div.functional__container {
   }
 }
 
+.main__functional .functional__img-slider {
+  @media (min-width: $f-width) {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 65px);
+      left: 300px;
+      width: 130px;
+      height: 130px;
+      background: url(../../images/svg/zoom-icon.svg) no-repeat center / contain;
+      z-index: 100;
+    }
+  }
+}
+
 .functional__img-slider--hidden,
 .functional__text--hidden {
   display: none;
@@ -281,4 +302,8 @@ div.functional__container {
     flex: none;
     padding: 15px;
   }
+}
+
+.functional__img-text {
+  font-weight: 300;
 }

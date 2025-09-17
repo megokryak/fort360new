@@ -2,8 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.querySelector(".modal--functional");
 
   const closeBtnFunctional = modal.querySelector(".modal__close-btn");
-  const openBtnsFunctional = document.querySelectorAll(
-    ".main__functional .functional__img"
+  // const openBtnsFunctional = document.querySelectorAll(
+  //   ".main__functional .functional__img"
+  // );
+  const oprnDivImg = document.querySelector(
+    ".main__functional .functional__img-slider"
   );
 
   const openModal = (modalCB) => {
@@ -18,12 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (window.innerWidth >= 1920) {
     // Открытие по кнопкам .about-btn (их может быть несколько)
-    openBtnsFunctional.forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        openModal(modal);
-      });
-    });
+    // openBtnsFunctional.forEach((btn) => {
+    //   btn.addEventListener("click", (e) => {
+    //     e.preventDefault();
+    //     openModal(modal);
+    //   });
+    // });
+    oprnDivImg.addEventListener("click", () => openModal(modal));
   }
 
   // Закрытие по крестику

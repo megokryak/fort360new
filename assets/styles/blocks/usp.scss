@@ -31,6 +31,7 @@
   position: relative;
   margin-top: 12px;
   letter-spacing: -0.6px;
+  font-weight: 400;
 
   @media (min-width: $d-width) {
     font-size: 20px;
@@ -52,7 +53,7 @@
   }
 
   @media (min-width: $f-width) {
-    width: 1127px;
+    width: 1112px;
     bottom: -50px;
   }
 }
