@@ -1,17 +1,23 @@
 @use "../common/variables" as *;
 
 .subscribe {
-  background: linear-gradient(119deg, #222222 0%, #333333 100%);
-  border-radius: 6px;
-
   @media (min-width: $d-width) {
     display: flex;
+  }
+}
+
+.main__feedback .subscribe {
+  @media (min-width: $f-width) {
+    border-radius: 8px;
   }
 }
 
 .subscribe__wrapper {
   padding: 35px;
   box-sizing: border-box;
+  background: linear-gradient(119deg, #222222 0%, #333333 100%);
+  border-radius: 6px;
+  border: 1px solid $colorGrayDark;
 
   @media (min-width: $d-width) {
     padding: 35px 40px;
@@ -19,6 +25,7 @@
 
   @media (min-width: $f-width) {
     padding: 80px;
+    border-radius: 20px;
   }
 }
 
@@ -35,6 +42,13 @@
 
   @media (min-width: $f-width) {
     padding-right: 100px;
+  }
+}
+
+.subscribe__title br {
+  display: none;
+  @media (min-width: $d-width) {
+    display: block;
   }
 }
 
@@ -91,7 +105,7 @@ textarea.subscribe__input {
 .subscribe__wrapper-bottom {
   display: flex;
   flex-direction: column;
-  background: $colorOrange;
+  background: $colorOrangeOnWhite;
   border-radius: 6px;
   margin-top: 0px;
   padding: 35px;
@@ -115,6 +129,7 @@ textarea.subscribe__input {
 .subscribe__text {
   font-size: 16px;
   line-height: 22px;
+  font-weight: 500;
   color: $colorWhite;
   text-transform: uppercase;
 

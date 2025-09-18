@@ -3,6 +3,15 @@
 @font-face {
   font-family: "PFDinTextPro";
   font-style: normal;
+  font-weight: 300;
+  src: url("../../fonts/PFDinTextProLight.woff2") format("woff2"),
+    url("../../fonts/PFDinTextProLight.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PFDinTextPro";
+  font-style: normal;
   font-weight: 400;
   src: url("../../fonts/PFDinTextProRegular.woff2") format("woff2"),
     url("../../fonts/PFDinTextProRegular.woff") format("woff");

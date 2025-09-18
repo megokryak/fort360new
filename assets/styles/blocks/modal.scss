@@ -14,6 +14,7 @@
 
 .modal__container {
   position: relative;
+
   @media (min-width: $d-width) {
     width: 80%;
   }
@@ -104,15 +105,14 @@
   width: 100%;
 
   @media (min-width: $f-width) {
-    padding-left: 290px;
-    padding-right: 290px;
+    width: auto;
     height: 866px;
   }
 }
 
 .modal__container--functional .functional__wrapper {
   border-radius: 8px;
-  border: 1px solid $colorGray;
+  border: 1px solid $colorGrayDark;
 
   @media (min-width: $d-width) {
     border-radius: 20px;
@@ -121,7 +121,6 @@
   @media (min-width: $f-width) {
     background: $colorBlack;
     padding-top: 0;
-    width: 100%;
     padding: 60px;
     box-sizing: border-box;
   }
@@ -185,7 +184,7 @@
 
 .modal__container--functional .modal__close-btn {
   @media (min-width: $f-width) {
-    right: 200px;
+    right: -88px;
   }
 }
 
@@ -210,7 +209,7 @@
     align-self: flex-end;
     margin-top: 0;
     position: absolute;
-    right: 350px;
+    right: 75px;
     bottom: 150px;
   }
 }
