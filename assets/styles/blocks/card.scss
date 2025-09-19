@@ -95,11 +95,6 @@
   flex: 0 0 30%;
 }
 
-.card__list-status {
-  margin-top: 10px;
-  padding-bottom: 10px;
-}
-
 .card__item-status {
   display: flex;
   justify-content: space-between;
@@ -239,6 +234,13 @@
   padding: 18px;
   border: 1px solid $colorOrange;
   border-radius: 6px;
+
+  &:hover,
+  &:focus {
+    background-color: $colorOrangeOnWhite;
+    color: $colorWhite;
+    border: 1px solid $colorOrangeOnWhite;
+  }
 
   &::after {
     content: "";

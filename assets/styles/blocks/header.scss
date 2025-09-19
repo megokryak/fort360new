@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+.header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
 .header__container {
   display: flex;
   align-items: center;
@@ -285,5 +293,17 @@ div.header__callback {
   @media (min-width: $d-width) {
     display: block;
     letter-spacing: -0.6px;
+  }
+}
+
+.header__contacts .contacts__mail {
+  @media (min-width: $d-width) {
+    font-weight: 300;
+  }
+}
+
+.header__contacts .contacts__mail {
+  @media (min-width: $d-width) {
+    font-weight: 500;
   }
 }

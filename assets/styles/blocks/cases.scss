@@ -280,6 +280,11 @@
 .cases__pagination-btn {
   display: none;
 
+  &:hover,
+  &:focus {
+    border: 1px solid $colorOrange;
+  }
+
   @media (min-width: $d-width) {
     display: flex;
     align-items: center;
@@ -290,6 +295,10 @@
     border-radius: 50%;
     border: 1px solid $colorGray;
   }
+}
+
+.cases__pagination-btn:hover svg path {
+  stroke: $colorOrange;
 }
 
 .cases__pagination-btn--next svg {

@@ -25,10 +25,14 @@
   @media (min-width: $d-width) {
     margin-top: 0;
     position: absolute;
-    right: -230px;
+    right: 0;
     bottom: -25px;
     height: 110%;
     width: auto;
+  }
+
+  @media (min-width: $f-width) {
+    right: -230px;
   }
 }
 

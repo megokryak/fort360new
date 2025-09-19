@@ -16,16 +16,16 @@
   padding: 35px;
   box-sizing: border-box;
   background: linear-gradient(119deg, #222222 0%, #333333 100%);
-  border-radius: 6px;
+  border-radius: 6px 6px 0 0;
   border: 1px solid $colorGrayDark;
 
   @media (min-width: $d-width) {
     padding: 35px 40px;
+    border-radius: 8px 0 0 8px;
   }
 
   @media (min-width: $f-width) {
     padding: 80px;
-    border-radius: 20px;
   }
 }
 
@@ -107,12 +107,13 @@ textarea.subscribe__input {
   flex-direction: column;
   background: $colorOrangeOnWhite;
   border-radius: 6px;
-  margin-top: 0px;
+  margin-top: -6px;
   padding: 35px;
   box-sizing: border-box;
 
   @media (min-width: $d-width) {
     margin-top: 0;
+    margin-left: -8px;
     width: calc(382 / 960 * 100%);
     flex-basis: calc(382 / 960 * 100%);
     flex-shrink: 0;
@@ -222,6 +223,12 @@ textarea.subscribe__input {
   border: 1px solid $colorWhite;
   border-radius: 6px;
   margin-top: 12px;
+
+  &:hover,
+  &:focus {
+    background-color: $colorWhite;
+    color: $colorOrange;
+  }
 
   &::after {
     content: "";

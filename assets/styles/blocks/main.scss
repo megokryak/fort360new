@@ -56,3 +56,21 @@
     padding-top: 60px;
   }
 }
+
+.main__certificates .contacts__callback {
+  &:hover,
+  &:focus {
+    color: $colorWhite;
+  }
+  @media (min-width: $d-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.main__certificates .contacts__mail {
+  @media (min-width: $d-width) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

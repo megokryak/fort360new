@@ -211,6 +211,12 @@
   margin-top: 32px;
   font-weight: 500;
 
+  &:hover,
+  &:focus {
+    color: $colorOrange;
+    border: 1px solid $colorOrange;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -235,6 +241,13 @@
 
   @media (min-width: $f-width) {
     width: 396px;
+  }
+}
+
+.about__rewiew:hover {
+  &::after {
+    background: transparent url("../../images/svg/arrow_small_icon_orange.svg")
+      no-repeat center / cover;
   }
 }
 
@@ -285,6 +298,12 @@
   border: 1px solid $colorWhite;
   border-radius: 6px;
   width: 100%;
+
+  &:hover,
+  &:focus {
+    background-color: $colorWhite;
+    color: $colorOrange;
+  }
 
   &::after {
     content: "";

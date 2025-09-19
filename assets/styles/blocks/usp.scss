@@ -97,6 +97,10 @@
 }
 
 .usp__btn-video {
+  &:hover,
+  &:focus {
+    background-color: $colorBlack;
+  }
   @media (min-width: $d-width) {
     background: rgba(32, 32, 32, 70%);
   }

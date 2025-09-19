@@ -1,5 +1,6 @@
 import "./assets/js/swiper.js";
 import "./assets/js/openBurgerMenu.js";
+import "./assets/js/fixedMenu.js";
 import "./assets/js/slider.js";
 import "./assets/js/flip.js";
 import "./assets/js/tabs.js";

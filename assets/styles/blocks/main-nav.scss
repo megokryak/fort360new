@@ -80,18 +80,19 @@
   flex-direction: column;
   box-sizing: border-box;
   position: relative;
-  &:hover {
-    color: $colorOrange;
-  }
 
   &:hover::after {
     content: "";
     position: absolute;
-    bottom: -27px;
+    bottom: -20px;
     left: 0;
     right: 0;
     height: 4px;
     width: 100%;
     background-color: $colorOrange;
   }
+}
+
+.main-nav__fullscreen-list .main-nav__item:hover .main-nav__link {
+  color: $colorOrangeOnWhite;
 }

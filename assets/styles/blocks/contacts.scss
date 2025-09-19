@@ -35,6 +35,11 @@
   font-weight: 700;
   line-height: 22px;
 
+  &:hover,
+  &:focus {
+    color: $colorOrangeOnWhite;
+  }
+
   @media (min-width: $d-width) {
     order: 2;
     margin-left: 35px;
@@ -69,6 +74,11 @@
   color: $colorOrange;
   margin-top: 16px;
 
+  &:hover,
+  &:focus {
+    color: $colorOrange;
+  }
+
   @media (min-width: $d-width) {
     display: flex;
     align-items: center;
@@ -95,6 +105,11 @@
   line-height: 150%;
   font-weight: 500;
   margin-top: 16px;
+
+  &:hover,
+  &:focus {
+    color: $colorOrangeOnWhite;
+  }
 
   @media (min-width: $d-width) {
     margin-top: 0;

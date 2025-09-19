@@ -23,3 +23,13 @@
     height: 18px;
   }
 }
+
+.social__link svg path {
+  @media (min-width: $d-width) {
+    stroke-width: 1.5px;
+  }
+}
+
+.social__link:hover svg path {
+  stroke: $colorOrangeOnWhite;
+}

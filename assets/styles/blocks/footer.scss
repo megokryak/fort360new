@@ -92,6 +92,11 @@
   line-height: 24px;
   color: $colorBlack;
 
+  &:hover,
+  &:focus {
+    color: $colorOrangeOnWhite;
+  }
+
   @media (min-width: $d-width) {
     font-size: 16px;
     line-height: 24px;
@@ -129,13 +134,18 @@
   @media (min-width: $d-width) {
     order: 1;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
   }
 }
 
 .footer__contacts .contacts__tel,
 .footer__contacts .contacts__mail {
   color: $colorBlack;
+
+  &:hover,
+  &:focus {
+    color: $colorOrangeOnWhite;
+  }
 }
 
 .footer__contacts .contacts__tel {
@@ -174,6 +184,10 @@
   }
 }
 
+.footer__contacts .contacts__work-day {
+  color: $colorGray;
+}
+
 .footer__contacts .contacts__text-info {
   color: $colorGrayDark;
 
@@ -183,7 +197,7 @@
   }
 
   @media (min-width: $f-width) {
-    margin-top: 20px;
+    margin-top: 5px;
   }
 }
 
@@ -202,6 +216,16 @@
 
 .footer__contacts .social__link svg path {
   stroke: $colorBlack;
+  stroke-width: 1.5px;
+}
+
+.footer__contacts .social__link {
+  &:hover,
+  &:focus {
+    svg path {
+      stroke: $colorOrangeOnWhite;
+    }
+  }
 }
 
 .footer__contacts .contacts__social {
@@ -221,5 +245,23 @@
   @media (min-width: $d-width) {
     width: 30px;
     height: 30px;
+  }
+}
+
+.footer .contacts__callback {
+  &:hover,
+  &:focus {
+    color: $colorOrangeOnWhite;
+  }
+  @media (min-width: $d-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.footer .contacts__mail {
+  @media (min-width: $d-width) {
+    font-size: 16px;
+    line-height: 24px;
   }
 }

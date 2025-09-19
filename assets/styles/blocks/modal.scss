@@ -262,3 +262,11 @@
   border-radius: 50%;
   background: $colorGray;
 }
+
+.modal .subscribe__wrapper {
+  border-radius: 6px;
+
+  @media (min-width: $d-width) {
+    border-radius: 20px;
+  }
+}
