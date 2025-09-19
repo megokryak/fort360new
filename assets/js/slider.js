@@ -10361,18 +10361,17 @@
     const swiper = new Swiper(".about__together-slider", {
       // Основные параметры
       loop: true,
-      slidesPerView: 4, // По умолчанию показываем 4 слайда
+      slidesPerView: "auto", // По умолчанию показываем 4 слайда
       spaceBetween: 32, // Отступы между слайдами
       centeredSlides: false,
-      initialSlide: 0,
       autoplay: {
-        delay: 3000,
+        delay: 2000,
         disableOnInteraction: false,
       },
       breakpoints: {
-        1920: {
-          slidesPerView: 8, // Для экранов больше 1920px показываем 8 слайдов
-          spaceBetween: 80, // Увеличиваем отступы между слайдами
+        1919: {
+          slidesPerView: "auto", // Для экранов больше 1920px показываем 8 слайдов
+          spaceBetween: 70, // Увеличиваем отступы между слайдами
         },
         768: {
           slidesPerView: 4, // Для экранов меньше 768px показываем 4 слайда
