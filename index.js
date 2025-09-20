@@ -14,3 +14,4 @@ import "./assets/js/modal-functional.js";
 import "./assets/js/changePrice.js";
 import "./assets/js/downloader.js";
 import "./assets/js/validation.js";
+import "./assets/js/scroll.js";
